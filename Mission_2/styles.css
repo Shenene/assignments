@@ -71,4 +71,9 @@ button:hover {
   max-width: 300px;
   height: auto;
   margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+#footer {
+  margin-bottom: 20px;
 }
