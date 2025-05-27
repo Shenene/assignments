@@ -8,48 +8,51 @@
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 id="h1">Building Inspection Training & Interactive Checklist</h1>
-    <section id="homeSection" class="page">
-      <h2 class="h2">Welcome to Building Inspection Training</h2>
-      <p class="paragraph">
-        This tool helps you understand the process of inspecting buildings.
-      </p>
-      <button id="btnChecklist">Go to Checklists</button>
-      <button id="btnQuiz">Take the Quiz</button>
-      <img id="pic" src="Photo.svg" />
-    </section>
+    <main class="main-content">
+      <section id="homeSection" class="page">
+        <h1 id="h1">Building Inspection Training & Interactive Checklist</h1>
+        <div class="buildingComp">Building Compliance</div>
+        <img id="compImg" src="Building Compliance.svg" alt="Compliance" />
+        <h2 class="h2">Welcome to Building Inspection Training</h2>
+        <p class="paragraph">
+          This tool helps you understand the process of inspecting buildings.
+        </p>
+        <button id="btnChecklist">Go to Checklists</button>
+        <button id="btnQuiz">Take the Quiz</button>
+        <img id="pic" src="Photo.svg" alt="inspection photo" />
+      </section>
 
-    <section id="checklistSection" class="page hidden">
-      <h2>Select an Inspection Type</h2>
-      <select id="inspectionType" onchange="loadChecklist()">
-        <option value="">-- Choose --</option>
-        <option value="footing">Footing Inspection</option>
-        <option value="framing">Framing Inspection</option>
-        <option value="final">Final Inspection</option>
-      </select>
+      <section id="checklistSection" class="page hidden">
+        <h2>Select an Inspection Type</h2>
+        <select id="inspectionType" onchange="loadChecklist()">
+          <option value="">-- Choose --</option>
+          <option value="footing">Footing Inspection</option>
+          <option value="framing">Framing Inspection</option>
+          <option value="final">Final Inspection</option>
+        </select>
 
-      <div id="checklistContainer"></div>
-    </section>
+        <div id="checklistContainer"></div>
+      </section>
 
-    <section id="quizSection" class="page hidden">
-      <h2>Choose Your Quiz Level</h2>
-      <select id="quizLevel" onchange="loadQuiz()">
-        <option value="">-- Choose Level --</option>
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-      </select>
+      <section id="quizSection" class="page hidden">
+        <h2>Choose Your Quiz Level</h2>
+        <select id="quizLevel" onchange="loadQuiz()">
+          <option value="">-- Choose Level --</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
 
-      <form id="quizForm"></form>
-      <button onclick="gradeQuiz()">Submit Quiz</button>
-    </section>
+        <form id="quizForm"></form>
+        <button onclick="gradeQuiz()">Submit Quiz</button>
+      </section>
 
-    <section id="quizResultsSection" class="page hidden">
-      <h2>Quiz Results</h2>
-      <div id="quizResults"></div>
-      <button onclick="showPage('quizSection')">Back to Quiz</button>
-    </section>
-
-    <section><footer id="footer">Building Inspections 2025</footer></section>
+      <section id="quizResultsSection" class="page hidden">
+        <h2>Quiz Results</h2>
+        <div id="quizResults"></div>
+        <button onclick="showPage('quizSection')">Back to Quiz</button>
+      </section>
+    </main>
+    <footer id="footer">&copy; 2025 Building Inspection Training Tool</footer>
   </body>
 </html>
