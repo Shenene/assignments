@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inspection Training Website</title>
+    <script defer src="script.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 id="h1">Building Inspection Training & Interactive Checklist</h1>
+    <section id="homeSection" class="page">
+      <h2 class="h2">Welcome to Building Inspection Training</h2>
+      <p class="paragraph">
+        This tool helps you understand the process of inspecting buildings.
+      </p>
+      <button id="btnChecklist">Go to Checklists</button>
+      <button id="btnQuiz">Take the Quiz</button>
+      <img id="pic" src="Photo.svg" />
+    </section>
+
+    <section id="checklistSection" class="page hidden">
+      <h2>Select an Inspection Type</h2>
+      <select id="inspectionType" onchange="loadChecklist()">
+        <option value="">-- Choose --</option>
+        <option value="footing">Footing Inspection</option>
+        <option value="framing">Framing Inspection</option>
+        <option value="final">Final Inspection</option>
+      </select>
+
+      <div id="checklistContainer"></div>
+    </section>
+
+    <section id="quizSection" class="page hidden">
+      <h2>Choose Your Quiz Level</h2>
+      <select id="quizLevel" onchange="loadQuiz()">
+        <option value="">-- Choose Level --</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+
+      <form id="quizForm"></form>
+      <button onclick="gradeQuiz()">Submit Quiz</button>
+    </section>
+
+    <section id="quizResultsSection" class="page hidden">
+      <h2>Quiz Results</h2>
+      <div id="quizResults"></div>
+      <button onclick="showPage('quizSection')">Back to Quiz</button>
+    </section>
+  </body>
+</html>
