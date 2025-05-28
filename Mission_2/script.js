@@ -95,3 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showPage("quizSection");
   });
 });
+
+// function homeButton() {
+//   const returnHome = document.getElementsById();
+// }

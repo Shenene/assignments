@@ -6,11 +6,11 @@
 
 @media (max-width: 480px) {
   #h1 {
-    font-size: 24px;
+    font-size: 35px;
   }
 
   .h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .paragraph {
@@ -20,6 +20,25 @@
   button {
     font-size: 14px;
     padding: 12px 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #h1 {
+    font-size: 48px;
+  }
+
+  .h2 {
+    font-size: 32px;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+
+  .page {
+    gap: 40px;
+    padding: 80px;
   }
 }
 
@@ -57,10 +76,10 @@ html {
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   gap: 10px;
-  padding: 48px 24px;
+  padding: 75px;
   box-sizing: border-box;
 }
 
@@ -69,18 +88,29 @@ html {
 }
 
 #h1 {
-  font-size: 32px;
+  font-size: 45px;
   text-shadow: #333;
   margin-bottom: 40px;
 }
 
+.buildingComp {
+  font-size: 28px;
+  margin-top: 8px;
+}
+
+#compImg {
+  max-width: 400px;
+  height: auto;
+  margin: 0 0;
+}
+
 .h2 {
-  font-size: 24px;
+  font-size: 35px;
   margin-bottom: 16px;
 }
 
 .paragraph {
-  font-size: 16px;
+  font-size: 20px;
   font-style: italic;
   margin-bottom: 24px;
   max-width: 700px;
@@ -104,19 +134,26 @@ button:hover {
 #pic {
   max-width: 300px;
   height: auto;
-  margin-top: 32px;
+  margin-top: 0px;
   margin-bottom: 10px;
 }
 
-.buildingComp {
-  font-size: 20px;
-  margin-top: 8px;
+.btn-home {
+  background-color: transparent;
+  margin-top: 24px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  size: 40px;
 }
 
-#compImg {
-  max-width: 400px;
-  height: auto;
-  margin: -20 -10;
+.btn-home img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 #footer {
