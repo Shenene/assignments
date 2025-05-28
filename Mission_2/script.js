@@ -78,24 +78,27 @@ function gradeQuiz() {
   showPage("quizResultsSection");
 }
 
+// ----Class for hiding pages ----
 function showPage(id) {
   document.querySelectorAll(".page").forEach((p) => p.classList.add("hidden"));
   document.getElementById(id).classList.remove("hidden");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const checklistBtn = document.getElementById("btnChecklist");
-  const quizBtn = document.getElementById("btnQuiz");
+// ----Click Events - Event Listeners ----
+const checklistBtn = document.getElementById("btnChecklist");
+const quizBtn = document.getElementById("btnQuiz");
+const homeButtons = document.querySelectorAll(".btn-home");
 
-  checklistBtn.addEventListener("click", () => {
-    showPage("checklistSection");
-  });
-
-  quizBtn.addEventListener("click", () => {
-    showPage("quizSection");
-  });
+checklistBtn.addEventListener("click", () => {
+  showPage("checklistSection");
 });
 
-// function homeButton() {
-//   const returnHome = document.getElementsById();
-// }
+quizBtn.addEventListener("click", () => {
+  showPage("quizSection");
+});
+
+homeButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    showPage("homeSection");
+  });
+});

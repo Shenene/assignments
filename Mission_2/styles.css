@@ -116,6 +116,13 @@ html {
   max-width: 700px;
 }
 
+#pic {
+  max-width: 300px;
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
 button {
   margin: 8px;
   padding: 14px 28px;
@@ -131,13 +138,6 @@ button:hover {
   background-color: #ddd;
 }
 
-#pic {
-  max-width: 300px;
-  height: auto;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-
 .btn-home {
   background-color: transparent;
   margin-top: 24px;
@@ -148,12 +148,18 @@ button:hover {
   align-items: center;
   justify-content: center;
   size: 40px;
+  transition: transform 0.2s ease;
 }
 
 .btn-home img {
   width: 40px;
   height: 40px;
-  object-fit: contain;
+  /* object-fit: contain; */
+}
+
+.btn-home:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 #footer {

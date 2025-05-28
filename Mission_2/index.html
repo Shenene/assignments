@@ -17,6 +17,7 @@
         <p class="paragraph">
           This tool helps you understand the process of inspecting buildings.
         </p>
+        <!------ Navigation Buttons ------>
         <button id="btnChecklist">Go to Checklists</button>
         <button id="btnQuiz">Take the Quiz</button>
         <img id="pic" src="Photo.svg" alt="inspection photo" />
@@ -31,8 +32,11 @@
           <option value="final">Final Inspection</option>
         </select>
 
+        <!---- Return Home Button ---->
+        <button class="btn-home">
+          <img src="House_Icon.png" alt="house icon" title="Return to Home" />
+        </button>
         <div id="checklistContainer"></div>
-        <!-- <button class="btn-home" onclick="showPage('homeSection')"><img src="House_Icon.png" alt="house icon"></img></button> -->
       </section>
 
       <section id="quizSection" class="page hidden">
@@ -46,6 +50,11 @@
 
         <form id="quizForm"></form>
         <button onclick="gradeQuiz()">Submit Quiz</button>
+
+        <!---- Return Home Button ---->
+        <button class="btn-home">
+          <img src="House_Icon.png" alt="house icon" title="Return to Home" />
+        </button>
       </section>
 
       <section id="quizResultsSection" class="page hidden">
