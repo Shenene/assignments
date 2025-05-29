@@ -4,44 +4,28 @@
   padding: 0;
 }
 
-@media (max-width: 480px) {
-  #h1 {
-    font-size: 35px;
+/* ------ S C R E E N   S I Z E   F I T ------ */
+@media (min-width: 768px) {
+  #homeSection,
+  #inspectionType,
+  #quizLevel {
+    flex-direction: row;
+  }
+
+  .leftSection {
+    width: 260px;
+  }
+
+  .rightSection {
+    width: auto;
   }
 
   .h2 {
-    font-size: 25px;
-  }
-
-  .paragraph {
-    font-size: 14px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 12px 20px;
+    width: auto;
   }
 }
 
-@media (min-width: 1600px) {
-  #h1 {
-    font-size: 48px;
-  }
-
-  .h2 {
-    font-size: 32px;
-  }
-
-  .paragraph {
-    font-size: 20px;
-  }
-
-  .page {
-    gap: 40px;
-    padding: 80px;
-  }
-}
-
+/* ------ M A I N   S E C T I O N ------ */
 .main-content {
   width: 100%;
   display: flex;
@@ -50,14 +34,13 @@
 }
 
 body {
-  background: linear-gradient(135deg, #2c3e50, #4ca1af);
-  color: white;
-  font-family: "Segoe UI", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 32px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body,
@@ -65,8 +48,6 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .page {
@@ -85,15 +66,6 @@ html {
 
 .hidden {
   display: none;
-}
-
-@media (min-width: 768px) {
-  #inspectionType,
-  #quizLevel {
-    width: 70%;
-    max-width: 700px;
-    font-size: 20px;
-  }
 }
 
 #h1 {
@@ -128,8 +100,9 @@ html {
 #pic {
   max-width: 300px;
   height: auto;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-bottom: 10px;
+  align-content: center;
 }
 
 button {
@@ -163,7 +136,6 @@ button:hover {
 .btn-home img {
   width: 40px;
   height: 40px;
-  /* object-fit: contain; */
 }
 
 .btn-home:hover {
@@ -171,11 +143,10 @@ button:hover {
   filter: brightness(1.2);
 }
 
-#footer {
-  text-align: center;
-  padding: 16px;
-  font-size: 14px;
-}
+/* #btnQuiz {
+  margin-top: 20px;
+  flex-direction: row;
+} */
 
 .home-layout {
   display: flex;
@@ -186,38 +157,85 @@ button:hover {
   gap: 40px;
 }
 
+/* ------ L E F T   S E C T I O N ------*/
 .leftSection {
-  width: 260px;
   background-color: #333;
   color: white;
   padding: 20px;
   border-radius: 10px;
   text-align: left;
-  flex-shrink: 0;
+  width: auto;
+  height: 1060px;
 }
 
-.rightContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px;
-  width: 100%;
+/* All unordered lists items */
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-/* .general-link {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  display: block;
-  flex-wrap: wrap;
-} */
+/* all left section list item links */
+.leftSection li a:hover {
+  color: rgba(255, 68, 0, 0.548);
+}
 
-/* .info {
-  display: flex;
-  flex-direction: column;
+/* links - all */
+.leftSection a {
+  text-decoration: none;
+  color: white;
+}
+
+/* links */
+/* h2 heading */
+#genInfo {
+  margin-top: 130px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.general-link {
+  padding: 20px;
+}
+
+/* h2 heading */
+#impInfo {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.info {
+  padding: 20px;
+}
+
+.info li {
+  margin-bottom: 30px;
+}
+
+/* h2 heading */
+#exPort {
+  margin-top: 20px;
 }
 
 .example-link {
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+/* ------ R I G H T   S E C T I O N ------*/
+.rightSection {
   display: flex;
   flex-direction: column;
-} */
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-left: 0;
+}
+
+/* ------ F O O T E R ------*/
+#footer {
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+}
