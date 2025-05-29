@@ -10,17 +10,47 @@
   <body>
     <main class="main-content">
       <section id="homeSection" class="page">
-        <h1 id="h1">Building Inspection Training & Interactive Checklist</h1>
-        <div class="buildingComp">Building Compliance</div>
-        <img id="compImg" src="Building Compliance.svg" alt="Compliance" />
-        <h2 class="h2">Welcome to Building Inspection Training</h2>
-        <p class="paragraph">
-          This tool helps you understand the process of inspecting buildings.
-        </p>
-        <!------ Navigation Buttons ------>
-        <button id="btnChecklist">Go to Checklists</button>
-        <button id="btnQuiz">Take the Quiz</button>
-        <img id="pic" src="Photo.svg" alt="inspection photo" />
+        <div class="home-layout">
+          <!------ L E F T   S E C T I O N ------>
+          <aside class="leftSection">
+            <h2>General Information</h2>
+            <ul>
+              <li><a href="#" class="general-link">MBIE</a></li>
+            </ul>
+
+            <h2>Important Information</h2>
+            <ul class="info">
+              <li>Building Concepts</li>
+              <li>Sustainable Design</li>
+              <li>Building Information Modelling (BIM)</li>
+              <li>Building Law</li>
+            </ul>
+
+            <h2>Example Portfolio</h2>
+            <ul class="info">
+              <li><a href="# One Drive Link" class="example-link"></a></li>
+            </ul>
+          </aside>
+
+          <!------ R I G H T   S E C T I O N ------>
+          <div class="rightSection">
+            <h1 id="h1">
+              Building Inspection Training & Interactive Checklist
+            </h1>
+            <div class="buildingComp">Building Compliance</div>
+            <img id="compImg" src="Building Compliance.svg" alt="Compliance" />
+            <h2 class="h2">Welcome to Building Inspection Training</h2>
+            <p class="paragraph">
+              This tool helps you understand the process of inspecting
+              buildings.
+            </p>
+
+            <!------ N A V I G A T I O N   B U T T O N S ------>
+            <button id="btnChecklist">Go to Checklists</button>
+            <button id="btnQuiz">Take the Quiz</button>
+            <img id="pic" src="Photo.svg" alt="inspection photo" />
+          </div>
+        </div>
       </section>
 
       <section id="checklistSection" class="page hidden">
@@ -32,7 +62,7 @@
           <option value="final">Final Inspection</option>
         </select>
 
-        <!---- Return Home Button ---->
+        <!------  R E T U R N   H O M E   B U T T O N ------>
         <button class="btn-home">
           <img src="House_Icon.png" alt="house icon" title="Return to Home" />
         </button>
@@ -51,7 +81,7 @@
         <form id="quizForm"></form>
         <button onclick="gradeQuiz()">Submit Quiz</button>
 
-        <!---- Return Home Button ---->
+        <!------  R E T U R N   H O M E   B U T T O N ------>
         <button class="btn-home">
           <img src="House_Icon.png" alt="house icon" title="Return to Home" />
         </button>
