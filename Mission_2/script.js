@@ -102,3 +102,12 @@ homeButtons.forEach((btn) => {
     showPage("homeSection");
   });
 });
+
+// ----Auto Set Home Page as Default on Load ----
+// homeButtons.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     showPage("homeSection");
+//   });
+// });
+
+// showPage("homeSection");

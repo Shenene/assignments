@@ -3,6 +3,76 @@
   margin: 0;
   padding: 0;
 }
+/* ------ O N   L O A D ------ */
+#siteLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999; /* higher index, to ensure this appears above the main content */
+  animation: fadeOut 1s ease-in-out 3.5s forwards; /* automatic fade */
+}
+
+.foundation,
+.walls,
+.roof {
+  opacity: 0;
+  position: relative;
+  animation: dropIn 0.5s ease forwards;
+  margin: 6px 0;
+}
+
+/* Foundation */
+.foundation {
+  width: 150px;
+  height: 20px;
+  background: white;
+  animation-delay: 0.5s;
+}
+
+/* Walls */
+.walls {
+  width: 100px;
+  height: 100px;
+  background: white;
+  animation-delay: 1.2s;
+}
+
+/* Roof (triangle) */
+.roof {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid white;
+  animation-delay: 2s;
+}
+
+/* Drop animation */
+@keyframes dropIn {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 /* ------ S C R E E N   S I Z E   F I T ------ */
 @media (min-width: 768px) {
@@ -64,25 +134,17 @@ html {
   box-sizing: border-box;
 }
 
+.home-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+}
+
 .hidden {
   display: none;
-}
-
-#h1 {
-  font-size: 45px;
-  text-shadow: #333;
-  margin-bottom: 40px;
-}
-
-.buildingComp {
-  font-size: 28px;
-  margin-top: 8px;
-}
-
-#compImg {
-  max-width: 400px;
-  height: auto;
-  margin: 0 0;
 }
 
 .h2 {
@@ -90,21 +152,7 @@ html {
   margin-bottom: 16px;
 }
 
-.paragraph {
-  font-size: 20px;
-  font-style: italic;
-  margin-bottom: 24px;
-  max-width: 700px;
-}
-
-#pic {
-  max-width: 300px;
-  height: auto;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  align-content: center;
-}
-
+/* Home page buttons */
 button {
   margin: 8px;
   padding: 14px 28px;
@@ -120,6 +168,7 @@ button:hover {
   background-color: #ddd;
 }
 
+/* Return to home page buttons */
 .btn-home {
   background-color: transparent;
   margin-top: 24px;
@@ -141,20 +190,6 @@ button:hover {
 .btn-home:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
-}
-
-/* #btnQuiz {
-  margin-top: 20px;
-  flex-direction: row;
-} */
-
-.home-layout {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  gap: 40px;
 }
 
 /* ------ L E F T   S E C T I O N ------*/
@@ -230,6 +265,38 @@ ul {
   text-align: center;
   width: 100%;
   margin-left: 0;
+}
+
+#h1 {
+  font-size: 45px;
+  text-shadow: #333;
+  margin-bottom: 40px;
+}
+
+.buildingComp {
+  font-size: 28px;
+  margin-top: 8px;
+}
+
+#compImg {
+  max-width: 400px;
+  height: auto;
+  margin: 0 0;
+}
+
+.paragraph {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 24px;
+  max-width: 700px;
+}
+
+#pic {
+  max-width: 300px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-content: center;
 }
 
 /* ------ F O O T E R ------*/
