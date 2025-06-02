@@ -147,51 +147,6 @@ html {
   display: none;
 }
 
-.h2 {
-  font-size: 35px;
-  margin-bottom: 16px;
-}
-
-/* Home page buttons */
-button {
-  margin: 8px;
-  padding: 14px 28px;
-  background-color: #fff;
-  color: #333;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #ddd;
-}
-
-/* Return to home page buttons */
-.btn-home {
-  background-color: transparent;
-  margin-top: 24px;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  size: 40px;
-  transition: transform 0.2s ease;
-}
-
-.btn-home img {
-  width: 40px;
-  height: 40px;
-}
-
-.btn-home:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
-
 /* ------ L E F T   S E C T I O N ------*/
 .leftSection {
   background-color: #333;
@@ -284,11 +239,32 @@ ul {
   margin: 0 0;
 }
 
+.h2-pg1 {
+  font-size: 35px;
+  margin-bottom: 16px;
+}
+
 .paragraph {
   font-size: 20px;
   font-style: italic;
   margin-bottom: 24px;
   max-width: 700px;
+}
+
+/* Home page buttons */
+button {
+  margin: 8px;
+  padding: 14px 28px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #ddd;
 }
 
 #pic {
@@ -297,6 +273,45 @@ ul {
   margin-top: 20px;
   margin-bottom: 10px;
   align-content: center;
+}
+
+/* ------   P A G E S   2,   3,   E T C. ------*/
+/* Return to home page buttons */
+.btn-home {
+  background-color: transparent;
+  margin-top: 24px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  size: 40px;
+  transition: transform 0.2s ease;
+}
+
+.btn-home img {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-home:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Dropdown Menu */
+#inspectionType {
+  width: 200px;
+  height: 30px;
+}
+
+/* Pg 2 - Container */
+#checklistSection {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 /* ------ F O O T E R ------*/

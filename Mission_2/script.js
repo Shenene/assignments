@@ -1,14 +1,7 @@
+// ------ C H E C K L I S T   S E C T I O N ------ //
 const checklists = {
-  footing: [
-    "Check soil compaction",
-    "Check steel placement",
-    "Formwork secured",
-  ],
-  framing: [
-    "Wall studs spacing",
-    "Bracing installed",
-    "Roof frame connections",
-  ],
+  footing: ["Check soil compaction", "Check steel placement", "Formwork secured"],
+  framing: ["Wall studs spacing", "Bracing installed", "Roof frame connections"],
   final: ["Smoke alarms fitted", "Handrails secured", "Energy compliance docs"],
 };
 
@@ -22,6 +15,8 @@ function loadChecklist() {
     });
   }
 }
+
+// ------ Q U I Z   S E C T I O N ------ //
 
 const quizzes = {
   beginner: [
@@ -46,12 +41,17 @@ const quizzes = {
 };
 
 function loadQuiz() {
-  const level = document.getElementById("quizLevel").value;
-  const quizForm = document.getElementById("quizForm");
-  quizForm.innerHTML = "";
+  const level = document.getElementById("quizLevel").value; // Using / Accessing ...
+  const quizForm = document.getElementById("quizForm"); // Using / Accessing ...
+  quizForm.innerHTML = ""; // clears previously shown quiz content
   if (quizzes[level]) {
+    // check if quiz array available for selected level (e.g. is data available for beginner level, etc)
     quizzes[level].forEach((q, index) => {
-      quizForm.innerHTML += `<p>${q.q}</p>`;
+      // Loop through each question in the selected quiz level's array.
+      // 'q' is the current question object.
+      // 'index' is the question's position in the array (0, 1, 2, ...).
+      // This block runs once per question to render it and its answer options.
+      quizForm.innerHTML += `<p>${q.q}</p>`; // addition assignment operator used.
       q.options.forEach((opt) => {
         quizForm.innerHTML += `
           <label><input type="radio" name="q${index}" value="${opt}"> ${opt}</label><br/>`;
@@ -71,20 +71,18 @@ function gradeQuiz() {
     const correct = userAnswer === q.a;
     results.innerHTML += `
       <p>${q.q}<br>
-      Your Answer: ${userAnswer} ${
-      correct ? "✅" : `❌ (Correct: ${q.a})`
-    }</p>`;
+      Your Answer: ${userAnswer} ${correct ? "✅" : `❌ (Correct: ${q.a})`}</p>`;
   });
   showPage("quizResultsSection");
 }
 
-// ----Class for hiding pages ----
+// ----Class for hiding pages ---- //
 function showPage(id) {
   document.querySelectorAll(".page").forEach((p) => p.classList.add("hidden"));
   document.getElementById(id).classList.remove("hidden");
 }
 
-// ----Click Events - Event Listeners ----
+// ----Click Events - Event Listeners ---- //
 const checklistBtn = document.getElementById("btnChecklist");
 const quizBtn = document.getElementById("btnQuiz");
 const homeButtons = document.querySelectorAll(".btn-home");

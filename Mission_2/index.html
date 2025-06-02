@@ -23,60 +23,50 @@
             <h2 id="genInfo">General Information</h2>
             <ul>
               <li>
-                <a
-                  href="https://www.mbie.govt.nz/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="general-link"
-                  >MBIE</a
-                >
+                <a href="https://www.mbie.govt.nz/" target="_blank" rel="noopener noreferrer" class="general-link">MBIE</a>
               </li>
             </ul>
 
             <h2 id="impInfo">Important Information</h2>
             <ul class="info">
-              <li><a href="">Building Concepts</a></li>
-              <li><a href="">Sustainable Design</a></li>
-              <li><a href="">Building Information Modelling (BIM)</a></li>
               <li>
-                <a
-                  href="https://www.dropbox.com/scl/fi/0agtkl05v43jjxx64i8wf/3D-Model-Diorama-2014-3.1.jpg?rlkey=ntq8tkkc3i53n4ol7gi4ogpt6&st=e80vvitc&dl=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >3D Model</a
-                >
+                <a href="">Building Concepts<br />(No link yet)</a>
               </li>
-              <li><a href="">Building Law</a></li>
-              <li><a href="">Project Management</a></li>
-              <li><a href="">Health & Safety</a></li>
+              <li>
+                <a href="">Sustainable Design<br />(No link yet)</a>
+              </li>
+              <li>
+                <a href="">Building Information Modelling (BIM)<br />(No link yet)</a>
+              </li>
+              <li>
+                <a href="https://www.dropbox.com/scl/fi/0agtkl05v43jjxx64i8wf/3D-Model-Diorama-2014-3.1.jpg?rlkey=ntq8tkkc3i53n4ol7gi4ogpt6&st=e80vvitc&dl=0" target="_blank" rel="noopener noreferrer">3D Model</a>
+              </li>
+              <li>
+                <a href="">Building Law<br />(No link yet)</a>
+              </li>
+              <li>
+                <a href="">Project Management<br />(No link yet)</a>
+              </li>
+              <li>
+                <a href="">Health & Safety<br />(No link yet)</a>
+              </li>
             </ul>
 
             <h2 id="exPort">Example Portfolio</h2>
             <ul class="info">
               <li>
-                <a
-                  href="https://www.dropbox.com/scl/fo/ya99g8srg4479f5o1s0w2/AGbg5GNWCYriRHLe8jrQDQ4?rlkey=qwfeqwrdy56k08euysczoxrwx&st=al1p7vpe&dl=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="example-link"
-                  >Portfolio</a
-                >
+                <a href="https://www.dropbox.com/scl/fo/ya99g8srg4479f5o1s0w2/AGbg5GNWCYriRHLe8jrQDQ4?rlkey=qwfeqwrdy56k08euysczoxrwx&st=al1p7vpe&dl=0" target="_blank" rel="noopener noreferrer" class="example-link">Portfolio</a>
               </li>
             </ul>
           </aside>
 
           <!------ R I G H T   S E C T I O N ------>
           <div class="rightSection">
-            <h1 id="h1">
-              Building Inspection Training & Interactive Checklist
-            </h1>
+            <h1 id="h1">Building Inspection Training & Interactive Checklist</h1>
             <div class="buildingComp">Building Compliance</div>
             <img id="compImg" src="Building Compliance.svg" alt="Compliance" />
-            <h2 class="h2">Welcome to Building Inspection Training</h2>
-            <p class="paragraph">
-              This tool helps you understand the process of inspecting
-              buildings.
-            </p>
+            <h2 class="h2 pg1">Welcome to Building Inspection Training</h2>
+            <p class="paragraph">This tool helps you understand the process of inspecting buildings.</p>
 
             <!------ N A V I G A T I O N   B U T T O N S ------>
             <button id="btnChecklist">Go to Checklists</button>
@@ -86,34 +76,42 @@
         </div>
       </section>
 
+      <!------- P A G E   2  --  C h e c k l i s t -------->
       <section id="checklistSection" class="page hidden">
-        <h2 class="h2">Select an Inspection Type</h2>
+        <h2 class="h2 pg2">Select an Inspection Type</h2>
         <select id="inspectionType" onchange="loadChecklist()">
           <option value="">-- Choose --</option>
-          <option value="footing">Footing Inspection</option>
-          <option value="framing">Framing Inspection</option>
-          <option value="final">Final Inspection</option>
+          <option value="IFO Foundation">Foundation Inspection</option>
+          <option value="ICB Masonry Concrete Block">Block Inspection</option>
+          <option value="ISF Floor slab">Slab Inspection</option>
+          <option value="IFG Framing">Framing Inspection</option>
+          <option value="ICA Cavity Wrap">Cavity Wrap Inspection</option>
+          <option value="ICL Cladding">Cladding Inspection</option>
+          <option value="IPB IPP Preline (Building & Plumbing)">Preline Inspection</option>
+          <option value="IPL Postline">Postline Inspection</option>
+          <option value="ITK Waterproofing">Waterproofing Inspection</option>
+          <option value="IF Final">Final Inspection</option>
         </select>
-
         <!------  R E T U R N   H O M E   B U T T O N ------>
         <button class="btn-home">
           <img src="House_Icon.png" alt="house icon" title="Return to Home" />
         </button>
+        <!-------- Output Display Window (Placeholder Section) -------->
         <div id="checklistContainer"></div>
       </section>
 
+      <!------- P A G E   2  --  Q u i z -------->
       <section id="quizSection" class="page hidden">
-        <h2 class="h2">Choose Your Quiz Level</h2>
+        <h2 class="h2 pg2">Choose Your Quiz Level</h2>
         <select id="quizLevel" onchange="loadQuiz()">
           <option value="">-- Choose Level --</option>
           <option value="beginner">Beginner</option>
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
-
+        <!-------- Q & A Form -------->
         <form id="quizForm"></form>
         <button onclick="gradeQuiz()">Submit Quiz</button>
-
         <!------  R E T U R N   H O M E   B U T T O N ------>
         <button class="btn-home">
           <img src="House_Icon.png" alt="house icon" title="Return to Home" />
@@ -122,10 +120,14 @@
 
       <section id="quizResultsSection" class="page hidden">
         <h2>Quiz Results</h2>
+        <!-------- Output Display Window (Placeholder Section)-------->
         <div id="quizResults"></div>
+        <!-------- Back to Quiz Button-------->
         <button onclick="showPage('quizSection')">Back to Quiz</button>
       </section>
     </main>
+
+    <!------  F O O T E R ------>
     <footer id="footer">&copy; 2025 Building Inspection Training Tool</footer>
   </body>
 </html>
