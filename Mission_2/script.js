@@ -117,11 +117,11 @@ homeButtons.forEach((btn) => {
   });
 });
 
-// ----Auto Set Home Page as Default on Load ----
-// homeButtons.forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     showPage("homeSection");
-//   });
-// });
+// ----Auto Set Home Page as Default on Load & on Return----
+homeButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    showPage("homeSection");
+  });
+});
 
-// showPage("homeSection");
+showPage("homeSection");
