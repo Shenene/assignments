@@ -1,23 +1,36 @@
 // ------ C H E C K L I S T   S E C T I O N ------ //
+//
+// ------ Checklists ------ //
 const checklists = {
-  footing: ["Check soil compaction", "Check steel placement", "Formwork secured"],
-  framing: ["Wall studs spacing", "Bracing installed", "Roof frame connections"],
-  final: ["Smoke alarms fitted", "Handrails secured", "Energy compliance docs"],
+  "IFO Foundation": ["Timber Subfloor", "Footings/bearers/joists size/spacings correct (1.5kPa)", "Pile Size (125 sq min)", "Min/Max pile height", "Solid Blocking @ joist mid-span", "Subfloor bracing calcs", "Anchor/Braced piles", "Stainless Steel fixings to exposed, < 600mm to GL", "Subfloor ventilation (min 3500mm²/m²)", "Min 450mm crawl space", "DPC to pile < 300mm high", "Driven Piles"],
+  "ICB Masonry Concrete Block": [],
+  "ISF Floor slab": ["Raft Slab", "Conventional Slab", "Geotech Report", "Good Ground in accordance with NZS3604", "Producer Statement", "Ground level to FL clearance", "Check soil compaction", "Check steel placement", "Formwork secured", "SED for Drain Bridging (if applicable)"],
+  "IFG Framing": ["Wall studs spacing", "Bracing installed", "Roof frame connections"],
+  "ICA Cavity Wrap": [],
+  "ICL Cladding": [],
+  "IPB IPP Preline (Building & Plumbing)": [],
+  "IPL Postline": [],
+  "ITK Waterproofing": [],
+  "IF Final": ["Smoke alarms fitted", "Handrails secured", "Energy compliance docs"],
 };
 
+// ------ Loading Checklists ------ //
 function loadChecklist() {
-  const type = document.getElementById("inspectionType").value;
-  const container = document.getElementById("checklistContainer");
-  container.innerHTML = "";
+  const type = document.getElementById("inspectionType").value; // Using/Accessing ...
+  const container = document.getElementById("checklistContainer"); // Using/Accessing ...
+  container.innerHTML = ""; // Reset the container (clear content)
   if (checklists[type]) {
+    // check if there is a checklist array for the selected inspection type.
     checklists[type].forEach((item) => {
-      container.innerHTML += `<label><input type="checkbox"> ${item}</label><br/>`;
+      // loop through each item in the checklist.
+      container.innerHTML += `<label><input type="checkbox"> ${item}</label><br/>`; // each item has a checkbox and label
     });
   }
 }
-
+//
 // ------ Q U I Z   S E C T I O N ------ //
-
+//
+// ------ Quiz Questions ------//
 const quizzes = {
   beginner: [
     {
@@ -39,10 +52,11 @@ const quizzes = {
     },
   ],
 };
-
+//
+// ------ Quiz Form ------//
 function loadQuiz() {
-  const level = document.getElementById("quizLevel").value; // Using / Accessing ...
-  const quizForm = document.getElementById("quizForm"); // Using / Accessing ...
+  const level = document.getElementById("quizLevel").value; // Using/Accessing ...
+  const quizForm = document.getElementById("quizForm"); // Using/Accessing ...
   quizForm.innerHTML = ""; // clears previously shown quiz content
   if (quizzes[level]) {
     // check if quiz array available for selected level (e.g. is data available for beginner level, etc)
@@ -50,28 +64,30 @@ function loadQuiz() {
       // Loop through each question in the selected quiz level's array.
       // 'q' is the current question object.
       // 'index' is the question's position in the array (0, 1, 2, ...).
-      // This block runs once per question to render it and its answer options.
       quizForm.innerHTML += `<p>${q.q}</p>`; // addition assignment operator used.
       q.options.forEach((opt) => {
+        // loop through each answer option.
         quizForm.innerHTML += `
-          <label><input type="radio" name="q${index}" value="${opt}"> ${opt}</label><br/>`;
+          <label><input type="radio" name="q${index}" value="${opt}"> ${opt}</label><br/>`; // adds the radio button & labels to the form
       });
     });
   }
 }
-
+//
+// ------ Quiz Results ------//
 function gradeQuiz() {
-  const level = document.getElementById("quizLevel").value;
-  const form = document.forms["quizForm"];
-  const results = document.getElementById("quizResults");
-  results.innerHTML = "";
-  if (!quizzes[level]) return;
+  const level = document.getElementById("quizLevel").value; // Using/Accessing ...
+  const form = document.forms["quizForm"]; // Using/Accessing ...
+  const results = document.getElementById("quizResults"); // Using/Accessing ...
+  results.innerHTML = ""; // clears existing results before showing new ones.
+  if (!quizzes[level]) return; // if there is no quiz for this level, return (exits the function).
   quizzes[level].forEach((q, i) => {
-    const userAnswer = form[`q${i}`]?.value || "None";
-    const correct = userAnswer === q.a;
+    // Loops through each question for the selected level. (q = current quiz question and i= index number of the question).
+    const userAnswer = form[`q${i}`]?.value || "None"; // if the user don't select anything and click submit it will say None.
+    const correct = userAnswer === q.a; // check if user's answer matches the correct one.
     results.innerHTML += `
-      <p>${q.q}<br>
-      Your Answer: ${userAnswer} ${correct ? "✅" : `❌ (Correct: ${q.a})`}</p>`;
+      <p>${q.q}<br> 
+      Your Answer: ${userAnswer} ${correct ? "✅" : `❌ (Correct: ${q.a})`}</p>`; //  displays the question and evaluates the user's answer.
   });
   showPage("quizResultsSection");
 }

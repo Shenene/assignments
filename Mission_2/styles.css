@@ -212,6 +212,39 @@ ul {
   padding: 20px;
 }
 
+/* Building Code Images  */
+.heading_BC {
+  display: block;
+  text-align: left;
+  padding-left: 8px;
+}
+.icon-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  max-width: 200px;
+}
+
+.tiny-icon {
+  width: 40px;
+  height: auto;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.icon-row span {
+  display: block;
+  text-align: left;
+}
+
+.leftImages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 150px;
+}
+
 /* ------ R I G H T   S E C T I O N ------*/
 .rightSection {
   display: flex;
@@ -312,6 +345,61 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+}
+
+/* Align Container items */
+#checklistContainer label {
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+  padding-left: 8px;
+  font-size: 16px;
+}
+
+.details {
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px; /* optional rounded corners */
+}
+
+/* Quiz Section */
+/* Dropdown Menu */
+#quizLevel {
+  width: 200px;
+  height: 30px;
+}
+
+form#quizForm p {
+  text-align: left;
+  margin: 10px 0 4px 0;
+  padding-left: 8px;
+  font-size: 16px;
+}
+
+#quizSection {
+  position: relative;
+  background-image: url("Raft\ Slab.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#quizSection::before {
+  /* Pseudo Element */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(44, 62, 80, 0.7); /* with transparency */
+  z-index: 0;
+}
+
+#quizSection * {
+  position: relative;
+  z-index: 1;
 }
 
 /* ------ F O O T E R ------*/

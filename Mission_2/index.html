@@ -60,6 +60,43 @@
             </ul>
           </aside>
 
+          <!-------- Building Code Images -------->
+          <div class="leftImages">
+            <h2 class="heading_BC">Building Code</h2>
+            <div class="icon-row">
+              <img class="tiny-icon" src="A.svg" alt="A image" />
+              <span>General Provisions</span>
+            </div>
+            <div class="icon-row">
+              <img class="tiny-icon" src="B.svg" alt="B image" />
+              <span>Stability</span>
+            </div>
+            <div class="icon-row">
+              <img class="tiny-icon" src="C.svg" alt="C image" />
+              <span>Protection from Fire</span>
+            </div>
+            <div class="icon-row">
+              <img class="tiny-icon" src="D.svg" alt="D image" />
+              <span>Access</span>
+            </div>
+            <div class="icon-row">
+              <img class="tiny-icon" src="E.svg" alt="E image" />
+              <span>Moisture</span>
+            </div>
+            <div class="icon-row">
+              <img class="tiny-icon" src="F.svg" alt="F image" />
+              <span>Safety of users</span>
+            </div>
+            <div class="icon-row">
+              <img class="tiny-icon" src="G.svg" alt="G image" />
+              <span>Services and facilities</span>
+            </div>
+            <div class="icon-row">
+              <img class="tiny-icon" src="H.svg" alt="H image" />
+              <span>Energy efficiency</span>
+            </div>
+          </div>
+
           <!------ R I G H T   S E C T I O N ------>
           <div class="rightSection">
             <h1 id="h1">Building Inspection Training & Interactive Checklist</h1>
@@ -78,6 +115,7 @@
 
       <!------- P A G E   2  --  C h e c k l i s t -------->
       <section id="checklistSection" class="page hidden">
+        <img src="Cladding Details.jpg" alt="Cladding Details" class="details" />
         <h2 class="h2 pg2">Select an Inspection Type</h2>
         <select id="inspectionType" onchange="loadChecklist()">
           <option value="">-- Choose --</option>
@@ -100,7 +138,7 @@
         <div id="checklistContainer"></div>
       </section>
 
-      <!------- P A G E   2  --  Q u i z -------->
+      <!------- P A G E   2  --  Q U I Z -------->
       <section id="quizSection" class="page hidden">
         <h2 class="h2 pg2">Choose Your Quiz Level</h2>
         <select id="quizLevel" onchange="loadQuiz()">
@@ -117,17 +155,17 @@
           <img src="House_Icon.png" alt="house icon" title="Return to Home" />
         </button>
       </section>
-
+      <!-------- Q u i z   R e s u l t s-------->
       <section id="quizResultsSection" class="page hidden">
         <h2>Quiz Results</h2>
-        <!-------- Output Display Window (Placeholder Section)-------->
+        <!--Output Display Window for quiz answers (Placeholder Section)-->
         <div id="quizResults"></div>
         <!-------- Back to Quiz Button-------->
         <button onclick="showPage('quizSection')">Back to Quiz</button>
       </section>
     </main>
 
-    <!------  F O O T E R ------>
+    <!-------- F O O T E R --------->
     <footer id="footer">&copy; 2025 Building Inspection Training Tool</footer>
   </body>
 </html>
