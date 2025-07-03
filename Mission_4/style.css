@@ -22,7 +22,8 @@
 .header_container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
 /* CONTAINER - LOGIN/REGISTER */
@@ -31,6 +32,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: auto;
   margin-left: 30px;
   width: 100px;
   height: 125px;
@@ -49,6 +51,25 @@
   color: rgb(0, 0, 0);
 }
 
+/*CONTAINER - LOGO */
+.logo_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0px;
+  margin-top: 35px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+.logo-text {
+  padding-top: 10px;
+}
+
 /* CONTAINER - MENU */
 .menu_container {
   display: flex;
@@ -56,14 +77,12 @@
   justify-content: center;
   align-items: center;
   margin-right: 30px;
-  width: 100px;
+  width: 40px;
   height: 100px;
-  padding: 20px;
 }
 
 .menu {
   width: 25px;
   height: 20px;
-
   cursor: pointer;
 }
