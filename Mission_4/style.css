@@ -67,6 +67,12 @@
 }
 
 .logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
   padding-top: 10px;
 }
 
@@ -85,4 +91,24 @@
   width: 25px;
   height: 20px;
   cursor: pointer;
+}
+
+/* --------------------- H O M E   S C R E E N--------------------- */
+/* --- CONTAINER MAIN - MAIN CONTENT--- */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 300px;
+  margin-left: 1100px;
+}
+
+.heading_main {
+  padding-top: 110px;
+}
+
+.subtext {
+  margin-top: 20px;
+  line-height: 1.4;
 }
