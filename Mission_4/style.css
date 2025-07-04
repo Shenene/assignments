@@ -6,10 +6,10 @@
   padding: 0;
 }
 
-/* Add Media queries later */
+/* ------------------------ Add Media queries later ------------------------ */
 
+/* B A C K   G R O U N D S */
 .background {
-  background-image: url('background/home_screen_laptop_bg.png');
   width: 1440px;
   height: 1024px;
   margin: 0 auto;
@@ -18,7 +18,15 @@
   background-repeat: no-repeat;
 }
 
-/* --- CONTAINER MAIN - HEADER --- */
+.background.home {
+  background-image: url('background/home_screen_laptop_bg.png');
+}
+
+.background.other {
+  background-image: url('background/other_screen_bg_laptop.png');
+}
+
+/* --- H E A D E R - Container - Main --- */
 .header_container {
   display: flex;
   flex-direction: row;
@@ -26,7 +34,7 @@
   justify-content: flex-end;
 }
 
-/* CONTAINER - LOGIN/REGISTER */
+/* Container 1 */
 .login_container {
   display: flex;
   flex-direction: column;
@@ -51,7 +59,7 @@
   color: rgb(0, 0, 0);
 }
 
-/*CONTAINER - LOGO */
+/* Container 2 */
 .logo_container {
   display: flex;
   flex-direction: column;
@@ -76,7 +84,7 @@
   padding-top: 10px;
 }
 
-/* CONTAINER - MENU */
+/* Container 3 */
 .menu_container {
   display: flex;
   flex-direction: column;
@@ -93,9 +101,9 @@
   cursor: pointer;
 }
 
-/* --------------------- H O M E   S C R E E N--------------------- */
-/* --- CONTAINER MAIN - MAIN CONTENT--- */
-.main-content {
+/* --------------------- 🏠 H O M E   S C R E E N--------------------- */
+/* --- CONTAINER MAIN - Main Content  - Home Screen  --- */
+.main-content.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,11 +112,141 @@
   margin-left: 1100px;
 }
 
-.heading_main {
+.heading_main.home {
   padding-top: 110px;
 }
 
-.subtext {
+.subtext.home {
   margin-top: 20px;
   line-height: 1.4;
 }
+
+/* ICON GRID */
+.icon-grid {
+  padding-top: 20px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 130px 200px 120px 150px 160px auto;
+  grid-template-rows: repeat(5, 105px);
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* All icons - general */
+/* .icon {
+  width: 120px;
+  height: 120px;
+  border: 1px solid red;
+} */
+
+/* individual icon - adjustments */
+#tree_icon,
+#bench_icon,
+#graffiti_icon,
+#path_icon,
+#bin_icon,
+#pothole_icon {
+  width: 130px;
+  height: 130px;
+}
+
+#light_icon {
+  width: 240px;
+  height: 240px;
+}
+
+/* GRID LAYOUT */
+
+/* tree icon */
+.icon:nth-child(1) {
+  justify-self: right;
+}
+
+/* bench icon */
+.icon:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  align-self: center;
+  justify-self: left;
+}
+
+/* graffiti icon */
+.icon:nth-child(3) {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  align-self: right;
+  justify-self: center;
+}
+
+/* paths icon */
+.icon:nth-child(4) {
+  grid-column: 1/2;
+  grid-row: 4/6;
+  align-self: center;
+  justify-self: right;
+}
+
+/* lights icon */
+.icon:nth-child(5) {
+  grid-column: 3/6;
+  grid-row: 4/6;
+  align-self: center;
+  justify-self: left;
+}
+
+/* bins icon */
+.icon:nth-child(6) {
+  grid-column: 5/6;
+  grid-row: 2/3;
+  align-self: center;
+  justify-self: center;
+}
+
+/* potholes icon */
+.icon:nth-child(7) {
+  grid-column: 5/6;
+  grid-row: 4/6;
+  align-self: center;
+  justify-self: right;
+}
+
+.footer_home {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 30px;
+}
+
+/* ---------------- 📑 R E P O R T   I S S U E   S C R E E N -------------- */
+/* PROGRESS BAR */
+.progress-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  margin: 0 auto;
+}
+
+.progress-label {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #a1a1a1;
+}
+
+.progress-bar {
+  height: 10px;
+  margin-top: 5px;
+  background-color: #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 33%;
+  background-color: #77a741;
+  transition: width 0.3s ease;
+}
+
+/* ------------------------------------------------------------------ */
+/* --- CONTAINER MAIN - Main Content - Report Issue Screen  --- */
