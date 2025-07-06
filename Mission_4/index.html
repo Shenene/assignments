@@ -6,15 +6,14 @@
     <title>FixIt App Prototype</title>
     <link href="style.css" rel="stylesheet" />
   </head>
-
   <body>
     <!-- B A C K   G R O U N D -->
     <div class="app-wrapper background home">
       <!---------------- 🏠 H O M E   S C R E E N ---------------->
       <!-- H E A D E R - Container - Main -->
-      <header class="header_container">
+      <header class="header_container-home">
         <!-- Container 1 -->
-        <div class="login_container">
+        <div class="login_container-home">
           <img
             src="icons/login_icon.png"
             alt="login/register icon"
@@ -42,7 +41,7 @@
       <!-- ------------------------------------------------------------------ -->
       <!-- CONTAINER MAIN - Main Content - Home Screen -->
       <main class="main-content home">
-        <h1 class="heading_main home">Welcome to FixIt</h1>
+        <h1 class="heading_main--home">Welcome to FixIt</h1>
         <p class="subtext home">
           A quick, simple way to report problems in your city - like full bins,
           broken lights, or graffiti, You're helping restore our shared spaces.
@@ -94,74 +93,10 @@
         />
       </section>
 
-      <footer class="footer_home">
+      <!-- FOOTER -->
+      <footer class="footer-home">
         <h2>&copy; 2025 FixIt. All rights reserved</h2>
       </footer>
     </div>
-
-    <!---------------- 📑 R E P O R T   I S S U E   S C R E E N ---------------->
-    <!-- B A C K   G R O U N D -->
-    <div class="app-wrapper background other">
-      <!-- H E A D E R - Container - Main -->
-      <header class="header_container">
-        <!-- Container 1 -->
-        <div class="login_container">
-          <img
-            src="icons/login_icon.png"
-            alt="login/register icon"
-            class="login-icon"
-            id="authIcon"
-          />
-          <div class="login-text">Login/Register</div>
-        </div>
-
-        <!-- Container 2 -->
-        <div class="logo_container">
-          <img src="logo/logo.png" alt="logo" class="logo" />
-          <div class="logo-text">
-            <span>See something wrong?</span>
-            <span>Report it. Help fix it.</span>
-          </div>
-        </div>
-
-        <!-- Container 3 -->
-        <div class="menu_container">
-          <img src="icons/menu.png" alt="menu icon" class="menu" />
-        </div>
-      </header>
-      <!-- ------------------------------------------------------------------ -->
-      <!-- PROGRESS BAR -->
-      <div class="progress-wrapper">
-        <span class="progress-label">Step 1</span>
-        <div class="progress-bar">
-          <div class="progress-fill"></div>
-        </div>
-      </div>
-      <!-- ------------------------------------------------------------------ -->
-      <!-- CONTAINER MAIN - Main Content - Report Issue Screen -->
-      <main class="main-content report_issue">
-        <h1 class="heading_main report_issue">Lights</h1>
-        <span><btn class="btn_lights_1">Flickering light</btn></span>
-        <span><btn class="btn_lights_2">Completely off</btn></span>
-        <span><btn class="btn_lights_3">Pole damaged</btn></span>
-        <div class="img_upload_container">
-          <img
-            class="upload-img"
-            src="images/drag_drop_img.svg"
-            alt="drag/drop image"
-          />
-        </div>
-      </main>
-    </div>
   </body>
 </html>
-==================
-<main class="main-content home">
-  <h1 class="heading_main home">Welcome to FixIt</h1>
-  <p class="subtext home">
-    A quick, simple way to report problems in your city - like full bins, broken
-    lights, or graffiti, You're helping restore our shared spaces.
-  </p>
-</main>
-
-<!-- 🪪 📑 🗂️ 📨 -->

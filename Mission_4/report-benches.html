@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FixIt App Prototype</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!---------------- 📑 R E P O R T   I S S U E   S C R E E N  * 🪑 B E N C H E S---------------->
+    <!-- B A C K   G R O U N D -->
+    <div class="app-wrapper background other">
+      <!-- H E A D E R - Container - Main -->
+      <header class="header_container">
+        
+         <!-- BACK BUTTON (ARROW) -->
+        <div class="back-button">
+          <button class="btn btn-back">
+            <img src="icons/back_arrow.png" alt="Go back" class="back-icon" />
+          </button>
+        </div>
+
+        <!-- Container 1 -->
+        <div class="login_container">
+          <img
+            src="icons/login_icon.png"
+            alt="login/register icon"
+            class="login-icon"
+            id="authIcon"
+          />
+          <div class="login-text">Login/Register</div>
+        </div>
+
+        <!-- Container 2 -->
+        <div class="logo_container">
+          <img src="logo/logo.png" alt="logo" class="logo" />
+          <div class="logo-text">
+            <span>See something wrong?</span>
+            <span>Report it. Help fix it.</span>
+          </div>
+        </div>
+
+        <!-- Container 3 -->
+        <div class="menu_container">
+          <img src="icons/menu.png" alt="menu icon" class="menu" />
+        </div>
+      </header>
+      <!-- ------------------------------------------------------------------ -->
+      <!-- PROGRESS BAR -->
+      <div class="progress-wrapper">
+        <span class="progress-label">Step 1</span>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <!-- ------------------------------------------------------------------ -->
+      <!-- CONTAINER MAIN - Main Content - Report Issue Screen -->
+      <main class="main-content report-issue">
+        <div class="content-wrapper">
+          <!-- Text Category Heading - Benches -->
+          <h1 class="heading_main report-issue">Benches</h1>
+
+          <fieldset class="issue-options">
+            <legend class="visually-hidden">Type of bench issue</legend>
+            <!-- button 1 -->
+            <button class="btn btn--broken-bench">
+              <span class="label--broken-bench">Broken</span>
+            </button>
+
+            <!-- button 2 -->
+            <button class="btn btn--loose-unstable">
+              <span class="label--loose-unstable">Loose / unstable</span>
+            </button>
+
+            <!-- button 3 -->
+            <button class="btn btn-vandalized">
+              <span class="label-vandalized">Vandalized</span>
+            </button>
+
+            <!-- button 4 -->
+            <button class="btn btn--missing-bench">
+              <span class="label--missing-bench">Missing bench</span>
+            </button>
+
+            <!-- button 5 -->
+            <button class="btn btn-other">
+              <span class="label-other">Other</span>
+            </button>
+
+            <!-- user input field -->
+            <div class="other-description">
+              <label for="other-issue-detail" class="visually-hidden other"
+                >Describe the other issue</label
+              >
+              <input type="text" id="other-issue-detail"
+              name="other-issue-detail" placeholder="Describe the other issue..." class="input-other"> </input>
+            </div>
+          </fieldset>
+
+          <!-- Upload image section -->
+          <section class="img-upload-container">
+            <img
+              class="upload-icon"
+              src="images/drag_drop_img.svg"
+              alt="Drag or drop to upload a photo"
+            />
+            <span class="subtext upload-instruction"
+              >Drag & drop or click to upload</span
+            >
+            <span class="subtext optional-note">(Optional)</span>
+          </section>
+        </div>
+      </main>
+      <!-- FOOTER -->
+      <footer class="footer footer-benches">
+        <div class="footer-inner">
+          <button class="btn next-button">Next</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

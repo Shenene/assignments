@@ -1,3 +1,4 @@
+/*  ------------------------- Base/Reset -------------------------  */
 *,
 *::before,
 *::after {
@@ -6,9 +7,16 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 /* ------------------------ Add Media queries later ------------------------ */
 
-/* B A C K   G R O U N D S */
+/*  ------------------------- Layout containers -------------------------  */
+/* --- B A C K   G R O U N D S --- */
 .background {
   width: 1440px;
   height: 1024px;
@@ -26,6 +34,7 @@
   background-image: url('background/other_screen_bg_laptop.png');
 }
 
+/*  ------------------------- Shared Components -------------------------  */
 /* --- H E A D E R - Container - Main --- */
 .header_container {
   display: flex;
@@ -34,7 +43,27 @@
   justify-content: flex-end;
 }
 
-/* Container 1 */
+.back-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 65px;
+  width: 40px;
+  height: 100px;
+}
+
+.btn-back {
+  background: transparent;
+}
+
+.back-icon {
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Login Container 1*/
 .login_container {
   display: flex;
   flex-direction: column;
@@ -80,6 +109,7 @@
   align-items: center;
   text-align: center;
   font-size: 12px;
+  color: #545454;
   line-height: 1.4;
   padding-top: 10px;
 }
@@ -90,7 +120,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 65px;
   width: 40px;
   height: 100px;
 }
@@ -101,8 +131,168 @@
   cursor: pointer;
 }
 
+/* --- P R O G R E S S   B A R --- */
+.progress-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  margin: 0 auto;
+}
+
+.progress-label {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #a1a1a1;
+}
+
+.progress-bar {
+  height: 10px;
+  margin-top: 5px;
+  background-color: #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 33%;
+  background-color: #77a741;
+  transition: width 0.3s ease;
+}
+
+/* M A I N   C O N T E N T */
+.main-content.report-issue {
+  width: 100%;
+  display: grid;
+  padding-top: 50px;
+}
+
+.content-wrapper {
+  display: grid;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+  gap: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Text Category Heading */
+.heading_main.report-issue {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #545454;
+}
+
+/* Upload image section */
+.image-upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 600px;
+}
+
+.upload-icon {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 2/1;
+  height: 180px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  margin-top: 40px;
+  justify-content: center;
+  align-content: center;
+}
+
+.subtext.upload-instruction {
+  display: flex;
+  justify-content: center;
+  align-content: left;
+  font-size: 15px;
+  font-weight: bold;
+  color: #545454;
+}
+
+.subtext.optional-note {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: 200;
+  color: #545454;
+}
+
+/* HIDDEN CONTENT */
+
+/* learnt that this hides the text from view - but info is useful for screen readers */
+.visually-hidden {
+  position: absolute !important; /* take it out of the normal flow */
+  width: 1px; /* shrink it down to a single pixel */
+  height: 1px; /* shrink it down to a single pixel */
+  margin: -1px; /* pull it off-screen just in case */
+  padding: 0; /* no extra padding to expand it */
+  border: 0; /* no border to make it visible */
+  clip: rect(0 0 0 0); /* clip any remaining pixel so nothing shows */
+  white-space: nowrap; /* prevent the text from wrapping out of the tiny box */
+  overflow: hidden; /* hide any overflowing content */
+}
+
+/* B A C K   B U T T O N S */
+.btn {
+  font-size: 18px;
+  min-width: 100px;
+  min-height: 44px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  color: #545454;
+}
+
+/* --- F O O T E R --- */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+  padding: 0px 65px;
+  margin-bottom: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 /* --------------------- 🏠 H O M E   S C R E E N--------------------- */
 /* --- CONTAINER MAIN - Main Content  - Home Screen  --- */
+.header_container-home {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/* Login Container 1*/
+.login_container-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 65px;
+  width: 100px;
+  height: 125px;
+  padding: 20px;
+}
+
+/* M A I N   C O N T E N T */
+
 .main-content.home {
   display: flex;
   flex-direction: column;
@@ -112,13 +302,18 @@
   margin-left: 1100px;
 }
 
-.heading_main.home {
+.heading_main--home {
   padding-top: 110px;
+  font-size: 28px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #545454;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .subtext.home {
   margin-top: 20px;
   line-height: 1.4;
+  color: #545454;
 }
 
 /* ICON GRID */
@@ -132,13 +327,6 @@
   margin: 0 auto;
   position: relative;
 }
-
-/* All icons - general */
-/* .icon {
-  width: 120px;
-  height: 120px;
-  border: 1px solid red;
-} */
 
 /* individual icon - adjustments */
 #tree_icon,
@@ -211,42 +399,129 @@
   justify-self: right;
 }
 
-.footer_home {
+/* FOOTER - HOME */
+
+.footer-home {
   display: flex;
   justify-content: flex-end;
   padding: 10px 30px;
+  font-size: 12px;
+  color: #545454;
 }
 
-/* ---------------- 📑 R E P O R T   I S S U E   S C R E E N -------------- */
-/* PROGRESS BAR */
-.progress-wrapper {
+/* ---------------- 📑 R E P O R T   I S S U E   S C R E E N  * 💡 L I G H T S ---------------- */
+.issue-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  border: none;
+}
+
+/* buttons */
+.btn-light-flicker,
+.btn-light-off,
+.btn-light-pole,
+.btn-light-other {
+  display: grid;
+  align-items: center;
+  background: url('images/button.png') center/cover no-repeat;
+  aspect-ratio: 4/1;
+  position: relative;
   width: 100%;
-  max-width: 400px;
-  margin: 10px;
-  margin: 0 auto;
+  border: none;
+  cursor: pointer;
 }
 
-.progress-label {
-  font-family: sans-serif;
+.label-flickering-light,
+.label-completely-off,
+.label-pole-damaged,
+.label-other {
+  z-index: 1;
+  color: #545454;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 auto;
+}
+
+/* user input field */
+.other-description {
+  display: grid;
+  margin-top: 10px;
+  gap: 5px;
+  grid-column: 1 / -1;
+}
+
+.input-other {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
   font-size: 16px;
-  font-weight: 600;
-  color: #a1a1a1;
+  border-radius: 6px;
+  border: 1px solid #bdbdbd;
 }
 
-.progress-bar {
-  height: 10px;
-  margin-top: 5px;
-  background-color: #ccc;
-  border-radius: 4px;
-  overflow: hidden;
+/* .other-description {
+  display: none;
+} LATER FOR JS USE - to hide 'other' inut until button is clicked */
+
+/* FOOTER - LIGHTS */
+
+.footer-lights {
+  margin-top: 125px;
 }
 
-.progress-fill {
-  height: 100%;
-  width: 33%;
-  background-color: #77a741;
-  transition: width 0.3s ease;
+/*  --------------- 📑 R E P O R T   I S S U E   S C R E E N  * 🪑 B E N C H E S--------------- */
+/* -- CONTAINER MAIN - Main Content - Report Issue Screen -- */
+
+/* buttons */
+.btn--broken-bench,
+.btn--loose-unstable,
+.btn-vandalized,
+.btn--missing-bench,
+.btn-other {
+  display: grid;
+  align-items: center;
+  background: url('images/button.png') center/cover no-repeat;
+  aspect-ratio: 4/1;
+  position: relative;
+  width: 100%;
+  border: none;
+  cursor: pointer;
 }
 
-/* ------------------------------------------------------------------ */
-/* --- CONTAINER MAIN - Main Content - Report Issue Screen  --- */
+.label--broken-bench,
+.label--loose-unstable,
+.label-vandalized,
+.label--missing-bench,
+.label-other {
+  z-index: 1;
+  color: #545454;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 auto;
+}
+
+/* user input field */
+.other-description {
+  display: grid;
+  margin-top: 10px;
+  gap: 5px;
+  grid-column: 1 / -1;
+}
+
+.input-other {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #bdbdbd;
+}
+
+/* FOOTER - BENCHES */
+
+.footer-benches {
+  margin-top: 58px;
+}
+
+/* ---------------- 📌 L O C A T I O N   S C R E E N -------------- */
