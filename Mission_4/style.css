@@ -43,14 +43,15 @@ body {
   justify-content: flex-end;
 }
 
+/* Back Button */
 .back-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 65px;
-  width: 40px;
-  height: 100px;
+  margin-left: 4rem;
+  width: 2.75rem;
+  height: 6.25rem;
 }
 
 .btn-back {
@@ -58,8 +59,8 @@ body {
 }
 
 .back-icon {
-  width: 25px;
-  height: 20px;
+  width: 1.5625rem;
+  height: 1.25rem;
   cursor: pointer;
 }
 
@@ -70,21 +71,21 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: auto;
-  margin-left: 30px;
-  width: 100px;
-  height: 125px;
-  padding: 20px;
+  margin-left: 1.875rem;
+  width: 6.25rem;
+  height: 7.8rem;
+  padding: 1.25rem;
 }
 
 .login-icon {
-  width: 55px;
-  height: 55px;
+  width: 3.43rem;
+  height: 3.43rem;
   cursor: pointer;
 }
 
 .login-text {
-  margin-top: 10px;
-  font-size: 14px;
+  margin-top: 0.625rem;
+  font-size: 1rem;
   color: rgb(0, 0, 0);
 }
 
@@ -94,8 +95,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 0px;
-  margin-top: 35px;
+  margin-right: 0;
+  margin-top: 2.1875rem;
 }
 
 .logo {
@@ -108,10 +109,10 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 12px;
+  font-size: 1rem;
   color: #545454;
   line-height: 1.4;
-  padding-top: 10px;
+  padding-top: 0.625rem;
 }
 
 /* Container 3 */
@@ -120,37 +121,37 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 65px;
-  width: 40px;
-  height: 100px;
+  margin-right: 4.0625rem;
+  width: 2.5rem;
+  height: 6.25rem;
 }
 
 .menu {
-  width: 25px;
-  height: 20px;
+  width: 1.5625rem;
+  height: 1.25rem;
   cursor: pointer;
 }
 
 /* --- P R O G R E S S   B A R --- */
 .progress-wrapper {
   width: 100%;
-  max-width: 400px;
-  margin: 10px;
+  max-width: 25rem;
+  margin: 0.625rem;
   margin: 0 auto;
 }
 
 .progress-label {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   color: #a1a1a1;
 }
 
 .progress-bar {
-  height: 10px;
-  margin-top: 5px;
+  height: 0.625rem;
+  margin-top: 0.3125rem;
   background-color: #ccc;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   overflow: hidden;
 }
 
@@ -165,25 +166,33 @@ body {
 .main-content.report-issue {
   width: 100%;
   display: grid;
-  padding-top: 50px;
+  padding-top: 1.25rem;
 }
 
 .content-wrapper {
   display: grid;
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 31.25rem;
   width: 100%;
-  gap: 20px;
-  padding: 0 20px;
+  gap: 1.25rem;
+  padding: 0 1.25rem;
   box-sizing: border-box;
 }
 
-/* Text Category Heading */
+/* P A G E   H E A D I N G (h1) */
+.page-heading-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 31.25rem;
+  margin: 0 auto;
+  padding-top: 3.125rem;
+}
+
 .heading_main.report-issue {
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 25px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-size: 1.5625rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #545454;
 }
@@ -193,26 +202,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 600px;
+  max-height: 37.5rem;
 }
 
 .upload-icon {
   display: flex;
   width: 100%;
   aspect-ratio: 2/1;
-  height: 180px;
+  height: 11.25rem;
   margin: 0 auto;
-  margin-bottom: 8px;
-  margin-top: 40px;
+  margin-bottom: 0.5rem;
+  margin-top: 2.5rem;
   justify-content: center;
   align-content: center;
+  cursor: pointer;
 }
 
 .subtext.upload-instruction {
   display: flex;
   justify-content: center;
   align-content: left;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: bold;
   color: #545454;
 }
@@ -220,7 +230,7 @@ body {
 .subtext.optional-note {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-style: italic;
   font-weight: 200;
   color: #545454;
@@ -243,13 +253,14 @@ body {
 
 /* B A C K   B U T T O N S */
 .btn {
-  font-size: 18px;
-  min-width: 100px;
-  min-height: 44px;
-  padding: 10px 30px;
+  font-size: 1.125rem;
+  min-width: 11.0625rem;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.875rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.375rem;
   color: #545454;
+  cursor: pointer;
 }
 
 /* --- F O O T E R --- */
@@ -259,13 +270,14 @@ body {
   justify-content: center;
   width: 100%;
   background: transparent;
-  padding: 0px 65px;
-  margin-bottom: 40px;
+  padding: 0 0.625rem;
+  margin-bottom: 2.5rem;
 }
 
 .footer-inner {
   display: flex;
   justify-content: flex-end;
+  margin-right: 4.0625rem;
   width: 100%;
 }
 
@@ -285,10 +297,10 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: auto;
-  margin-left: 65px;
-  width: 100px;
-  height: 125px;
-  padding: 20px;
+  margin-left: 4.0625rem;
+  width: 6.25rem;
+  height: 7.8125rem;
+  padding: 1.25rem;
 }
 
 /* M A I N   C O N T E N T */
@@ -298,32 +310,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 300px;
-  margin-left: 1100px;
+  max-width: 18.75rem;
+  margin-left: 68.75rem;
 }
 
 .heading_main--home {
-  padding-top: 110px;
-  font-size: 28px;
+  padding-top: 6.875rem;
+  font-size: 1.75rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #545454;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .subtext.home {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   line-height: 1.4;
   color: #545454;
 }
 
 /* ICON GRID */
 .icon-grid {
-  padding-top: 20px;
-  padding-left: 10px;
+  padding-top: 1.25rem;
+  padding-left: 0.625rem;
   display: grid;
-  grid-template-columns: 130px 200px 120px 150px 160px auto;
-  grid-template-rows: repeat(5, 105px);
-  max-width: 1440px;
+  grid-template-columns: 8.125rem 12.5rem 7.5rem 9.375rem 10rem auto;
+  grid-template-rows: repeat(5, 6.5625rem);
+  max-width: 90rem;
   margin: 0 auto;
   position: relative;
 }
@@ -335,13 +347,13 @@ body {
 #path_icon,
 #bin_icon,
 #pothole_icon {
-  width: 130px;
-  height: 130px;
+  width: 8.125rem;
+  height: 8.125rem;
 }
 
 #light_icon {
-  width: 240px;
-  height: 240px;
+  width: 15rem;
+  height: 15rem;
 }
 
 /* GRID LAYOUT */
@@ -404,8 +416,8 @@ body {
 .footer-home {
   display: flex;
   justify-content: flex-end;
-  padding: 10px 30px;
-  font-size: 12px;
+  padding: 0.625rem 1.875rem;
+  font-size: 1rem;
   color: #545454;
 }
 
@@ -413,7 +425,7 @@ body {
 .issue-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 0.625rem;
   border: none;
 }
 
@@ -438,7 +450,7 @@ body {
 .label-other {
   z-index: 1;
   color: #545454;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: center;
   padding: 0 auto;
 }
@@ -446,18 +458,18 @@ body {
 /* user input field */
 .other-description {
   display: grid;
-  margin-top: 10px;
-  gap: 5px;
+  margin-top: 0.625rem;
+  gap: 0.3125rem;
   grid-column: 1 / -1;
 }
 
 .input-other {
   box-sizing: border-box;
   width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #bdbdbd;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid #bdbdbd;
 }
 
 /* .other-description {
@@ -467,7 +479,7 @@ body {
 /* FOOTER - LIGHTS */
 
 .footer-lights {
-  margin-top: 125px;
+  margin-top: 7.5rem;
 }
 
 /*  --------------- 📑 R E P O R T   I S S U E   S C R E E N  * 🪑 B E N C H E S--------------- */
@@ -496,7 +508,7 @@ body {
 .label-other {
   z-index: 1;
   color: #545454;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: center;
   padding: 0 auto;
 }
@@ -504,24 +516,97 @@ body {
 /* user input field */
 .other-description {
   display: grid;
-  margin-top: 10px;
-  gap: 5px;
+  margin-top: 0.625rem;
+  gap: 0.3125rem;
   grid-column: 1 / -1;
 }
 
 .input-other {
   box-sizing: border-box;
   width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #bdbdbd;
+  padding: 0.625rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid #bdbdbd;
 }
 
 /* FOOTER - BENCHES */
 
 .footer-benches {
-  margin-top: 58px;
+  margin-top: 3.3125rem;
 }
 
 /* ---------------- 📌 L O C A T I O N   S C R E E N -------------- */
+
+.map-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 43.75rem;
+  max-height: 25rem;
+}
+
+/* SEARCH LOCATION */
+.input--search-location {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 25rem;
+  margin-left: 26.875rem;
+  margin-top: 3.125rem;
+  margin-right: 0.3125rem;
+  padding: 0.625rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid #bdbdbd;
+}
+
+.location-info {
+  width: 100%;
+  margin-top: 0.75rem;
+  margin-left: 26.875rem;
+  font-size: 0.875rem;
+  color: #545454;
+}
+
+/* FOOTER - LOCATION */
+
+.footer-location {
+  margin-top: 6.125rem;
+}
+
+/* ---------------- 🪟 P R E V I E W   S C R E E N ---------------- */
+/* Upload image section */
+.image-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 37.5rem;
+}
+
+.photo-icon {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 2/1;
+  height: 11.25rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.attached_photo-text {
+  display: flex;
+  justify-content: center;
+  align-content: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #545454;
+}
+
+/* FOOTER - LOCATION */
+
+.footer-preview--lights {
+  margin-top: 6.25rem;
+}

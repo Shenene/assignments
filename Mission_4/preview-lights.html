@@ -7,7 +7,7 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <!---------------- 📌 L O C A T I O N   S C R E E N ---------------->
+    <!---------------- 🪟 P R E V I E W   S C R E E N ---------------->
     <!-- B A C K   G R O U N D -->
     <div class="app-wrapper background other">
       <!-- H E A D E R - Container - Main -->
@@ -48,7 +48,7 @@
       <!-- ------------------------------------------------------------------ -->
       <!-- PROGRESS BAR -->
       <div class="progress-wrapper">
-        <span class="progress-label">Step 2</span>
+        <span class="progress-label">Step 3</span>
         <div class="progress-bar">
           <div class="progress-fill"></div>
         </div>
@@ -57,42 +57,25 @@
       <!-- ------------------------------------------------------------------ -->
       <!-- P A G E   H E A D I N G (h1)-->
       <div class="page-heading-wrapper">
-        <h1 class="heading_main report-issue">Location</h1>
+        <h1 class="heading_main report-issue">Preview</h1>
       </div>
+      <h2 class="report-summary">
+        You're about to report a flickering light at
+        <em>[123 West Street, Auckland].</em>
+      </h2>
 
-      <!-- ------------------------------------------------------------------ -->
-      <!-- CONTAINER MAIN - Main Content - Report Issue Screen -->
-      <main>
-        <!-- MAP MOCKUP -->
-        <div class="map-mockup">
-          <img
-            src="images/laptop-map_mockup.png"
-            alt="map showing location on street grid"
-            class="map-img"
-          />
-        </div>
-        <!-- SEARCH LOCATION -->
-        <div class="search-location">
-          <label for="location-search" class="visually-hidden"
-            >Search address or place name</label
-          >
-          <input
-            type="text"
-            id="location-search"
-            name="location"
-            placeholder="Search address or place name"
-            class="input--search-location"
-          />
-          <button class="btn btn-search">Search</button>
-          <div class="location-info">
-            Use your current location or search for a different one
-          </div>
-        </div>
-      </main>
-
+      <!-- Upload image section -->
+      <section class="img-photo-container">
+        <img
+          class="photo-icon"
+          src="images/photo_img.svg"
+          alt="uploaded photo"
+        />
+        <span class="attached_photo-text">Your attached photo</span>
+      </section>
       <!-- ------------------------------------------------------------------ -->
       <!-- FOOTER -->
-      <footer class="footer footer-location">
+      <footer class="footer footer-preview--lights">
         <div class="footer-inner">
           <button class="btn next-button">Next</button>
         </div>
