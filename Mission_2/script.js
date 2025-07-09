@@ -2,6 +2,7 @@
 //
 // ------ Checklists ------ //
 const checklists = {
+  // Object of arrays
   "IFO Foundation": ["Timber Subfloor", "Footings/bearers/joists size/spacings correct (1.5kPa)", "Pile Size (125 sq min)", "Min/Max pile height", "Solid Blocking @ joist mid-span", "Subfloor bracing calcs", "Anchor/Braced piles", "Stainless Steel fixings to exposed, < 600mm to GL", "Subfloor ventilation (min 3500mm²/m²)", "Min 450mm crawl space", "DPC to pile < 300mm high", "Driven Piles"],
   "ICB Masonry Concrete Block": [],
   "ISF Floor slab": ["Raft Slab", "Conventional Slab", "Geotech Report", "Good Ground in accordance with NZS3604", "Producer Statement", "Ground level to FL clearance", "Check soil compaction", "Check steel placement", "Formwork secured", "SED for Drain Bridging (if applicable)"],

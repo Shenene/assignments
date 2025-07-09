@@ -62,34 +62,35 @@
 
       <!-- ------------------------------------------------------------------ -->
       <!-- CONTAINER MAIN - Main Content - Report Issue Screen -->
-      <main>
-        <!-- MAP MOCKUP -->
-        <div class="map-mockup">
-          <img
-            src="images/laptop-map_mockup.png"
-            alt="map showing location on street grid"
-            class="map-img"
-          />
-        </div>
-        <!-- SEARCH LOCATION -->
-        <div class="search-location">
-          <label for="location-search" class="visually-hidden"
-            >Search address or place name</label
-          >
-          <input
-            type="text"
-            id="location-search"
-            name="location"
-            placeholder="Search address or place name"
-            class="input--search-location"
-          />
-          <button class="btn btn-search">Search</button>
-          <div class="location-info">
-            Use your current location or search for a different one
+      <div class="content-wrapper location-wrapper">
+        <main class="main-content">
+          <!-- MAP MOCKUP -->
+          <div class="map-mockup">
+            <img
+              src="images/laptop-map_mockup.png"
+              alt="map showing location on street grid"
+              class="map-img"
+            />
           </div>
-        </div>
-      </main>
-
+          <!-- SEARCH LOCATION -->
+          <div class="search-location">
+            <label for="location-search" class="visually-hidden"
+              >Search address or place name</label
+            >
+            <input
+              type="text"
+              id="location-search"
+              name="location"
+              placeholder="Search address or place name"
+              class="input--search-location"
+            />
+            <div class="location-info">
+              Use your current location or search for a different one
+            </div>
+            <button class="btn btn-search">Search</button>
+          </div>
+        </main>
+      </div>
       <!-- ------------------------------------------------------------------ -->
       <!-- FOOTER -->
       <footer class="footer footer-location">
