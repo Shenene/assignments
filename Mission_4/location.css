@@ -1,0 +1,61 @@
+/* ---------------- 📌 L O C A T I O N   S C R E E N -------------- */
+
+/* PROGRESS BAR - STEP 2*/
+.progress-fill-step2 {
+  height: 100%;
+  width: 75%;
+  background-color: #77a741;
+  transition: width 0.3s ease;
+}
+
+.location-wrapper {
+  display: grid;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* IMAGE */
+.map-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 43.75rem;
+  max-height: 25rem;
+}
+
+/* SEARCH LOCATION */
+/* Search Container */
+.search-location {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  max-width: 32rem;
+  width: 100%;
+  margin: 0.9375rem auto;
+}
+
+/* Input Text Box & Placeholder Text */
+.input--search-location {
+  max-width: 90rem;
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid #bdbdbd;
+}
+
+/* Subtext */
+.location-info {
+  width: 100%;
+  padding-bottom: 0.625rem;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  color: #545454;
+}
+
+/* FOOTER - LOCATION */
+
+.footer-location {
+  margin-top: 3.9rem;
+}

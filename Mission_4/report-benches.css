@@ -1,0 +1,50 @@
+/*  --------------- 📑 R E P O R T   I S S U E   S C R E E N  * 🪑 B E N C H E S--------------- */
+/* -- CONTAINER MAIN - Main Content - Report Issue Screen -- */
+
+/* buttons */
+.btn--broken-bench,
+.btn--loose-unstable,
+.btn-vandalized,
+.btn--missing-bench,
+.btn-bench-other {
+  display: grid;
+  align-items: center;
+  background: url('images/button.png') center/cover no-repeat;
+  aspect-ratio: 4/1;
+  position: relative;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.label--broken-bench,
+.label--loose-unstable,
+.label-vandalized,
+.label--missing-bench,
+.label-bench-other {
+  z-index: 1;
+  color: #545454;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0 auto;
+}
+
+/* user input field */
+.other-description {
+  display: grid;
+  grid-column: 1 / -1;
+}
+
+.input-other {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid #bdbdbd;
+}
+
+/* FOOTER - BENCHES */
+
+.footer-benches {
+  margin-top: 3rem;
+}
