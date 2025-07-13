@@ -424,6 +424,7 @@ body {
   line-height: 1.6;
   color: #545454;
   max-width: 23rem;
+  font-weight: 400;
 }
 
 /* Home Visual Section */
@@ -650,7 +651,6 @@ body {
   }
 
 
-
 /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟱𝟴𝟬𝗽𝘅------------------  */
   @media (max-width: 580px) {
   .main-content.home {
@@ -697,7 +697,6 @@ body {
       padding-top: 1.5625rem;
     }
 }
-
 
 
 /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟱𝟮𝟬𝗽𝘅 - (MOBILE VIEW)------------------  */
@@ -862,13 +861,14 @@ body {
 .footer-home {
   position: absolute;
   bottom: 1.5rem;
-  right: 2.5rem;
-  color: #818181;
+  right: 5rem;
+  color: #222;
   z-index: 10;
   background: transparent;
   font-size: 1rem;
   font-family: 'Inter', sans-serif, Arial;
   font-weight: 400;
+  opacity: 0.9;
   text-align: right;
   width: auto;
   margin: 0;
@@ -922,6 +922,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   font-size: 1rem;
+  opacity: 0.9;
   border-radius: 0.375rem;
   border: 0.0625rem solid #bdbdbd;
 }
@@ -972,6 +973,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   font-size: 1rem;
+  opacity: 0.9;
   border-radius: 0.375rem;
   border: 0.0625rem solid #bdbdbd;
 }
@@ -1019,6 +1021,7 @@ body {
   width: 100%;
   padding: 0.625rem;
   font-size: 1rem;
+  opacity: 0.9;
   border-radius: 0.375rem;
   border: 0.0625rem solid #bdbdbd;
 }
@@ -1072,6 +1075,7 @@ body {
   width: 100%;
   padding: 0.625rem;
   font-size: 1rem;
+  opacity: 0.9;
   border-radius: 0.375rem;
   border: 0.0625rem solid #bdbdbd;
 }
