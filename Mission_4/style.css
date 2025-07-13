@@ -65,6 +65,13 @@ body {
   background-image: url('background/other_screen_bg_laptop.png');
 }
 
+.app-wrapper,
+.background,
+.home-visual {
+  min-height: 844px;
+}
+
+
 
 /*  ------------------------- Shared Components -------------------------  */
 /* --- H E A D E R - Container - Other --- */
@@ -394,6 +401,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 340px;
   flex: 1 1 auto;
   z-index: 1;
 }
@@ -410,30 +418,143 @@ body {
   width: 230px;    
   max-width: 230px;
   min-width: 120px;
-  left: 27%; 
+  left: 25%; 
   top: 74.5%;
 }
 
-.icon.tree     { left: 3%;  top: 40%; }
-.icon.bench    { left: 12%; top: 46%; }
-.icon.graffiti { left: 15%; top: 73%; }
-.icon.path     { left: 3%;  top: 80%; }
-.icon.bin      { left: 45%; top: 55%; }
-.icon.pothole  { left: 47%; top: 81%; }
+.icon.tree     { left: 1%;  top: 40%; }
+.icon.bench    { left: 9%;  top: 46%; }
+.icon.graffiti { left: 14%; top: 73%; }
+.icon.path     { left: 1%;  top: 80%; }
+.icon.bin      { left: 40%; top: 55%; }
+.icon.pothole  { left: 43%; top: 85%; }
+
 
 /* M E D I A   Q U E R I E S */
 @media (max-width: 1200px) {
   .icon { width: 10vw; max-width: 100px; }
-  .icon.tree     { left: 6%;  top: 44%; }
-  .icon.bench    { left: 17%; top: 49%; }
-  .icon.graffiti { left: 20%; top: 79%; }
-  .icon.path     { left: 7%;  top: 84%; }
-  .icon.light    { left: 34%; top: 89%; }
-  .icon.bin      { left: 54%; top: 60%; }
-  .icon.pothole  { left: 56%; top: 85%; }
+  .icon.tree     { left: 1%;  top: 40%; }
+  .icon.bench    { left: 3%;  top: 52%; }
+  .icon.graffiti { left: 10%; top:73%; }
+  .icon.path     { left: 1%;  top: 84%; }
+  .icon.light    { left: 24%; top: 80%; }
+  .icon.bin      { left: 44%; top: 60%; }
+  .icon.pothole  { left: 43%; top: 85%; }
+
+  .icon.light { max-width: 182px }
+}
+
+/* M E D I A   Q U E R I E S */
+@media (max-width: 1150px) {
+  .icon { width: 10vw; max-width: 100px; }
+  .icon.tree     { left: 1%;  top: 40%; }
+  .icon.bench    { left: 16%;  top: 48%; }
+  .icon.graffiti { left: 10%; top: 73%; }
+  .icon.path     { left: 1%;  top: 89%; }
+  .icon.light    { left: 24%; top: 80%; }
+  .icon.bin      { left: 44%; top: 60%; }
+  .icon.pothole  { left: 43%; top: 85%; }
+
+  .icon.light { max-width: 192px }
+
+    .main-content.home {
+      position: absolute;
+      top: 12.625rem; 
+      right: 3.75rem; 
+      z-index: 5;
+    }
+}
+
+
+@media (max-width: 990px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 1%; top: 45%; }
+  .icon.bench    { left: 20%; top: 48%; }
+  .icon.graffiti { left: 7%; top: 70%; }
+  .icon.path     { left: 1%; top: 84%; }
+  .icon.light    { left: 17%; top: 82%; }
+  .icon.bin      { left: 38%; top: 60%; }
+  .icon.pothole  { left: 41%; top: 90%; }
+
+   .icon.light { max-width: 145px }
+
+    .main-content.home {
+      position: absolute;
+      top: 12.625rem; 
+      right: 3.75rem; 
+      z-index: 5;
+    }
 }
 
 @media (max-width: 900px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 1%; top: 45%; }
+  .icon.bench    { left: 20%; top: 48%; }
+  .icon.graffiti { left: 7%; top: 70%; }
+  .icon.path     { left: 1%; top: 84%; }
+  .icon.light    { left: 17%; top: 82%; }
+  .icon.bin      { left: 38%; top: 60%; }
+  .icon.pothole  { left: 41%; top: 90%; }
+
+   .icon.light { max-width: 145px }
+
+    .main-content.home {
+      position: absolute;
+      top: 12.625rem; 
+      right: 3.75rem; 
+      z-index: 5;
+    }
+}
+
+
+/* New....520 or 480px......................................... */
+@media (max-width: 520px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 5%; top: 57%; }
+  .icon.bench    { left: 26%; top: 62%; }
+  .icon.graffiti { left: 31%; top: 77%; }
+  .icon.path     { left:5%; top: 85%; }
+  .icon.light    { left: 43%; top: 83%; }
+  .icon.bin      { left: 74%; top: 67%; }
+  .icon.pothole  { left: 83%; top: 88%; }
+
+   .icon.light { max-width: 140px }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+    .menu,
+    .menu_container {
+      display: none;
+    }
+
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+
+    .main-content.home {
+      position: absolute;
+      top: 8.625rem; 
+      right: 3.75rem; 
+      z-index: 5;
+    }
+   
+ .footer-home {
+    display: none;
+   }
+
+   
+
+   .background.home {
+  background-image: url('background/home_screen_mobile_bg.png');
+  }
+}
+
+ 
+
+@media (max-width: 390px) {
   .icon { width: 14vw; max-width: 70px; }
   .icon.tree     { left: 12%; top: 28%; }
   .icon.bench    { left: 26%; top: 36%; }
@@ -442,8 +563,58 @@ body {
   .icon.light    { left: 49%; top: 73%; }
   .icon.bin      { left: 67%; top: 44%; }
   .icon.pothole  { left: 68%; top: 72%; }
+
+   .icon.light { max-width: 192px }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+    .menu,
+    .menu_container {
+      display: none;
+    }
+
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+
+    .main-content.home {
+      position: absolute;
+      top: 8.625rem; 
+      right: 3.75rem; 
+      z-index: 5;
+    }
+   
+ .footer-home_mobile {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2.5rem;
+  color: #818181;
+  z-index: 10;
+  background: transparent;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif, Arial;
+  text-align: right;
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
 
+   
+   .background.home {
+  background-image: url('background/home_screen_mobile_bg.png');
+  }
+
+  .footer-home {
+    display: none;
+   }
+}
+
+.footer-home_mobile {
+  display: none;
+}
 
 /* FOOTER - HOME */
 
@@ -461,6 +632,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
 
 /* ---------------- 📑 R E P O R T   I S S U E   S C R E E N  * 💡 L I G H T S ---------------- */
 .issue-options {
