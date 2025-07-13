@@ -472,7 +472,7 @@ body {
 
 @media (max-width: 900px) {
   .icon { width: 14vw; max-width: 70px; }
-  .icon.tree     { left: 8%; top: 45%; }
+  .icon.tree     { left: 6%; top: 45%; }
   .icon.bench    { left: 20%; top: 58%; }
   .icon.graffiti { left: 7%; top: 72%; }
   .icon.path     { left: 1%; top: 94%; }
@@ -595,6 +595,33 @@ body {
     }
   }
 
+
+  /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟲𝟬𝟬𝗽𝘅------------------  */
+
+@media (max-width: 600px) {
+  .main-content.home {
+      position: absolute;
+      top: 7.625rem; 
+      right: 7rem; 
+      z-index: 5;
+    }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+        .menu_container {
+      padding-right: 5px;
+  }
+  
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+  }
+
+
+
 /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟱𝟴𝟬𝗽𝘅------------------  */
   @media (max-width: 580px) {
   .main-content.home {
@@ -688,19 +715,67 @@ body {
   }
 }
 
+/* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟰𝟴𝟬𝗽𝘅------------------  */
+  
+  @media (max-width: 480px) {
+  .main-content.home {
+      position: absolute;
+      top: 7.625rem; 
+      right: 2rem; 
+      z-index: 5;
+    }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+    .menu_container {
+      padding-right: 5px;
+  }
+
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+}
+
+/* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟰𝟮𝟬𝗽𝘅------------------  */
+  
+  @media (max-width: 420px) {
+  .main-content.home {
+      position: absolute;
+      top: 7.625rem; 
+      right: 1rem; 
+      z-index: 5;
+    }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+    .menu_container {
+      padding-right: 5px;
+  }
+
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+}
+
  /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟯𝟵𝟬𝗽𝘅------------------  */
 
 @media (max-width: 390px) {
   .icon { width: 14vw; max-width: 70px; }
-  .icon.tree     { left: 12%; top: 28%; }
-  .icon.bench    { left: 26%; top: 36%; }
-  .icon.graffiti { left: 31%; top: 58%; }
-  .icon.path     { left: 13%; top: 66%; }
-  .icon.light    { left: 49%; top: 73%; }
-  .icon.bin      { left: 67%; top: 44%; }
-  .icon.pothole  { left: 68%; top: 72%; }
+  .icon.tree     { left: 2%; top: 60%; }
+  .icon.bench    { left: 26%; top: 62%; }
+  .icon.graffiti { left: 28%; top:77%; }
+  .icon.path     { left: 2%; top: 87%; }
+  .icon.light    { left: 42%; top: 83.2%; }
+  .icon.bin      { left: 72%; top: 66%; }
+  .icon.pothole  { left: 83%; top: 85%; }
 
-   .icon.light { max-width: 192px; }
+   .icon.light { max-width: 85px; }
 
     .login_container-home {
     padding-left: 0rem;
@@ -719,7 +794,7 @@ body {
     .main-content.home {
       position: absolute;
       top: 8.625rem; 
-      right: 3.75rem; 
+      right: 0rem; 
       z-index: 5;
     }
    
