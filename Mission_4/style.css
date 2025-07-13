@@ -16,6 +16,7 @@ body {
 }
 
 body {
+  font-size: 1rem;
   font-family: 'Inter', sans-serif, Arial;
   min-height: 100vh;
   width: 100vw;
@@ -418,8 +419,8 @@ body {
   width: 230px;    
   max-width: 230px;
   min-width: 120px;
-  left: 25%; 
-  top: 74.5%;
+  left: 24%; 
+  top: 77%;
 }
 
 .icon.tree     { left: 1%;  top: 40%; }
@@ -430,32 +431,33 @@ body {
 .icon.pothole  { left: 43%; top: 85%; }
 
 
-/* M E D I A   Q U E R I E S */
+/* 𝗠 𝗘 𝗗 𝗜 𝗔   𝗤 𝗨 𝗘 𝗥 𝗜 𝗘 𝗦 */
+
 @media (max-width: 1200px) {
   .icon { width: 10vw; max-width: 100px; }
   .icon.tree     { left: 1%;  top: 40%; }
   .icon.bench    { left: 3%;  top: 52%; }
-  .icon.graffiti { left: 10%; top:73%; }
+  .icon.graffiti { left: 10%; top: 73%; }
   .icon.path     { left: 1%;  top: 84%; }
-  .icon.light    { left: 24%; top: 80%; }
+  .icon.light    { left: 20%; top: 80%; }
   .icon.bin      { left: 44%; top: 60%; }
   .icon.pothole  { left: 43%; top: 85%; }
 
-  .icon.light { max-width: 182px }
+  .icon.light { max-width: 182px; }
 }
 
-/* M E D I A   Q U E R I E S */
+/* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟭𝟭𝟱𝟬𝗽𝘅------------------  */
 @media (max-width: 1150px) {
   .icon { width: 10vw; max-width: 100px; }
-  .icon.tree     { left: 1%;  top: 40%; }
+  .icon.tree     { left: 1%;  top: 42%; }
   .icon.bench    { left: 16%;  top: 48%; }
-  .icon.graffiti { left: 10%; top: 73%; }
+  .icon.graffiti { left: 7%; top: 73%; }
   .icon.path     { left: 1%;  top: 89%; }
-  .icon.light    { left: 24%; top: 80%; }
+  .icon.light    { left: 17%; top: 81%; }
   .icon.bin      { left: 44%; top: 60%; }
   .icon.pothole  { left: 43%; top: 85%; }
 
-  .icon.light { max-width: 192px }
+  .icon.light { max-width: 192px; }
 
     .main-content.home {
       position: absolute;
@@ -463,40 +465,22 @@ body {
       right: 3.75rem; 
       z-index: 5;
     }
+
 }
 
-
-@media (max-width: 990px) {
-  .icon { width: 14vw; max-width: 70px; }
-  .icon.tree     { left: 1%; top: 45%; }
-  .icon.bench    { left: 20%; top: 48%; }
-  .icon.graffiti { left: 7%; top: 70%; }
-  .icon.path     { left: 1%; top: 84%; }
-  .icon.light    { left: 17%; top: 82%; }
-  .icon.bin      { left: 38%; top: 60%; }
-  .icon.pothole  { left: 41%; top: 90%; }
-
-   .icon.light { max-width: 145px }
-
-    .main-content.home {
-      position: absolute;
-      top: 12.625rem; 
-      right: 3.75rem; 
-      z-index: 5;
-    }
-}
+ /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟵𝟬𝟬𝗽𝘅------------------  */
 
 @media (max-width: 900px) {
   .icon { width: 14vw; max-width: 70px; }
-  .icon.tree     { left: 1%; top: 45%; }
-  .icon.bench    { left: 20%; top: 48%; }
-  .icon.graffiti { left: 7%; top: 70%; }
-  .icon.path     { left: 1%; top: 84%; }
-  .icon.light    { left: 17%; top: 82%; }
+  .icon.tree     { left: 8%; top: 45%; }
+  .icon.bench    { left: 20%; top: 58%; }
+  .icon.graffiti { left: 7%; top: 72%; }
+  .icon.path     { left: 1%; top: 94%; }
+  .icon.light    { left: 17%; top: 85%; }
   .icon.bin      { left: 38%; top: 60%; }
   .icon.pothole  { left: 41%; top: 90%; }
 
-   .icon.light { max-width: 145px }
+   .icon.light { max-width: 145px; }
 
     .main-content.home {
       position: absolute;
@@ -506,8 +490,162 @@ body {
     }
 }
 
+/* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟳𝟵𝟴𝗽𝘅------------------  */
 
-/* New....520 or 480px......................................... */
+@media (max-width: 798px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 2%; top: 64%; }
+  .icon.bench    { left: 20%; top: 70%; }
+  .icon.graffiti { left: 18%; top: 85%; }
+  .icon.path     { left: 2%; top: 94%; }
+  .icon.light    { left: 28%; top: 86%; }
+  .icon.bin      { left: 72%; top: 82%; }
+  .icon.pothole  { left: 48%; top: 80%; }
+
+   .icon.light { max-width: 145px; }
+
+    .main-content.home {
+      position: absolute;
+      top: 7.625rem; 
+      right: 11rem; 
+      z-index: 5;
+    }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+    .menu_container {
+      padding-right: 5px;
+  }
+  
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+
+      .background.home {
+  background-image: url('background/home_screen_mobile_bg.png');
+  }
+}
+
+
+/* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟳𝟬𝟬𝗽𝘅------------------  */
+
+@media (max-width: 700px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 2%; top: 60%; }
+  .icon.bench    { left: 20%; top: 66%; }
+  .icon.graffiti { left: 20%; top: 77%; }
+  .icon.path     { left: 2%; top: 94%; }
+  .icon.light    { left: 28%; top: 86%; }
+  .icon.bin      { left: 78%; top:72%; }
+  .icon.pothole  { left: 44%; top: 78%; }
+
+   .icon.light { max-width: 145px; }
+
+    .main-content.home {
+      position: absolute;
+      top: 7.625rem; 
+      right: 9rem; 
+      z-index: 5;
+    }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+    .menu_container {
+      padding-right: 5px;
+  }
+  
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+
+      .background.home {
+  background-image: url('background/home_screen_mobile_bg.png');
+  }
+}
+
+
+
+/* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟲𝟱𝟬𝗽𝘅------------------  */
+
+@media (max-width: 650px) {
+  .main-content.home {
+      position: absolute;
+      top: 7.625rem; 
+      right: 8rem; 
+      z-index: 5;
+    }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+        .menu_container {
+      padding-right: 5px;
+  }
+  
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+  }
+
+/* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟱𝟴𝟬𝗽𝘅------------------  */
+  @media (max-width: 580px) {
+  .main-content.home {
+      position: absolute;
+      top: 7.625rem; 
+      right: 6rem; 
+      z-index: 5;
+    }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+    .menu_container {
+      padding-right: 5px;
+  }
+  
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+  }
+
+  /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟱𝟯𝟬𝗽𝘅------------------  */
+  
+  @media (max-width: 530px) {
+  .main-content.home {
+      position: absolute;
+      top: 7.625rem; 
+      right: 4rem; 
+      z-index: 5;
+    }
+
+    .login_container-home {
+    padding-left: 0rem;
+    }
+
+    .menu_container {
+      padding-right: 5px;
+  }
+
+    .logo_container {
+      padding-right: 0;
+      padding-top: 1.5625rem;
+    }
+}
+
+
+
+/* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟱𝟮𝟬𝗽𝘅 - (MOBILE VIEW)------------------  */
+
 @media (max-width: 520px) {
   .icon { width: 14vw; max-width: 70px; }
   .icon.tree     { left: 5%; top: 57%; }
@@ -518,7 +656,7 @@ body {
   .icon.bin      { left: 74%; top: 67%; }
   .icon.pothole  { left: 83%; top: 88%; }
 
-   .icon.light { max-width: 140px }
+   .icon.light { max-width: 140px; }
 
     .login_container-home {
     padding-left: 0rem;
@@ -544,15 +682,13 @@ body {
  .footer-home {
     display: none;
    }
-
    
-
    .background.home {
   background-image: url('background/home_screen_mobile_bg.png');
   }
 }
 
- 
+ /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟯𝟵𝟬𝗽𝘅------------------  */
 
 @media (max-width: 390px) {
   .icon { width: 14vw; max-width: 70px; }
@@ -564,7 +700,7 @@ body {
   .icon.bin      { left: 67%; top: 44%; }
   .icon.pothole  { left: 68%; top: 72%; }
 
-   .icon.light { max-width: 192px }
+   .icon.light { max-width: 192px; }
 
     .login_container-home {
     padding-left: 0rem;
@@ -602,7 +738,6 @@ body {
   padding: 0;
 }
 
-   
    .background.home {
   background-image: url('background/home_screen_mobile_bg.png');
   }
@@ -616,6 +751,8 @@ body {
   display: none;
 }
 
+/* ----------------------------------------------------------------------------------- */
+
 /* FOOTER - HOME */
 
 .footer-home {
@@ -627,6 +764,7 @@ body {
   background: transparent;
   font-size: 1rem;
   font-family: 'Inter', sans-serif, Arial;
+  font-weight: 400;
   text-align: right;
   width: auto;
   margin: 0;
