@@ -1,4 +1,4 @@
-/*  ------------------------- ⁡⁢⁢⁣Base/Reset⁡ -------------------------  */
+ ------------------------- ⁡⁢⁢⁣Base/Reset⁡ ------------------------- 
 *,
 *::before,
 *::after {
@@ -25,14 +25,18 @@ body {
 
 /*  ------------------------- ⁡⁢⁢⁣Layout containers⁡ -------------------------  */
 /* O V E R   A L L   C O N T A I N E R */
+.app-wrapper,
+.background,
+.home-visual {
+  min-height: 844px;
+}
 
 .app-wrapper {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100vw;
-}
+} 
 
 .app-wrapperbackground.other {
   display: flex;
@@ -65,13 +69,9 @@ body {
 
 .background.other {
   background-image: url('background/other_screen_bg_laptop.png');
-}
+} 
 
-.app-wrapper,
-.background,
-.home-visual {
-  min-height: 844px;
-}
+
 
 
 
@@ -105,7 +105,7 @@ body {
   height: 1.25rem;
   cursor: pointer;
   background-color: transparent;
-}
+} 
 
 /* Login Container 1*/
 .login_container {
@@ -307,15 +307,15 @@ body {
 
 /* learnt that this hides the text from view - but info is useful for screen readers */
 .visually-hidden {
-  position: absolute !important; /* take it out of the normal flow */
-  width: 1px; /* shrink it down to a single pixel */
-  height: 1px; /* shrink it down to a single pixel */
-  margin: -1px; /* pull it off-screen just in case */
-  padding: 0; /* no extra padding to expand it */
-  border: 0; /* no border to make it visible */
-  clip: rect(0 0 0 0); /* clip any remaining pixel so nothing shows */
-  white-space: nowrap; /* prevent the text from wrapping out of the tiny box */
-  overflow: hidden; /* hide any overflowing content */
+  position: absolute !important; 
+  width: 1px; 
+  height: 1px; 
+  margin: -1px; 
+  padding: 0; 
+  border: 0; 
+  clip: rect(0 0 0 0);
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 /* B U T T O N S */
@@ -339,7 +339,6 @@ body {
   align-items: center;
   color: #000;
   font-size: 1rem;
-  font-size: 1rem;
   gap: 0.75rem;
   cursor: pointer;
 }
@@ -358,7 +357,7 @@ body {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-top: auto; /* makes the footer always drop to the bottom*/
+  margin-top: auto; 
   background: transparent;
   padding: 0 0.625rem;
   padding-bottom: 2.5rem;
@@ -389,7 +388,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Login Container 1*/
+/* Login Container1*/ 
 .login_container-home {
   display: flex;
   flex-direction: column;
@@ -408,7 +407,7 @@ body {
   top: 15.625rem; 
   right: 3.75rem; 
   z-index: 5;
-}
+} 
 
 .heading_main--home {
   padding-top: 6.875rem;
@@ -496,10 +495,10 @@ body {
       z-index: 5;
     }
 
-}
+} 
 
  /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟵𝟬𝟬𝗽𝘅------------------  */
-
+ 
 @media (max-width: 900px) {
   .icon { width: 14vw; max-width: 70px; }
   .icon.tree     { left: 6%; top: 45%; }
@@ -522,7 +521,7 @@ body {
 
 /* ------------------ 𝗠𝗔𝗫 𝗪𝗜𝗗𝗧𝗛 𝟳𝟵𝟴𝗽𝘅------------------  */
 
-@media (max-width: 798px) {
+ @media (max-width: 798px) {
   .icon { width: 14vw; max-width: 70px; }
   .icon.tree     { left: 2%; top: 64%; }
   .icon.bench    { left: 20%; top: 70%; }
@@ -543,7 +542,7 @@ body {
 
     .login_container-home {
     padding-left: 0rem;
-    }
+    } 
 
     .menu_container {
       padding-right: 5px;
@@ -556,7 +555,7 @@ body {
 
       .background.home {
   background-image: url('background/home_screen_mobile_bg.png');
-  }
+  } 
 }
 
 
@@ -583,7 +582,7 @@ body {
 
     .login_container-home {
     padding-left: 0rem;
-    }
+    } 
 
     .menu_container {
       padding-right: 5px;
@@ -596,7 +595,7 @@ body {
 
       .background.home {
   background-image: url('background/home_screen_mobile_bg.png');
-  }
+  } 
 }
 
 
@@ -613,7 +612,7 @@ body {
 
     .login_container-home {
     padding-left: 0rem;
-    }
+    } */
 
         .menu_container {
       padding-right: 5px;
@@ -638,7 +637,7 @@ body {
 
     .login_container-home {
     padding-left: 0rem;
-    }
+    } 
 
         .menu_container {
       padding-right: 5px;
@@ -662,7 +661,7 @@ body {
 
     .login_container-home {
     padding-left: 0rem;
-    }
+    } */
 
     .menu_container {
       padding-right: 5px;
@@ -686,7 +685,7 @@ body {
 
     .login_container-home {
     padding-left: 0rem;
-    }
+    } 
 
     .menu_container {
       padding-right: 5px;
@@ -717,6 +716,13 @@ body {
     padding-left: 0rem;
     }
 
+      .main-content.home {
+      position: absolute;
+      top: 8.625rem; 
+      right: 3.75rem; 
+      z-index: 5;
+    } 
+
     .menu,
     .menu_container {
       display: none;
@@ -727,14 +733,7 @@ body {
       padding-top: 1.5625rem;
     }
 
-    .main-content.home {
-      position: absolute;
-      top: 8.625rem; 
-      right: 3.75rem; 
-      z-index: 5;
-    }
-   
- .footer-home {
+  .footer-home {
     display: none;
    }
    
@@ -755,7 +754,7 @@ body {
 
     .login_container-home {
     padding-left: 0rem;
-    }
+    } 
 
     .menu_container {
       padding-right: 5px;
@@ -779,7 +778,7 @@ body {
 
     .login_container-home {
     padding-left: 0rem;
-    }
+    } 
 
     .menu_container {
       padding-right: 5px;
@@ -809,6 +808,13 @@ body {
     padding-left: 0rem;
     }
 
+     .main-content.home {
+      position: absolute;
+      top: 8.625rem; 
+      right: 0rem; 
+      z-index: 5;
+    }
+
     .menu,
     .menu_container {
       display: none;
@@ -819,14 +825,7 @@ body {
       padding-top: 1.5625rem;
     }
 
-    .main-content.home {
-      position: absolute;
-      top: 8.625rem; 
-      right: 0rem; 
-      z-index: 5;
-    }
-   
- .footer-home_mobile {
+  .footer-home_mobile {
   position: absolute;
   bottom: 1.5rem;
   right: 2.5rem;
@@ -873,7 +872,7 @@ body {
   width: auto;
   margin: 0;
   padding: 0;
-}
+} 
 
 
 
@@ -884,7 +883,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.625rem;
   border: none;
-}
+} 
 
 /* category buttons */
 .btn-flickering-light,
@@ -899,7 +898,7 @@ body {
   width: 100%;
   border: none;
   cursor: pointer;
-}
+} 
 
 .label-flickering-light,
 .label-light-off,
@@ -910,7 +909,7 @@ body {
   font-size: 1.25rem;
   text-align: center;
   padding: 0 auto;
-}
+} 
 
 /* user input field */
 .other-description {
@@ -925,11 +924,12 @@ body {
   opacity: 0.9;
   border-radius: 0.375rem;
   border: 0.0625rem solid #bdbdbd;
-}
+} 
 
-/* .other-description {
+/* 
+.other-description {
   display: none;
-} LATER FOR JS USE - to hide 'other' inut until button is clicked */
+} LATER FOR JS USE - to hide 'other' inut until button is clicked */ */
 
 
 /*  --------------- ⁡⁢⁣⁢📑 R E P O R T   I S S U E   S C R E E N  * 🪑 B E N C H E S ⁡--------------- */
@@ -949,7 +949,7 @@ body {
   width: 100%;
   border: none;
   cursor: pointer;
-}
+} 
 
 .label--broken-bench,
 .label--loose-unstable,
@@ -961,13 +961,13 @@ body {
   font-size: 1.25rem;
   text-align: center;
   padding: 0 auto;
-}
+} 
 
 /* user input field */
 .other-description {
   display: grid;
   grid-column: 1 / -1;
-}
+} 
 
 .input-other {
   box-sizing: border-box;
@@ -976,7 +976,7 @@ body {
   opacity: 0.9;
   border-radius: 0.375rem;
   border: 0.0625rem solid #bdbdbd;
-}
+} 
 
 
 /* ---------------- ⁡⁢⁣⁢📑 R E P O R T   I S S U E   S C R E E N  * 🌴 T R E E S⁡ ---------------- */
@@ -995,7 +995,7 @@ body {
   width: 100%;
   border: none;
   cursor: pointer;
-}
+} 
 
 .label--tree-fallen-branch,
 .label--tree-blocking-path,
@@ -1006,7 +1006,7 @@ body {
   font-size: 1.25rem;
   text-align: center;
   padding: 0 auto;
-}
+} 
 
 /* user input field */
 .other-description {
@@ -1014,7 +1014,7 @@ body {
   margin-top: 0.625rem;
   gap: 0.3125rem;
   grid-column: 1 / -1;
-}
+} 
 
 .input-other {
   box-sizing: border-box;
@@ -1024,7 +1024,7 @@ body {
   opacity: 0.9;
   border-radius: 0.375rem;
   border: 0.0625rem solid #bdbdbd;
-}
+} 
 
 
 /* ---------------- 📌 ⁡⁣⁣⁢L O C A T I O N   S C R E E N⁡ -------------- */
@@ -1057,7 +1057,7 @@ body {
   max-height: 25rem;
 }
 
-/* SEARCH LOCATION */
+/* SEARCH LOCATION CONTAINER */
 /* Search Container */
 .search-location {
   display: flex;
@@ -1090,6 +1090,12 @@ body {
   color: #545454;
 }
 
+@media (max-height: 900px) {
+  .location-wrapper {
+    overflow-y: auto;
+  }
+}
+
 
 /* ---------------- ⁡⁢⁣⁣🪟 P R E V I E W   ⁡⁡⁢⁣⁣S C R E E N⁡ ---------------- */
 
@@ -1099,7 +1105,7 @@ body {
   width: 100%;
   background-color: #77a741;
   transition: width 0.3s ease;
-}
+} 
 
 /* Report Summary */
 .container {
@@ -1119,7 +1125,7 @@ body {
 .report-address {
   font-size: 1.5rem;
   font-weight: bold;
-}
+} 
 
 /* Upload image section */
 .image-photo-container {
@@ -1149,7 +1155,7 @@ body {
   font-size: 1rem;
   font-weight: bold;
   color: #545454;
-}
+} 
 
 /* BUTTON */
 .send-report-button {
@@ -1167,7 +1173,7 @@ body {
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
-}
+} 
 
 /* ---------------- ✅⁡⁢⁢⁢ C O N F I R M A T I O N   S C R E E N ⁡---------------- */
 
@@ -1183,20 +1189,20 @@ body {
   display: grid;
   margin: 0 auto;
   max-width: 100%;
-}
+} 
 
 .main-content_confirm{
   width: 100%;
   display: grid;
   padding-top: 1.25rem;
-}
+} 
 
 .confirm-pg_container {
   display: grid;
   grid-template-columns: 1.2fr auto 1fr;
   grid-template-rows: repeat(7, auto);
   position: relative;
-}
+} 
 
 .heading_h1 {
   grid-column: 2/3;
@@ -1205,22 +1211,22 @@ body {
   justify-self: left;
   padding-top: 3rem;
   padding-bottom: 2.5rem;
-}
+} 
 
 .sub-heading {
   grid-column: 2/3;
   grid-row: 2/3;
   align-self: left;
   justify-self: left;
-}
-
+} 
+ 
 .ul_confirmation-pg {
   grid-column: 2/3;
   grid-row: 3/4;
   align-self: left;
   justify-self: left;
   margin-top: 1rem;
-}
+} 
 
 .li_con-layout {
   line-height: 1.5;
@@ -1229,14 +1235,14 @@ body {
 
 .text_reviewing-days {
   font-weight: bold;
-}
+} 
 
 .track-report {
   grid-column: 2/3;
   grid-row: 4/5;
   align-self: left;
   justify-self: left;
-}
+} 
 
 .visit-dashboard {
   grid-column: 2/3;
@@ -1245,13 +1251,13 @@ body {
   justify-self: left;
   margin-top: 1rem;
   font-size: 1.2rem;
-}
-
+} 
+ 
 .ul_confirmation-pg {
   margin-bottom: 2rem;
   list-style-position: inside;
   padding-left: 0.5rem;
-}
+} 
 
 .report-note {
   grid-column: 2/3;
@@ -1264,7 +1270,7 @@ body {
   border-left: 0.1875rem solid #999;
   padding-left: 1rem;
   line-height: 1.6;
-}
+} 
 
 /* FOOTER - CONFIRMATION SCREEN*/
 .footer-confirmation-pg {
@@ -1274,7 +1280,7 @@ body {
   max-width: 100%;
   padding-bottom: 2.5rem;
   padding-top: 1rem;
-}
+} 
 
 /* BUTTON */
 .view-report-button {
@@ -1285,7 +1291,7 @@ body {
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
-}
+} 
 
 /* ---------------- 🗂️ A L L   R E P O R T S   S C R E E N ---------------- */
 
@@ -1313,7 +1319,7 @@ body {
   border: 0.0625rem solid #bdbdbd;
   line-height: 1.2;
   background-color: #fff;
-}
+} 
 
 .main-content-reports {
   display: flex;
@@ -1323,7 +1329,7 @@ body {
   align-items: center;
   width: 100%;
   overflow-y: auto;
-}
+} 
 
 /* MAIN CONTENT - SCROLL - ALL REPORTS */
 
@@ -1343,34 +1349,34 @@ body {
   background: #f5f6f8;
   border-radius: 1.5rem;
   box-shadow: 0 2px 24px rgba(120,120, 120 0.09);
-}
+} 
 
 .scroll-area {
   scroll-behavior: smooth;
-}
+} 
 
 /* width */
 .report-scroll-area::-webkit-scrollbar {
   width: 0.75rem;
-}
+} 
 
 /* Track */
 .report-scroll-area::-webkit-scrollbar-track {
   background: #ABD038;
   border-radius: 100vw;
   margin-block: 0.5rem;
-}
+} 
 
 /* Handle */
 .report-scroll-area::-webkit-scrollbar-thumb {
   background: #77A741;
   border-radius: 100vw;
-}
+} 
 
 /* Handle on hover */
 .report-scroll-area::-webkit-scrollbar-thumb:hover {
   background: hsl(120, 85%, 24%);
-}
+} 
 
 .report-card {
   display: flex;
@@ -1380,7 +1386,7 @@ body {
   border-radius: 1.125rem;
   box-shadow: 0 2px 12px rgba(90, 90, 90, 0.06);
   background-color: #e7e9e9;
-}
+} 
 
 /* icon section (left) */
 .report-card_icon-container {
@@ -1390,7 +1396,7 @@ body {
   justify-content: center;
   width: 8rem;
   padding: 3rem 2rem;
-}
+} 
 
 .light_ico,
 .tree_ico,
@@ -1410,7 +1416,7 @@ flex-direction: column;
 justify-content: center;
 flex: 1;
 padding: 2rem;
-}
+} 
 
 .status-container{
 display: flex;
@@ -1426,14 +1432,14 @@ margin-top: 0.5rem;
 
 .report-title {
 margin-bottom: 1.2rem;
-}
+} 
 
 /* labels bold */
 .label {
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 2.1rem;
-}
+} 
 
 
 /* FOOTER - ALL REPORTS */
@@ -1444,7 +1450,7 @@ margin-bottom: 1.2rem;
   gap: 1.5rem;
   margin-top: 0rem;
   margin-bottom: 4rem;
-}
+} 
 
 .status-label {
   font-size: 1.4rem;
@@ -1462,7 +1468,7 @@ margin-top: auto;
 padding-top: 1rem;
 list-style: none;
 gap: 2rem;
-}
+} 
 
 .status-key {
   padding: 1rem;
@@ -1486,6 +1492,6 @@ gap: 2rem;
 .status-icon {
   width: 1.25rem;
   height: 1.25rem;
-}
+} 
 
 
