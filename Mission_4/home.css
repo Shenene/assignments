@@ -68,6 +68,7 @@
   min-width: 48px;
   max-width: 120px;
   height: auto;
+  cursor: pointer;
 }
 
 .icon.light {
