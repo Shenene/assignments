@@ -385,3 +385,10 @@ body {
     display: none;
   }
 } */
+
+
+/* @media (max-height: 798px) {
+   .background.home {
+  background-image: url('background/home_screen_mobile_bg.png');
+  }
+} */
