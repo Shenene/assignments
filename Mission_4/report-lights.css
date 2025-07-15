@@ -1,12 +1,7 @@
-/* ---------------- 📑 R E P O R T   I S S U E   S C R E E N  * 💡 L I G H T S ---------------- */
-.issue-options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.625rem;
-  border: none;
-}
 
-/* buttons */
+/* ---------------- 📑 ⁡⁢⁣⁢R E P O R T   I S S U E   S C R E E N  * 💡 L I G H T S⁡ ---------------- */
+
+/* Button styles (unique to lights) */
 .btn-flickering-light,
 .btn-light-off,
 .btn-pole-damaged,
@@ -32,26 +27,33 @@
   padding: 0 auto;
 }
 
-/* user input field */
+/* Issue options grid */
+.issue-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
+  border: none;
+}
+
+/* User input for "other" option */
 .other-description {
   display: grid;
   grid-column: 1 / -1;
-}
-
-.input-other {
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 1rem;
-  border-radius: 0.375rem;
-  border: 0.0625rem solid #bdbdbd;
+  margin-top: 0.625rem;
+  gap: 0.3125rem;
 }
 
 /* .other-description {
   display: none;
 } LATER FOR JS USE - to hide 'other' inut until button is clicked */
 
-/* FOOTER - LIGHTS */
+.input-other {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 1rem;
+  opacity: 0.9;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid #bdbdbd;
+} 
 
-.footer-lights {
-  margin-top: 7.1rem;
-}

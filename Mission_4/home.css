@@ -1,13 +1,22 @@
-/* ------------------- 🏠 H O M E   S C R E E N--------------------- */
-/* --- CONTAINER MAIN - Main Content  - Home Screen  --- */
+
+/* ------------------- 🏠 ⁡⁣⁢⁢H O M E   S C R E E N⁡ --------------------- */⁡
+
 .header_container-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
+  padding: 1.5rem 2.5rem 0 2.5rem;
+  box-sizing: border-box;
 }
 
-/* Login Container 1*/
+/* Login Container for home (unique left padding for home) */
+/* Login Container1*/ 
 .login_container-home {
   display: flex;
   flex-direction: column;
@@ -19,121 +28,381 @@
   height: 7.8125rem;
 }
 
-/* M A I N   C O N T E N T */
-
+/* Main content positioning on home */
 .main-content.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 18.75rem;
-  margin-left: auto;
-  margin-right: 1.5rem;
+  position: absolute;
+  top: 15.625rem; 
+  right: 3.75rem; 
+  z-index: 5;
 }
 
 .heading_main--home {
   padding-top: 6.875rem;
   font-size: 1.75rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #545454;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5rem;
 }
 
 .subtext.home {
-  padding-top: 1.25rem;
-  line-height: 1.4;
+  padding-top: 1.70rem;
+  line-height: 1.6;
   color: #545454;
+  max-width: 23rem;
+  font-weight: 400;
 }
 
-/* ICON GRID */
-.icon-grid {
-  padding-top: 1.25rem;
-  padding-left: 0.625rem;
-  display: grid;
-  grid-template-columns: 8.125rem 12.5rem 7.5rem 9.375rem 10rem auto;
-  grid-template-rows: repeat(5, 6.5625rem);
-  max-width: 90rem;
-  margin: 0 auto;
+/* Home Visual Section */
+.home-visual {
   position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  flex: 1 1 auto;
+  z-index: 1;
 }
 
-/* individual icon - adjustments */
-#tree_icon,
-#bench_icon,
-#graffiti_icon,
-#path_icon,
-#bin_icon,
-#pothole_icon {
-  width: 8.125rem;
-  height: 8.125rem;
+.icon {
+  position: absolute;
+  width: 8vw;
+  min-width: 48px;
+  max-width: 120px;
+  height: auto;
 }
 
-#light_icon {
-  width: 15rem;
-  height: 15rem;
+.icon.light {
+  width: 230px;    
+  max-width: 230px;
+  min-width: 120px;
+  left: 22%; 
+  top: 71%;
 }
 
-/* GRID LAYOUT */
-
-/* tree icon */
-.icon:nth-child(1) {
-  justify-self: right;
-}
-
-/* bench icon */
-.icon:nth-child(2) {
-  grid-column: 2/3;
-  grid-row: 1/3;
-  align-self: center;
-  justify-self: left;
-}
-
-/* graffiti icon */
-.icon:nth-child(3) {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  align-self: right;
-  justify-self: center;
-}
-
-/* paths icon */
-.icon:nth-child(4) {
-  grid-column: 1/2;
-  grid-row: 4/6;
-  align-self: center;
-  justify-self: right;
-}
-
-/* lights icon */
-.icon:nth-child(5) {
-  grid-column: 3/6;
-  grid-row: 4/6;
-  align-self: center;
-  justify-self: left;
-}
-
-/* bins icon */
-.icon:nth-child(6) {
-  grid-column: 5/6;
-  grid-row: 2/3;
-  align-self: center;
-  justify-self: center;
-}
-
-/* potholes icon */
-.icon:nth-child(7) {
-  grid-column: 5/6;
-  grid-row: 4/6;
-  align-self: center;
-  justify-self: right;
-}
+.icon.tree     { left: 2%;  top: 28%; }
+.icon.bench    { left: 9%;  top: 36%; }
+.icon.graffiti { left: 12%; top: 67%; }
+.icon.path     { left: 2%;  top: 85%; }
+.icon.bin      { left: 40%; top: 45%; }
+.icon.pothole  { left: 43%; top: 85%; }
 
 /* FOOTER - HOME */
-
 .footer-home {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.625rem 1.868rem;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 5rem;
+  color: #222;
+  z-index: 10;
+  background: transparent;
   font-size: 1rem;
-  color: #545454;
+  font-family: 'Inter', sans-serif, Arial;
+  font-weight: 400;
+  opacity: 0.9;
+  text-align: right;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-home_mobile {
+  display: none;
+}
+
+/* Responsive queries unique to home */
+@media (max-width: 1200px) {
+  .icon { width: 10vw; max-width: 100px; }
+  .icon.tree     { left: 1%;  top: 27%; }
+  .icon.bench    { left: 2%;  top: 42%; }
+  .icon.graffiti { left: 10%; top: 73%; }
+  .icon.path     { left: 1%;  top: 88%; }
+  .icon.light    { left: 20%; top: 78%; }
+  .icon.bin      { left: 38%; top: 48%; }
+  .icon.pothole  { left: 43%; top: 85%; }
+  .icon.light { max-width: 182px; }
+}
+
+@media (max-width: 1120px) {
+  .icon { width: 10vw; max-width: 100px; }
+  .icon.tree     { left: 1%;  top: 31%; }
+  .icon.bench    { left: 14%;  top: 37%; }
+  .icon.graffiti { left: 7%; top: 73%; }
+  .icon.path     { left: 1%;  top: 89%; }
+  .icon.light    { left: 17%; top: 76%; }
+  .icon.bin      { left: 35%; top: 48%; }
+  .icon.pothole  { left: 43%; top: 85%; }
+  .icon.light { max-width: 192px; }
+  
+  .main-content.home {
+    position: absolute;
+    top: 12.625rem; 
+    right: 3.75rem; 
+    z-index: 5;
+  }
+}
+
+@media (max-width: 1000px) {
+  .icon { width: 10vw; max-width: 100px; }
+  .icon.tree     { left: 10%;  top: 30%; }
+  .icon.bench    { left: 14%;  top: 45%; }
+  .icon.graffiti { left: 4%; top:68%; }
+  .icon.path     { left: 1%;  top: 90%; }
+  .icon.light    { left: 13%; top: 76%; }
+  .icon.bin      { left: 35%; top: 48%; }
+  .icon.pothole  { left: 41%; top: 85%; }
+  .icon.light { max-width: 192px; }
+  
+  .main-content.home {
+    position: absolute;
+    top: 12.625rem; 
+    right: 3.75rem; 
+    z-index: 5;
+  }
+}
+
+@media (max-width: 900px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 6%; top: 35%; }
+  .icon.bench    { left: 18%; top: 48%; }
+  .icon.graffiti { left: 5%; top: 72%; }
+  .icon.path     { left: 1%; top: 93%; }
+  .icon.light    { left: 13%; top: 83%; }
+  .icon.bin      { left: 35%; top: 50%; }
+  .icon.pothole  { left: 41%; top: 90%; }
+  .icon.light { max-width: 145px; }
+  .main-content.home {
+    position: absolute;
+    top: 12.625rem; 
+    right: 3.75rem; 
+    z-index: 5;
+  }
+}
+
+@media (max-width: 798px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 3%; top: 59%; }
+  .icon.bench    { left: 24%; top: 66%; }
+  .icon.graffiti { left: 16%; top: 79%; }
+  .icon.path     { left: 3%; top: 94%; }
+  .icon.light    { left: 28%; top: 82%; }
+  .icon.bin      { left: 72%; top: 75%; }
+  .icon.pothole  { left: 48%; top: 90%; }
+  .icon.light { max-width: 145px; }
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right: 11rem; 
+    z-index: 5;
+  }
+  /* .login_container-home { padding-left: 0rem; } */
+
+  .background.home {
+  background-image: url('background/home_screen_mobile_bg.png');
+  }
+}
+
+@media (max-width: 700px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 2%; top: 53%; }
+  .icon.bench    { left: 20%; top: 60%; }
+  .icon.graffiti { left: 20%; top: 77%; }
+  .icon.path     { left: 2%; top: 94%; }
+  .icon.light    { left: 28%; top: 83%; }
+  .icon.bin      { left: 78%; top:72%; }
+  .icon.pothole  { left: 44%; top: 70%; }
+  .icon.light { max-width: 145px; }
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right: 9rem; 
+    z-index: 5;
+  }
+  /* .login_container-home { padding-left: 0rem; } */
+
+  .background.home {
+  background-image: url('background/home_screen_mobile_bg.png');
+  }
+}
+
+@media (max-width: 650px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 2%; top: 52%; }
+  .icon.bench    { left: 20%; top: 60%; }
+  .icon.graffiti { left: 22%; top: 73%; }
+  .icon.path     { left: 2%; top: 93%; }
+  .icon.light    { left: 25%; top: 83%; }
+  .icon.bin      { left: 73%; top:69%; }
+  .icon.pothole  { left: 44%; top: 71%; }
+  .icon.light { max-width: 145px; }
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right: 8rem; 
+    z-index: 5;
+  }
+  /* .login_container-home { padding-left: 0rem; } */
+}
+
+@media (max-width: 600px) {
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right: 7rem; 
+    z-index: 5;
+  }
+  /* .login_container-home { padding-left: 0rem; } */
+}
+
+@media (max-width: 580px) {
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right:6rem; 
+    z-index: 5;
+  }
+  /* .login_container-home { padding-left: 0rem; } */
+}
+
+@media (max-width: 560px) {
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right:5rem; 
+    z-index: 5;
+  }
+  /* .login_container-home { padding-left: 0rem; } */
+}
+
+
+@media (max-width: 530px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 2%; top: 50%; }
+  .icon.bench    { left: 20%; top:57%; }
+  .icon.graffiti { left: 22%; top: 69%; }
+  .icon.path     { left: 2%; top: 90%; }
+  .icon.light    { left: 21%; top: 83%; }
+  .icon.bin      { left: 73%; top: 61%; }
+  .icon.pothole  { left: 50%; top: 74%; }
+  .icon.light { max-width: 145px; }
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right:4rem; 
+    z-index: 5;
+  }
+  .login_container-home { padding-left: 4rem; }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 520px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 5%; top: 47%; }
+  .icon.bench    { left: 26%; top: 53%; }
+  .icon.graffiti { left: 26%; top: 70%; }
+  .icon.path     { left:5%; top: 85%; }
+  .icon.light    { left: 43%; top: 80%; }
+  .icon.bin      { left: 74%; top: 60%; }
+  .icon.pothole  { left: 83%; top: 88%; }
+  .icon.light { max-width: 140px; }
+  .login_container-home { padding-left: 0rem; }
+  .main-content.home {
+    position: absolute;
+    top: 8.625rem; 
+    right: 3.75rem; 
+    z-index: 5;
+  }
+  .login_container-home { padding-left: 4rem; }
+  .footer-home { display: none; }
+  .background.home {
+    background-image: url('background/home_screen_mobile_bg.png');
+  }
+}
+
+@media (max-width: 480px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 5%; top: 47%; }
+  .icon.bench    { left: 26%; top: 52%; }
+  .icon.graffiti { left: 31%; top: 70%; }
+  .icon.path     { left:5%; top: 85%; }
+  .icon.light    { left: 43%; top: 78%; }
+  .icon.bin      { left: 74%; top: 59%; }
+  .icon.pothole  { left: 83%; top: 82%; }
+  .icon.light { max-width: 140px; }
+  .login_container-home { padding-left: 0rem; }
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right: 2.9rem; 
+    z-index: 5;
+  }
+  .login_container-home { padding-left: 4rem; }
+}
+
+@media (max-width: 450px) {
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right: 1rem; 
+    z-index: 5;
+  }
+  .login_container-home { padding-left: 4rem; }
+}
+
+@media (max-width: 420px) {
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right: 1rem; 
+    z-index: 5;
+  }
+  .login_container-home { padding-left: 3rem; }
+}
+
+@media (max-width: 400px) {
+  .main-content.home {
+    position: absolute;
+    top: 7.625rem; 
+    right: 0rem; 
+    z-index: 5;
+  }
+  .login_container-home { padding-left: 3rem; }
+}
+
+@media (max-width: 390px) {
+  .icon { width: 14vw; max-width: 70px; }
+  .icon.tree     { left: 2%; top: 48%; }
+  .icon.bench    { left: 26%; top: 52%; }
+  .icon.graffiti { left: 28%; top:72%; }
+  .icon.path     { left: 2%; top: 84%; }
+  .icon.light    { left: 42%; top: 76%; }
+  .icon.bin      { left: 72%; top: 60%; }
+  .icon.pothole  { left: 81%; top: 82%; }
+  .icon.light { max-width: 85px; }
+  .login_container-home { padding-left: 2rem; }
+  .menu_container { padding-right: 3 rem; }
+  .main-content.home {
+    position: absolute;
+    top: 8.625rem; 
+    right: 0rem; 
+    z-index: 5;
+  }
+
+  .footer-home_mobile {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2.5rem;
+    color: #818181;
+    z-index: 10;
+    background: transparent;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif, Arial;
+    text-align: right;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-home { display: none; }
+  
+  .background.home {
+    background-image: url('background/home_screen_mobile_bg.png');
+  }
 }
