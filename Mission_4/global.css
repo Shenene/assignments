@@ -361,8 +361,10 @@ body {
   width: 100%;
 }
 
+/* ------------------------- ⁡⁢⁢⁣Media Queries⁡⁡ ------------------------- */
+
 /* Report issue screens */
-@media (max-width: 390px) {
+@media (max-width: 400px) {
 .label-flickering-light,
 .label-light-off,
 .label-pole-damaged,
@@ -381,7 +383,7 @@ body {
  .login_container {
   padding-top: 1rem;
   padding-left: 1rem;
-}
+  }
 .logo_container {
   padding-left: 1rem;
   }
@@ -392,6 +394,9 @@ body {
 .logo-text {
   font-size: 0.85rem;
   }
+  .menu_container {
+  padding-right: 2rem;
+}
 .back-button {
   padding-left: 1rem;
   }
@@ -404,7 +409,10 @@ body {
 }
 
 /* Preview Screens */
-@media (max-width: 390px) {
+@media (max-width: 400px) {
+.container {
+  padding-left: 1rem;
+}
 .image-photo-container {
   max-height: 10rem;
 }
@@ -427,6 +435,9 @@ body {
 .logo-text {
   font-size: 0.85rem;
   }
+.menu_container {
+  padding-right: 2rem;
+  }
 .back-button {
   padding-left: 1rem;
   }
@@ -444,9 +455,118 @@ body {
   padding-bottom: 0.3rem;
   }
 .footer-inner {
-  padding-right: 2.4rem;
+  padding-right: 6.2rem !important;
   }
 }
+
+/* Confirmation Screen */
+@media (max-width: 400px) {
+   .login_container-home {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+}
+.logo_container {
+  padding-left: 1rem;
+  }
+.logo {
+  width: 70px;
+  height: 70px;
+  }
+.logo-text {
+  font-size: 0.85rem;
+  }
+.menu_container {
+  padding-right: 2rem;
+  }
+.progress-wrapper {
+  max-width: 20rem;
+  }  
+  .confirm-pg_container {
+    grid-template-columns: 1fr !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .main-content_confirm {
+    padding-top: 0rem !important;
+  }
+  .heading_h1 {
+    font-size: 1.8rem;
+    padding-top: 1rem !important;
+  }
+  .report-note {
+    margin-top: 1.5rem !important;
+    font-size: 0.95rem !important;
+  }
+  .heading_h1,
+  .sub-heading,
+  .ul_confirmation-pg,
+  .track-report,
+  .visit-dashboard,
+  .report-note {
+    grid-column: 1 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left;
+  }
+  .li_con-layout {
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+  }
+  .envelope_img {
+    display: none !important;
+  }
+  .footer-confirmation-pg {
+    padding-bottom: 0.3rem !important;
+    padding-top: 0.3rem;
+  }
+}
+
+/* All Reports Screen */
+@media (max-width: 400px) {
+   .login_container-home {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+}
+.logo_container {
+  padding-left: 1rem;
+  }
+.logo {
+  width: 70px;
+  height: 70px;
+  }
+.logo-text {
+  font-size: 0.85rem;
+  }
+.menu_container {
+  padding-right: 2rem;
+  }
+.input--search-filter {
+  min-width: 1rem !important;
+}
+.btn.btn-search {
+  min-width: 7rem;
+  }
+.card_icon-status {
+  width: 1rem;
+  height: 1rem;
+}
+.status-label {
+  font-size: 1rem;
+  padding-left: 1.2rem;
+}
+.status-key {
+  padding-left: 0;  
+}
+.status-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+}
+
+
+
+
 
 /* Shared responsive queries (used by more than one page) */
 /* @media (max-width: 1200px) {
