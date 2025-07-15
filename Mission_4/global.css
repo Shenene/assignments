@@ -361,7 +361,7 @@ body {
   width: 100%;
 }
 
-
+/* Report issue screens */
 @media (max-width: 390px) {
 .label-flickering-light,
 .label-light-off,
@@ -400,6 +400,51 @@ body {
   }
 .progress-wrapper {
   max-width: 20rem;
+  }
+}
+
+/* Preview Screens */
+@media (max-width: 390px) {
+.image-photo-container {
+  max-height: 10rem;
+}
+.photo-icon {
+  width: 12rem !important;
+  height: 15rem !important;
+  margin-top: 1rem !important;
+}  
+ .login_container {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+.logo_container {
+  padding-left: 1rem;
+  }
+.logo {
+  width: 70px;
+  height: 70px;
+  }
+.logo-text {
+  font-size: 0.85rem;
+  }
+.back-button {
+  padding-left: 1rem;
+  }
+.send-report-button {
+  min-width: 9rem;
+  }
+.progress-wrapper {
+  max-width: 20rem;
+  }
+  .report-address {
+  font-size: 1.4rem !important;
+  }
+.footer,
+.footer-inner {
+  padding-bottom: 0.3rem;
+  }
+.footer-inner {
+  padding-right: 2.4rem;
   }
 }
 
