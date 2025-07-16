@@ -588,13 +588,6 @@ body {
 }
 }
 
-/* Mobile Screens */
-@media (max-width: 600px) {
-.menu_container {
-  display: none;
-}
-}
-
 
 /*  M A X   W I D T H   7 6 8 */
 /* Home screen */
