@@ -24,6 +24,7 @@
   align-items: center;
   margin-right: auto;
   padding-left: 7rem;
+  padding-top: 1.2rem;
   width: 6.25rem;
   height: 7.8125rem;
 }
@@ -175,6 +176,12 @@
     right: 3.75rem; 
     z-index: 5;
   }
+}
+
+@media (max-width: 800px) {
+.subtext.home {
+  color:#000;
+}
 }
 
 @media (max-width: 798px) {
@@ -385,6 +392,11 @@
     right: 0rem; 
     z-index: 5;
   }
+
+  
+.subtext.home {
+  color:#000;
+}
 
   .footer-home_mobile {
     position: absolute;
