@@ -1,4 +1,4 @@
-wi/* ------------------------- ⁡⁢⁢⁣Base/Reset⁡ ------------------------- */
+/* ------------------------- ⁡⁢⁢⁣Base/Reset⁡ ------------------------- */
 *,
 *::before,
 *::after {
@@ -409,6 +409,30 @@ body {
   }
 }
 
+/* Location Screen */
+@media (max-width: 400px) {
+  .map-img {
+  max-width: 31.25rem;
+  height: 14rem !important;
+  width: 20rem !important;
+  margin-left: 1.4rem !important;
+}
+.search-location {
+  padding-left: 0.9rem;
+}
+  .input--search-location {
+  max-width: 80vw !important;
+}
+.location-info {
+  max-width: 80%;
+  margin-left: 0 !important;
+}
+.next-button {
+  min-width: 9rem;
+  }
+}
+
+
 /* Preview Screens */
 @media (max-width: 400px) {
 .container {
@@ -456,7 +480,7 @@ body {
   padding-bottom: 0.3rem;
   }
 .footer-inner {
-  padding-right: 6.2rem !important;
+  padding-right: 6.5rem !important;
   }
 }
 
@@ -587,3 +611,6 @@ body {
   padding-top: 2rem !important;
 }
 }
+
+
+
