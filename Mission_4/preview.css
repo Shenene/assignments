@@ -1,12 +1,5 @@
-/* ---------------- 🪟 P R E V I E W   S C R E E N ---------------- */
 
-/* PROGRESS BAR - STEP 3*/
-.progress-fill-step3 {
-  height: 100%;
-  width: 100%;
-  background-color: #77a741;
-  transition: width 0.3s ease;
-}
+/* ---------------- 🪟 ⁡⁢⁣⁣P R E V I E W   S C R E E N⁡ ---------------- */
 
 /* Report Summary */
 .container {
@@ -58,14 +51,7 @@
   color: #545454;
 }
 
-/* FOOTER - LOCATION */
-
-.footer-preview--lights,
-.footer-preview--benches,
-.footer-preview--trees {
-  margin-top: 9.25rem;
-}
-
+/* BUTTON */
 .send-report-button {
   display: flex;
   align-items: center;
