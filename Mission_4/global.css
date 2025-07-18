@@ -400,7 +400,7 @@ body {
     font-size: 0.85rem;
   }
   .menu_container {
-    padding-right: 2rem;
+    display: none;
   }
   .back-button {
     padding-left: 1rem;
