@@ -73,10 +73,10 @@
   color: rgb(0, 32, 19);
 }
 
-html,
+/* html,
 body {
   height: 100%;
   margin: 0;
   background: url("testhome_screen_bg.png") no-repeat center center fixed;
   background-size: cover;
-}
+} */

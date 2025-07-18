@@ -29,23 +29,113 @@
     <!---------------- 🏠 ⁡⁣⁢⁢H O M E   S C R E E N⁡ ---------------->
     <!-- B A C K   G R O U N D -->
     <div class="background home">
-      <nav class="navbar navbar-light"></nav>
+      <!-- Signup -->
+      <!------------------------------- Navbar with hamburger button -------------------------------------->
+
+      <nav class="navbar navbar-light">
+        <div class="container-fluid justify-content-end">
+          <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">&#9776;</button>
+        </div>
+      </nav>
 
       <!------------------------------- Offcanvas Menu (slides in from right) ---------------------------->
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <!--Header -->
-        <!-- <div class="offcanvas-header">
-        <h3 class="offcanvas-title px-4 fw-bold" id="offcanvasRightLabel">
-          Menu
-        </h3>
-        <button
-          type="button"
-          class="btn-close btn-close-dark"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div> -->
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title" id="offcanvasRightLabel">Menu</h3>
+          <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="nav flex-column gap-2">
+            <li class="nav-item">
+              <a href="timhome.html" class="btn btn-outline-dark">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-dark" href="#">All Reports</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#feedbackModal">Feedback</button>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-dark" href="#">Chat FAQs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
+      <!-- -----------------------------------(( Create An Account )) -------------------------------------------- -->
+      <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow p-4 w-100 mw-500">
+          <h3 class="text-center mb-4">Create an Account</h3>
+          <!--------------------------------------- Form ----------------------------------------------------->
+          <form class="needs-validation" novalidate id="signupForm">
+            <!------------------------------------- Full Names ----------------------------------------------->
+            <div class="mb-3">
+              <!-- text input for signUpName -->
+              <label for="signupName" class="form-label">Full Name</label>
+              <input type="text" class="form-control bg-light" id="signupName" required />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <!------------------------------------- Emails Address ------------------------------------------->
+            <div class="mb-3">
+              <!-- text input for signupEmail -->
+              <label for="signupEmail" class="form-label">Email Address</label>
+              <input type="email" class="form-control bg-light" id="signupEmail" required />
+              <div class="invalid-feedback">Please enter your Email.</div>
+            </div>
+            <!------------------------------------- Password ------------------------------------------------->
+            <div class="mb-3">
+              <!-- text input for signupPassword -->
+              <label for="signupPassword" class="form-label">Password</label>
+              <input type="password" class="form-control bg-light" id="signupPassword" required minlength="6" />
+              <div class="invalid-feedback">Password must be at least 6 characters.</div>
+            </div>
+            <!------------------------------------- Confirm Password --------------------------------------->
+            <div class="mb-3">
+              <!-- text input for signupConfirm -->
+              <label for="signupConfirm" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control bg-light" id="signupConfirm" required />
+              <div class="invalid-feedback" id="confirmFeedback">Please Confirm your password</div>
+            </div>
+
+            <!------------------------------------- terms and conditions ----------------------------------->
+            <div class="mb-3 form-check">
+              <!-- checkbox input for terms-->
+              <input type="checkbox" class="form-check-input" id="terms" required />
+              <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+              <div class="invalid-feedback">You must agree before submitting.</div>
+            </div>
+
+            <!-- submit button for form-->
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            <!-------------------------------------------------------------------------------->
+          </form>
+          <!---------------------------------------------------------------------------------->
+          <div class="mt-3 text-center">
+            <small class="text-muted">
+              Already have an account?
+              <a href="#" data-bs-toggle="modal" data-bs-target="#LoginModal">Login here</a>
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- Navbar with hamburger button -------------------------------------->
+
+      <nav class="navbar navbar-light">
+        <div class="container-fluid d-flex justify-content-between align-items-start">
+          <button class="btn loginbtn" type="button" data-bs-toggle="modal" data-bs-target="#LoginModal">
+            <img src="loginbtn.svg" alt="login In btn" />
+          </button>
+
+          <!-- <a href="timhome.html" class="btn">-->
+          <img class="logoo" src="Logo.svg" alt="Logoo" />
+
+          <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">&#9776;</button>
+        </div>
+      </nav>
+
+      <!------------------------------- Offcanvas Menu (slides in from right) ---------------------------->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <!-- Body -->
         <div class="offcanvas-body d-flex p-0 hamNavBar2">
           <ul class="nav flex-column gap-3 px-2 py-4 hamNavBar1">
@@ -234,33 +324,5 @@
         <a class="chat_nav" href="help.html" aria-label="Help/Chat"><img src="icons/chat_icon.png" alt="Help or Chat" /></a>
       </nav>
     </div>
-
-    <script>
-      //------------------------ Login in & Form Validation  ------------------------
-      document.addEventListener("DOMContentLoaded", () => {
-        const forms = document.querySelectorAll(".needs-validation");
-
-        forms.forEach((form) => {
-          form.addEventListener("submit", (e) => {
-            if (!form.checkValidity()) {
-              e.preventDefault();
-              e.stopPropagation();
-            }
-
-            form.classList.add("was-validated");
-          });
-        });
-      });
-      //------------------------ Stars Rating's Code ------------------------
-      document.querySelectorAll(".star-rating:not(.readonly) label").forEach((star) => {
-        star.addEventListener("click", function () {
-          this.style.transform = "scale(1.2)";
-          setTimeout(() => {
-            this.style.transform = "scale(1)";
-          }, 200);
-        });
-      });
-      //-----------------------------------------------------------------------
-    </script>
   </body>
 </html>

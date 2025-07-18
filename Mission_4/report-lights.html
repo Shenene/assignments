@@ -29,13 +29,11 @@
     <!---------------- 📑 ⁡⁢⁣⁢R E P O R T   I S S U E   S C R E E N  * 💡 L I G H T S⁡ ---------------->
     <!-- B A C K   G R O U N D -->
     <div class="app-wrapper background other">
-          
-      <nav class="navbar navbar-light"></nav>
-
+        
       <!------------------------------- Offcanvas Menu (slides in from right) ---------------------------->
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <!--Header -->
-        <!-- <div class="offcanvas-header">
+        <div class="offcanvas-header">
         <h3 class="offcanvas-title px-4 fw-bold" id="offcanvasRightLabel">
           Menu
         </h3>
@@ -45,7 +43,7 @@
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>
-      </div> -->
+      </div>
 
         <!-- Body -->
         <div class="offcanvas-body d-flex p-0 hamNavBar2">
@@ -306,33 +304,5 @@
         </div>
       </footer>
     </div>
-    
-    <script>
-      //------------------------ Login in & Form Validation  ------------------------
-      document.addEventListener("DOMContentLoaded", () => {
-        const forms = document.querySelectorAll(".needs-validation");
-
-        forms.forEach((form) => {
-          form.addEventListener("submit", (e) => {
-            if (!form.checkValidity()) {
-              e.preventDefault();
-              e.stopPropagation();
-            }
-
-            form.classList.add("was-validated");
-          });
-        });
-      });
-      //------------------------ Stars Rating's Code ------------------------
-      document.querySelectorAll(".star-rating:not(.readonly) label").forEach((star) => {
-        star.addEventListener("click", function () {
-          this.style.transform = "scale(1.2)";
-          setTimeout(() => {
-            this.style.transform = "scale(1)";
-          }, 200);
-        });
-      });
-      //-----------------------------------------------------------------------
-    </script>
   </body>
 </html>

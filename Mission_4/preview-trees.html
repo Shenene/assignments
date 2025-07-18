@@ -30,7 +30,7 @@
 
     <!-- B A C K   G R O U N D -->
     <div class="app-wrapper background other">
-      <nav class="navbar navbar-light"></nav>
+      <!-- <nav class="navbar navbar-light"></nav> -->
 
       <!------------------------------- Offcanvas Menu (slides in from right) ---------------------------->
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -252,33 +252,5 @@
         </div>
       </footer>
     </div>
-
-    <script>
-      //------------------------ Login in & Form Validation  ------------------------
-      document.addEventListener("DOMContentLoaded", () => {
-        const forms = document.querySelectorAll(".needs-validation");
-
-        forms.forEach((form) => {
-          form.addEventListener("submit", (e) => {
-            if (!form.checkValidity()) {
-              e.preventDefault();
-              e.stopPropagation();
-            }
-
-            form.classList.add("was-validated");
-          });
-        });
-      });
-      //------------------------ Stars Rating's Code ------------------------
-      document.querySelectorAll(".star-rating:not(.readonly) label").forEach((star) => {
-        star.addEventListener("click", function () {
-          this.style.transform = "scale(1.2)";
-          setTimeout(() => {
-            this.style.transform = "scale(1)";
-          }, 200);
-        });
-      });
-      //-----------------------------------------------------------------------
-    </script>
   </body>
 </html>

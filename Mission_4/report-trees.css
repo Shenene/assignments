@@ -1,4 +1,3 @@
-
 /* ---------------- 📑 ⁡⁢⁣⁢R E P O R T   I S S U E   S C R E E N  * 🌴 T R E E S⁡ ---------------- */
 
 /* Button styles (unique to trees) */
@@ -8,7 +7,7 @@
 .btn-trees-other {
   display: grid;
   align-items: center;
-  background: url('images/button.png') center/cover no-repeat;
+  background: url("images/button.png") center/cover no-repeat;
   aspect-ratio: 4/1;
   position: relative;
   width: 100%;
@@ -40,7 +39,7 @@
   display: grid;
   grid-column: 1 / -1;
   margin-top: 0.625rem;
-  gap: 0.3125rem;  
+  gap: 0.3125rem;
 }
 
 /* .other-description {

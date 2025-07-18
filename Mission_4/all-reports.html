@@ -30,22 +30,15 @@
 
     <!-- B A C K   G R O U N D -->
     <div class="app-wrapper background other">
-      <nav class="navbar navbar-light"></nav>
+      <!-- <nav class="navbar navbar-light"></nav> -->
 
       <!------------------------------- Offcanvas Menu (slides in from right) ---------------------------->
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <!--Header -->
-        <!-- <div class="offcanvas-header">
-        <h3 class="offcanvas-title px-4 fw-bold" id="offcanvasRightLabel">
-          Menu
-        </h3>
-        <button
-          type="button"
-          class="btn-close btn-close-dark"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div> -->
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title px-4 fw-bold" id="offcanvasRightLabel">Menu</h3>
+          <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
 
         <!-- Body -->
         <div class="offcanvas-body d-flex p-0 hamNavBar2">
@@ -180,187 +173,198 @@
 
       <!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
 
-      <!-- M A I N -->⁡
-      <main class="main-content-reports">
-        <div class="report-scroll-area">
-          <!-- Card 1 -->
-          <div class="report-card">
-            <div class="report-card_icon-container">
-              <img src="icons/lights_icon_bgremoved.png" alt="light icon" class="light_ico" />
-            </div>
+      <!-- H E A D E R - Container - Main -->
+      <header class="header_container-home">
+        <!-- Container 1 -->
+        <div class="login_container-home">
+          <img src="icons/account_icon.png" alt="login/register icon" class="login-icon" id="authIcon" />
+          <div class="login-text">Account</div>
+        </div>
 
-            <div class="report-details">
-              <h2 class="report-title">Flickering light</h2>
-
-              <p>
-                <span class="label">Location:</span>
-                <span class="report-location">123 West Street, Auckland</span>
-              </p>
-
-              <p>
-                <span class="label">Submitted:</span>
-                <span class="report-date">June 14, 2025</span>
-              </p>
-
-              <div class="status-container">
-                <span class="label">Status:</span>
-                <span class="report-status">
-                  <!--  **********************************updte alt="status icon" info dynamically with JS later ************************************** -->
-                  <img src="icons/diamond_icon.png" alt="status icon" id="status_icon-card" class="card_icon-status" />
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="report-card">
-            <div class="report-card_icon-container">
-              <img src="icons/trees_icon_bgremoved.png" alt="tree icon" class="tree_ico" />
-            </div>
-
-            <div class="report-details">
-              <h2 class="report-title">Tree blocking path</h2>
-
-              <p>
-                <span class="label">Location:</span>
-                <span class="report-location">10 South Street, Auckland</span>
-              </p>
-
-              <p>
-                <span class="label">Submitted:</span>
-                <span class="report-date">June 5, 2025</span>
-              </p>
-
-              <div class="status-container">
-                <span class="label">Status:</span>
-                <span class="report-status">
-                  <!--  **********************************updte alt="status icon" info dynamically with JS later ************************************** -->
-                  <img src="icons/triangle_icon.png" alt="status icon" id="status_icon-card" class="card_icon-status" />
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="report-card">
-            <div class="report-card_icon-container">
-              <img src="icons/bench_icon_bgremoved.png" alt="bench icon" class="bench_ico" />
-            </div>
-
-            <div class="report-details">
-              <h2 class="report-title">Broken seat or backrest</h2>
-
-              <p>
-                <span class="label">Location:</span>
-                <span class="report-location">20 South Street, Auckland</span>
-              </p>
-
-              <p>
-                <span class="label">Submitted:</span>
-                <span class="report-date">April 5, 2025</span>
-              </p>
-
-              <div class="status-container">
-                <span class="label">Status:</span>
-                <span class="report-status">
-                  <!--  **********************************updte alt="status icon" info dynamically with JS later ************************************** -->
-                  <img src="icons/green_tick_icon.png" alt="status icon" id="status_icon-card" class="card_icon-status" />
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="report-card">
-            <div class="report-card_icon-container">
-              <img src="icons/bins_icon_bgremoved.png" alt="bin icon" class="bin_ico" />
-            </div>
-
-            <div class="report-details">
-              <h2 class="report-title">Overflowing bin</h2>
-
-              <p>
-                <span class="label">Location:</span>
-                <span class="report-location">17 North Street, Auckland</span>
-              </p>
-
-              <p>
-                <span class="label">Submitted:</span>
-                <span class="report-date">January 2, 2025</span>
-              </p>
-
-              <div class="status-container">
-                <span class="label">Status:</span>
-                <span class="report-status">
-                  <!--  **********************************updte alt="status icon" info dynamically with JS later ************************************** -->
-                  <img src="icons/green_tick_icon.png" alt="status icon" id="status_icon-card" class="card_icon-status" />
-                </span>
-              </div>
-            </div>
+        <!-- Container 2 -->
+        <div class="logo_container">
+          <img src="logo/logo.png" alt="logo" class="logo" />
+          <div class="logo-text">
+            <span>See something wrong?</span>
+            <span>Report it. Help fix it.</span>
           </div>
         </div>
-      </main>
 
-      ⁡⁣⁢⁢
-      <!-- FOOTER -->⁡
-      <div class="status-footer-row">
-        <span class="status-label">Status Key:</span>
-        <div class="status-key">
-          <ul>
-            <li class="status-item">
-              <div class="status-icon-label">
-                <img class="status-icon" src="icons/diamond_icon.png" alt="Logged" />
+        <!-- Container 3 -->
+        <div class="menu_container">
+          <img src="icons/menu.png" alt="menu icon" class="menu" />
+        </div>
+      </header>
 
-                <span>Logged</span>
+      <!-- ------------------------------------------------------------------ -->
+      <div class="app-wrapper-reports">
+        <!-- P A G E   H E A D I N G (h1)-->
+        <div class="page-heading-wrapper">
+          <h1 class="heading_main report-issue">All Reports</h1>
+        </div>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- -------- All Reports Screen -------- -->
+        <!-- SEARCH / FILTER LOCATION -->
+
+        <div class="search-filter">
+          <label for="search/filter-reports" class="visually-hidden">Search or filter reports</label>
+          <input type="text" id="search/filter" name="search" placeholder="Search or filter reports..." class="input--search-filter" />
+          <button class="btns btn-search">Search</button>
+        </div>
+
+        ⁡⁣⁢⁢
+        <!-- M A I N -->⁡
+        <main class="main-content-reports">
+          <div class="report-scroll-area">
+            <!-- Card 1 -->
+            <div class="report-card">
+              <div class="report-card_icon-container">
+                <img src="icons/lights_icon_bgremoved.png" alt="light icon" class="light_ico" />
               </div>
-            </li>
 
-            <li class="status-item">
-              <div class="status-icon-label">
-                <img class="status-icon" src="icons/triangle_icon.png" alt="In Progress" />
+              <div class="report-details">
+                <h2 class="report-title">Flickering light</h2>
 
-                <span>In Progress</span>
+                <p>
+                  <span class="label">Location:</span>
+                  <span class="report-location">123 West Street, Auckland</span>
+                </p>
+
+                <p>
+                  <span class="label">Submitted:</span>
+                  <span class="report-date">June 14, 2025</span>
+                </p>
+
+                <div class="status-container">
+                  <span class="label">Status:</span>
+                  <span class="report-status">
+                    <!--  **********************************updte alt="status icon" info dynamically with JS later ************************************** -->
+                    <img src="icons/diamond_icon.png" alt="status icon" id="status_icon-card" class="card_icon-status" />
+                  </span>
+                </div>
               </div>
-            </li>
+            </div>
 
-            <li class="status-item">
-              <div class="status-icon-label">
-                <img class="status-icon" src="icons/green_tick_icon.png" alt="Completed" />
-
-                <span>Completed</span>
+            <!-- Card 2 -->
+            <div class="report-card">
+              <div class="report-card_icon-container">
+                <img src="icons/trees_icon_bgremoved.png" alt="tree icon" class="tree_ico" />
               </div>
-            </li>
-          </ul>
+
+              <div class="report-details">
+                <h2 class="report-title">Tree blocking path</h2>
+
+                <p>
+                  <span class="label">Location:</span>
+                  <span class="report-location">10 South Street, Auckland</span>
+                </p>
+
+                <p>
+                  <span class="label">Submitted:</span>
+                  <span class="report-date">June 5, 2025</span>
+                </p>
+
+                <div class="status-container">
+                  <span class="label">Status:</span>
+                  <span class="report-status">
+                    <!--  **********************************updte alt="status icon" info dynamically with JS later ************************************** -->
+                    <img src="icons/triangle_icon.png" alt="status icon" id="status_icon-card" class="card_icon-status" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="report-card">
+              <div class="report-card_icon-container">
+                <img src="icons/bench_icon_bgremoved.png" alt="bench icon" class="bench_ico" />
+              </div>
+
+              <div class="report-details">
+                <h2 class="report-title">Broken seat or backrest</h2>
+
+                <p>
+                  <span class="label">Location:</span>
+                  <span class="report-location">20 South Street, Auckland</span>
+                </p>
+
+                <p>
+                  <span class="label">Submitted:</span>
+                  <span class="report-date">April 5, 2025</span>
+                </p>
+
+                <div class="status-container">
+                  <span class="label">Status:</span>
+                  <span class="report-status">
+                    <!--  **********************************updte alt="status icon" info dynamically with JS later ************************************** -->
+                    <img src="icons/green_tick_icon.png" alt="status icon" id="status_icon-card" class="card_icon-status" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="report-card">
+              <div class="report-card_icon-container">
+                <img src="icons/bins_icon_bgremoved.png" alt="bin icon" class="bin_ico" />
+              </div>
+
+              <div class="report-details">
+                <h2 class="report-title">Overflowing bin</h2>
+
+                <p>
+                  <span class="label">Location:</span>
+                  <span class="report-location">17 North Street, Auckland</span>
+                </p>
+
+                <p>
+                  <span class="label">Submitted:</span>
+                  <span class="report-date">January 2, 2025</span>
+                </p>
+
+                <div class="status-container">
+                  <span class="label">Status:</span>
+                  <span class="report-status">
+                    <!--  **********************************updte alt="status icon" info dynamically with JS later ************************************** -->
+                    <img src="icons/green_tick_icon.png" alt="status icon" id="status_icon-card" class="card_icon-status" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        ⁡⁣⁢⁢
+        <!-- FOOTER -->⁡
+        <div class="status-footer-row">
+          <span class="status-label">Status Key:</span>
+          <div class="status-key">
+            <ul>
+              <li class="status-item">
+                <div class="status-icon-label">
+                  <img class="status-icon" src="icons/diamond_icon.png" alt="Logged" />
+                  <span>Logged</span>
+                </div>
+              </li>
+
+              <li class="status-item">
+                <div class="status-icon-label">
+                  <img class="status-icon" src="icons/triangle_icon.png" alt="In Progress" />
+                  <span>In Progress</span>
+                </div>
+              </li>
+
+              <li class="status-item">
+                <div class="status-icon-label">
+                  <img class="status-icon" src="icons/green_tick_icon.png" alt="Completed" />
+                  <span>Completed</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
-    <script>
-      //------------------------ Login in & Form Validation  ------------------------
-      document.addEventListener("DOMContentLoaded", () => {
-        const forms = document.querySelectorAll(".needs-validation");
-
-        forms.forEach((form) => {
-          form.addEventListener("submit", (e) => {
-            if (!form.checkValidity()) {
-              e.preventDefault();
-              e.stopPropagation();
-            }
-
-            form.classList.add("was-validated");
-          });
-        });
-      });
-      //------------------------ Stars Rating's Code ------------------------
-      document.querySelectorAll(".star-rating:not(.readonly) label").forEach((star) => {
-        star.addEventListener("click", function () {
-          this.style.transform = "scale(1.2)";
-          setTimeout(() => {
-            this.style.transform = "scale(1)";
-          }, 200);
-        });
-      });
-      //-----------------------------------------------------------------------
-    </script>
   </body>
 </html>
