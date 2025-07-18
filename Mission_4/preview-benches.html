@@ -253,4 +253,32 @@
       </footer>
     </div>
   </body>
+
+  <script>
+    //------------------------ Login in & Form Validation  ------------------------
+    document.addEventListener("DOMContentLoaded", () => {
+      const forms = document.querySelectorAll(".needs-validation");
+
+      forms.forEach((form) => {
+        form.addEventListener("submit", (e) => {
+          if (!form.checkValidity()) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        });
+      });
+    });
+    //------------------------ Stars Rating's Code ------------------------
+    document.querySelectorAll(".star-rating:not(.readonly) label").forEach((star) => {
+      star.addEventListener("click", function () {
+        this.style.transform = "scale(1.2)";
+        setTimeout(() => {
+          this.style.transform = "scale(1)";
+        }, 200);
+      });
+    });
+    //-----------------------------------------------------------------------
+  </script>
 </html>

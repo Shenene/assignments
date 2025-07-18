@@ -248,9 +248,37 @@
       <!-- FOOTER -->⁡
       <footer class="footer footer-preview--trees">
         <div class="footer-inner">
-          <button class="btn send-report-button"><img src="icons/tick.png" alt="" class="btn-icon" aria-hidden="true" />Send Report</button>
+          <button class="btns send-report-button"><img src="icons/tick.png" alt="" class="btn-icon" aria-hidden="true" />Send Report</button>
         </div>
       </footer>
     </div>
+
+    <script>
+      //------------------------ Login in & Form Validation  ------------------------
+      document.addEventListener("DOMContentLoaded", () => {
+        const forms = document.querySelectorAll(".needs-validation");
+
+        forms.forEach((form) => {
+          form.addEventListener("submit", (e) => {
+            if (!form.checkValidity()) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          });
+        });
+      });
+      //------------------------ Stars Rating's Code ------------------------
+      document.querySelectorAll(".star-rating:not(.readonly) label").forEach((star) => {
+        star.addEventListener("click", function () {
+          this.style.transform = "scale(1.2)";
+          setTimeout(() => {
+            this.style.transform = "scale(1)";
+          }, 200);
+        });
+      });
+      //-----------------------------------------------------------------------
+    </script>
   </body>
 </html>

@@ -263,7 +263,7 @@ body {
 }
 
 /* ------------------------- ⁡⁢⁢⁣Buttons⁡ ------------------------- */
-.btn {
+.btns {
   font-size: 1rem;
   min-width: 11.0625rem;
   min-height: 2.75rem;
@@ -541,6 +541,8 @@ body {
     padding-top: 2rem !important;
   }
 }
+
+/* MODALS */
 
 .star-rating {
   direction: rtl;

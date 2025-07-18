@@ -23,7 +23,7 @@
     <script src="script.js" defer></script>
   </head>
 
-  
+
 ⁡⁣⁢⁢ <!-- B O D Y -->⁡
   <body>
     <!---------------- 📑 ⁡⁢⁣⁢R E P O R T   I S S U E   S C R E E N  * 🪑 B E N C H E S⁡---------------->
@@ -239,27 +239,27 @@
           <fieldset class="issue-options">
              <legend class="visually-hidden">Type of bench issue</legend>
             <!-- button 1 -->
-            <button class="btn btn--broken-bench">
+            <button class="btns btn--broken-bench">
               <span class="label--broken-bench">Broken</span>
             </button>
 
             <!-- button 2 -->
-            <button class="btn btn--loose-unstable">
+            <button class="btns btn--loose-unstable">
               <span class="label--loose-unstable">Loose / unstable</span>
             </button>
 
             <!-- button 3 -->
-            <button class="btn btn-vandalized">
+            <button class="btns btn-vandalized">
               <span class="label-vandalized">Vandalized</span>
             </button>
 
             <!-- button 4 -->
-            <button class="btn btn--missing-bench">
+            <button class="btns btn--missing-bench">
               <span class="label--missing-bench">Missing bench</span>
             </button>
 
             <!-- button 5 -->
-            <button class="btn btn-bench-other">
+            <button class="btns btn-bench-other">
               <span class="label-bench-other">Other</span>
             </button>
 
@@ -294,14 +294,42 @@
       <footer class="footer footer-benches">
         <div class="footer-inner">
            <!-- Next Button -->
-             <a class="btn next-button" href="location.html">Next
-            <img
-              src="icons/next_arrow.png"
-              alt="" class="btn-icon-next" aria-hidden="true"/>
-          </a>
+      <a class="btns next-button" href="location.html">Next
+      <img
+        src="icons/next_arrow.png"
+        alt="" class="btn-icon-next" aria-hidden="true"/>
+      </a>
         </div>
       </footer>
    </div>
+
+   <script>
+      //------------------------ Login in & Form Validation  ------------------------
+      document.addEventListener("DOMContentLoaded", () => {
+        const forms = document.querySelectorAll(".needs-validation");
+
+        forms.forEach((form) => {
+          form.addEventListener("submit", (e) => {
+            if (!form.checkValidity()) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          });
+        });
+      });
+      //------------------------ Stars Rating's Code ------------------------
+      document.querySelectorAll(".star-rating:not(.readonly) label").forEach((star) => {
+        star.addEventListener("click", function () {
+          this.style.transform = "scale(1.2)";
+          setTimeout(() => {
+            this.style.transform = "scale(1)";
+          }, 200);
+        });
+      });
+      //-----------------------------------------------------------------------
+    </script>
   </body>
 </html>
 
