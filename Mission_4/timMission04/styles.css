@@ -28,9 +28,9 @@
 .loginbtn {
   display: flex;
   justify-content: center;
-  height: 3rem;
-  width: 3rem;
-  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.2rem;
   border: #007d1f;
   outline: auto;
 }
@@ -44,14 +44,39 @@
 .icon-btn-nav {
   display: flex;
   justify-content: center;
-  height: 2.5rem;
-  width: 2.5rem;
-  padding: 0.5rem;
-  border: #007d1f;
-  outline: auto;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.1rem;
+  border: #396444;
+  outline-offset: 0.1rem;
 }
 .icon-btn-nav:hover {
   display: flex;
   background-color: #2effb6;
   outline: auto;
+}
+.logoo {
+  display: flex;
+  justify-content: center;
+  max-height: 6rem;
+  max-width: 4rem;
+  padding: 0.5rem;
+}
+.hamNavBar1 {
+  background-color: rgb(170, 237, 134);
+}
+/* .hamNavBar2 {
+  background-color: rgba(23, 131, 50, 0.806);
+} */
+
+.nav-bar-text {
+  color: rgb(0, 32, 19);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: url("testhome_screen_bg.png") no-repeat center center fixed;
+  background-size: cover;
 }
