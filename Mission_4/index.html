@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
 
     <link href="global.css" rel="stylesheet" />
-    <link href="preview.css" rel="stylesheet" />
+    <link href="home.css" rel="stylesheet" />
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
@@ -26,10 +26,9 @@
   ⁡⁣⁢⁢
   <!-- B O D Y -->⁡
   <body>
-    <!---------------- 🪟 ⁡⁢⁣⁣P R E V I E W   S C R E E N - 🌴 T R E E S⁡ ---------------->
-
+    <!---------------- 🏠 ⁡⁣⁢⁢H O M E   S C R E E N⁡ ---------------->
     <!-- B A C K   G R O U N D -->
-    <div class="app-wrapper background other">
+    <div class="background home">
       <nav class="navbar navbar-light"></nav>
 
       <!------------------------------- Offcanvas Menu (slides in from right) ---------------------------->
@@ -181,16 +180,9 @@
       <!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
 
       <!-- H E A D E R - Container - Main -->
-      <header class="header_container">
-        <!-- Back Button (Arrow) -->
-        <div class="back-button">
-          <button class="btn-back">
-            <img src="icons/back_arrow.png" alt="Go back" class="back-icon" />
-          </button>
-        </div>
-
+      <header class="header_container-home">
         <!-- Container 1 -->
-        <div class="login_container">
+        <div class="login_container-home">
           <img src="icons/login_icon.png" alt="login/register icon" class="login-icon" id="authIcon" />
           <div class="login-text">Login/Register</div>
         </div>
@@ -210,47 +202,64 @@
         </div>
       </header>
 
-      <!-- ------------------------------------------------------------------ -->
-      <!-- PROGRESS BAR -->
-      <div class="progress-wrapper">
-        <span class="progress-label">Step 3</span>
-        <div class="progress-bar">
-          <div class="progress-fill-step3"></div>
-        </div>
-      </div>
+      ⁡⁣⁢⁢<!-- M A I N -->⁡
+      <main class="main-content home">
+        <h1 class="heading_main--home">Welcome to FixIt</h1>
+        <p class="subtext home">A quick, simple way to report problems in your city - like full bins, broken lights, or graffiti, You're helping restore our shared spaces.</p>
+      </main>
 
-      ⁡⁣⁢⁢
-      <!-- M A I N -->⁡
-      <!-- P A G E   H E A D I N G (h1)-->
-      <div class="content-wrapper">
-        <main class="main-content">
-          <div class="page-heading-wrapper">
-            <h1 class="heading_main report-issue">Preview</h1>
-          </div>
+      <section class="home-visual">
+        <a href="report-lights.html" class="icon-link"><img src="icons/lights_icon.png" alt="light icon" class="icon light" /></a>
+        <a href="report-benches.html" class="icon-link"><img src="icons/bench_icon.png" alt="bench icon" class="icon bench" /></a>
+        <a href="report-trees.html" class="icon-link"><img src="icons/trees_icon.png" alt="tree icon" class="icon tree" /></a>
 
-          <!-- Report summary -->
-          <div class="container">
-            <div class="report-summary">
-              <h2 class="report-intro">You're about to report a tree blocking path at</h2>
-              <em class="report-address">[10 South Street, Auckland].</em>
-            </div>
-          </div>
-
-          <!-- Upload image section -->
-          <section class="img-photo-container">
-            <img class="photo-icon" src="images/photo_img.svg" alt="uploaded photo" />
-            <span class="attached_photo-text">Your attached photo</span>
-          </section>
-        </main>
-      </div>
+        <img src="icons/graffiti_icon.png" alt="graffiti icon" class="icon graffiti" />
+        <img src="icons/paths_icon.png" alt="path icon" class="icon path" />
+        <img src="icons/bins_icon.png" alt="bin icon" class="icon bin" />
+        <img src="icons/pothole - icon.png" alt="pothole icon" class="icon pothole" />
+      </section>
 
       ⁡⁣⁢⁢
       <!-- FOOTER -->⁡
-      <footer class="footer footer-preview--trees">
-        <div class="footer-inner">
-          <button class="btn send-report-button"><img src="icons/tick.png" alt="" class="btn-icon" aria-hidden="true" />Send Report</button>
-        </div>
+      <footer class="footer-home">
+        <p>&copy; 2025 FixIt. All rights reserved</p>
       </footer>
+
+      ⁡⁢⁢⁣
+      <!-- FOOTER NAV (MOBILE ONLY -->⁡
+      <nav class="footer-home_mobile">
+        <a class="home_nav" href="index.html" aria-label="Home"><img src="icons/house_icon.svg" alt="Home" /></a>
+        <a class="reports_nav" href="reports.html" aria-label="Reports"><img src="icons/report_icon.svg" alt="Reports" /></a>
+        <a class="rating_nav" href="rate.html" aria-label="Rate"><img src="icons/feedback_icon.svg" alt="Rate" /></a>
+        <a class="chat_nav" href="help.html" aria-label="Help/Chat"><img src="icons/chat_icon.png" alt="Help or Chat" /></a>
+      </nav>
     </div>
+    <script>
+      //------------------------ Login in & Form Validation  ------------------------
+      document.addEventListener("DOMContentLoaded", () => {
+        const forms = document.querySelectorAll(".needs-validation");
+
+        forms.forEach((form) => {
+          form.addEventListener("submit", (e) => {
+            if (!form.checkValidity()) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          });
+        });
+      });
+      //------------------------ Stars Rating's Code ------------------------
+      document.querySelectorAll(".star-rating:not(.readonly) label").forEach((star) => {
+        star.addEventListener("click", function () {
+          this.style.transform = "scale(1.2)";
+          setTimeout(() => {
+            this.style.transform = "scale(1)";
+          }, 200);
+        });
+      });
+      //-----------------------------------------------------------------------
+    </script>
   </body>
 </html>
