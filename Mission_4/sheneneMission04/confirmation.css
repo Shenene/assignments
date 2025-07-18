@@ -1,0 +1,106 @@
+/* ---------------- ✅ C O N F I R M A T I O N   S C R E E N ---------------- */
+
+/* Envelope Image */
+.envelope_img {
+  display: flex;
+  width: 9.375rem;
+  height: 9.375rem;
+  margin: 0 auto;
+}
+
+.confirm-wrapper {
+  display: grid;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.confirm-pg_container {
+  display: grid;
+  grid-template-columns: 1.2fr auto 1fr;
+  grid-template-rows: repeat(7, auto);
+  position: relative;
+}
+
+.heading_h1 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: left;
+  justify-self: left;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.sub-heading {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-self: left;
+  justify-self: left;
+}
+
+.ul_confirmation-pg {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  align-self: left;
+  justify-self: left;
+  margin-top: 1rem;
+}
+
+.li_con-layout {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.track-report {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  align-self: left;
+  justify-self: left;
+}
+
+.visit-dashboard {
+  grid-column: 2/3;
+  grid-row: 5/6;
+  align-self: left;
+  justify-self: left;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.ul_confirmation-pg {
+  margin-bottom: 2rem;
+  list-style-position: inside;
+  padding-left: 0.5rem;
+}
+
+.report-note {
+  grid-column: 2/3;
+  grid-row: 6/7;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  align-self: left;
+  justify-self: left;
+  color: #545454;
+  border-left: 3px solid #999;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+/* FOOTER - CONFIRMATION SCREEN*/
+.footer-confirmation-pg {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  max-width: 100%;
+  padding-bottom: 2.5rem;
+  padding-top: 3.5rem;
+}
+
+.view-report-button {
+  justify-self: end;
+  background-color: #dde9ba;
+  border: solid 0.25rem #77a741;
+  color: #000;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}

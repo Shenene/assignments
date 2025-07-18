@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FixIt App Prototype</title>
+    
+    <!-- Linked Sheets -->
+    <link href="style.css" rel="stylesheet" />      
+    <script src="script.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+
+⁡⁣⁢⁡⁣⁢⁢ <!-- B O D Y -->⁡
+  <body>
+    <!---------------- 🪟 P R E V I E W   S C R E E N - 🪑 B E N C H E S --------------->
+   
+    <!-- B A C K   G R O U N D -->
+    <div class="app-wrapper background other">
+      <!-- H E A D E R - Container - Main -->
+      <header class="header_container">
+        <!-- Back Button (Arrow) -->
+        <div class="back-button">
+          <button class="btn-back">
+            <img src="icons/back_arrow.png" alt="Go back" class="back-icon" />
+          </button>
+        </div>
+
+        <!-- Container 1 -->
+        <div class="login_container">
+          <img
+            src="icons/login_icon.png"
+            alt="login/register icon"
+            class="login-icon"
+            id="authIcon"
+          />
+          <div class="login-text">Login/Register</div>
+        </div>
+
+        <!-- Container 2 -->
+        <div class="logo_container">
+          <img src="logo/logo.png" alt="logo" class="logo" />
+          <div class="logo-text">
+            <span>See something wrong?</span>
+            <span>Report it. Help fix it.</span>
+          </div>
+        </div>
+
+        <!-- Container 3 -->
+        <div class="menu_container">
+          <img src="icons/menu.png" alt="menu icon" class="menu" />
+        </div>
+      </header>
+
+      <!-- ------------------------------------------------------------------ -->
+      <!-- PROGRESS BAR -->
+      <div class="progress-wrapper">
+        <span class="progress-label">Step 3</span>
+        <div class="progress-bar">
+          <div class="progress-fill-step3"></div>
+        </div>
+      </div>
+
+     ⁡⁣⁢⁢ <!-- M A I N -->⁡
+      <!-- P A G E   H E A D I N G (h1)-->
+      <div class="content-wrapper">
+        <main class="main-content">
+          <div class="page-heading-wrapper">
+            <h1 class="heading_main report-issue">Preview</h1>
+          </div>
+
+          <!-- Report summary -->
+          <div class="container">
+            <div class="report-summary">
+              <h2 class="report-intro">
+                You're about to report a broken bench at
+              </h2>
+              <em class="report-address">[20 South Street, Auckland].</em>
+            </div>
+          </div>
+
+          <!-- Upload image section -->
+          <section class="img-photo-container">
+            <img
+              class="photo-icon"
+              src="images/photo_img.svg"
+              alt="uploaded photo"
+            />
+            <span class="attached_photo-text">Your attached photo</span>
+          </section>
+        </main>
+      </div>
+    
+  ⁡⁣⁢⁢    <!-- FOOTER -->⁡
+      <footer class="footer footer-preview--benches">
+        <div class="footer-inner">
+          <button class="btn send-report-button">
+            <img
+              src="icons/tick.png"
+              alt=""
+              class="btn-icon"
+              aria-hidden="true"
+            />Send Report
+          </button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
