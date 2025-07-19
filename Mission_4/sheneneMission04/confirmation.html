@@ -3,31 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>FixIt App Prototype</title>
-    
-    <!-- Linked Sheets -->
-    <link href="style.css" rel="stylesheet" />      
-    <script src="script.js" defer></script>
+    <title>FixIt App Prototype</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-------------------- Linked Sheets -------------------->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link href="global.css" rel="stylesheet" />
+    <link href="confirmation.css" rel="stylesheet" />
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
   </head>
 
-⁡⁣⁢⁢ <!-- B O D Y -->⁡
+  ⁡⁣⁢⁢
+  <!-- B O D Y -->⁡
   <body>
-    <!---------------- ✅ C O N F I R M A T I O N   S C R E E N ---------------->
-   
+    <!---------------- ✅ ⁡⁢⁢⁢C O N F I R M A T I O N   S C R E E N ⁡---------------->
+
     <!-- B A C K   G R O U N D -->
     <div class="app-wrapper background other">
       <!-- H E A D E R - Container - Main -->
       <header class="header_container-home">
         <!-- Container 1 -->
         <div class="login_container-home">
-          <img
-            src="icons/login_icon.png"
-            alt="login/register icon"
-            class="login-icon"
-            id="authIcon"
-          />
+          <img src="icons/login_icon.png" alt="login/register icon" class="login-icon" id="authIcon" />
           <div class="login-text">Login/Register</div>
         </div>
 
@@ -46,35 +47,20 @@
         </div>
       </header>
 
-     ⁡⁣⁢⁢ <!-- M A I N -->⁡
+      ⁡⁣⁢⁢
+      <!-- M A I N -->⁡
       <div class="content-wrapper confirm-wrapper">
         <main class="main-content_confirm">
-          <img
-            class="envelope_img"
-            src="images/envelope_img.png"
-            alt="envelope image"
-          />
+          <img class="envelope_img" src="images/envelope_img.png" alt="envelope image" />
 
           <div class="confirm-pg_container">
-            <h1 class="heading_h1">
-              Report Received - Thank You for Taking Action!
-            </h1>
-            <h2 class="sub-heading">
-              Your report has been sent to the FixIt response team
-            </h2>
+            <h1 class="heading_h1">Report Received - Thank You for Taking Action!</h1>
+            <h2 class="sub-heading">Your report has been sent to the FixIt response team</h2>
 
             <ul class="ul_confirmation-pg">
-              <li class="li_con-layout">
-                We're reviewing it and will route it to the right crew shortly.
-              </li>
-              <li class="li_con-layout">
-                By speaking up, you're helping restore and protect our shared
-                spaces.
-              </li>
-              <li class="li_con-layout">
-                You'll receive an email update once the issue has been resolved
-                - provided you've registered.
-              </li>
+              <li class="li_con-layout">We're reviewing it and will route it to the right crew shortly.</li>
+              <li class="li_con-layout">By speaking up, you're helping restore and protect our shared spaces.</li>
+              <li class="li_con-layout">You'll receive an email update once the issue has been resolved - provided you've registered.</li>
               <li class="li_con-layout">
                 Most issues are reviewed within
                 <span class="text_reviewing-days">1 - 3 working days.</span>
@@ -82,20 +68,18 @@
             </ul>
 
             <h2 class="track-report">Want to track your report?</h2>
-            <p class="visit-dashboard">
-              Visit your dashboard (All Reports) to see it's status
-            </p>
+            <p class="visit-dashboard">Visit your dashboard (All Reports) to see it's status</p>
 
             <p class="report-note">
               To access your report history, please log in. <br />
-              If you don't have an account yet, you'll be prompted to create
-              one.
+              If you don't have an account yet, you'll be prompted to create one.
             </p>
           </div>
         </main>
       </div>
-      
-     ⁡⁣⁢⁢ <!-- FOOTER -->⁡
+
+      ⁡⁣⁢⁢
+      <!-- FOOTER -->⁡
       <footer class="footer footer-confirmation-pg">
         <div class="footer-inner">
           <button class="btn view-report-button">View My Reports</button>
