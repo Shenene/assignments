@@ -70,6 +70,21 @@
   cursor: pointer;
 }
 
+/* .icon-link img:focus,
+.icon-link img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(60, 168, 80, 0.12);
+  outline: 2px solid #77a741;
+} */
+
+.icon-link img:focus,
+.icon-link img:hover {
+  outline: 2px solid #77a741;
+  box-shadow: 0 0 16px 4px rgba(60, 168, 80, 0.18);
+  border-radius: 50%;
+  transition: box-shadow 0.2s;
+}
+
 .icon.light {
   width: 230px;
   max-width: 230px;
