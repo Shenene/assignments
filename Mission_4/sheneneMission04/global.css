@@ -55,7 +55,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
 }
@@ -144,6 +144,12 @@ body {
   width: 1.5625rem;
   height: 1.25rem;
   cursor: pointer;
+}
+
+.button_menu,
+.button_login {
+  border: none;
+  background: transparent;
 }
 
 /* Back Buttons */
@@ -328,7 +334,18 @@ body {
   color: #545454;
 }
 
-/* Utility */
+/* Hover/focus state for Desktop/Laptop Only */
+@media (hover: hover) and (pointer: fine) {
+  .icon-link img:hover,
+  .icon-link img:focus {
+    outline: 2px solid #77a741;
+    box-shadow: 0 0 16px 4px rgba(60, 168, 80, 0.18);
+    border-radius: 50%;
+    transition: box-shadow 0.2s;
+  }
+}
+
+/* ------------------------- ⁡⁢⁡⁢⁢⁣Accessibility⁡⁡ ------------------------- */
 /* learnt that this hides the text from view - but info is useful for screen readers */
 .visually-hidden {
   position: absolute !important; /* take it out of the normal flow */
@@ -340,6 +357,33 @@ body {
   clip: rect(0 0 0 0); /* clip any remaining pixel so nothing shows */
   white-space: nowrap; /* prevent the text from wrapping out of the tiny box */
   overflow: hidden; /* hide any overflowing content */
+}
+
+/* Makes it visible and styled when focused or active */
+.visually-hidden:focus,
+.visually-hidden:active {
+  position: absolute !important;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0.5em 1.25em;
+  background: #e2e0d9 !important;
+  color: #222;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 2px rgba(119, 167, 65, 0.15);
+  outline: 2px solid #77a741;
+  z-index: 9999;
+  white-space: normal;
+  overflow: visible;
+}
+
+.upload-label:focus-within {
+  outline: 2px solid #77a741;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 2px rgba(119, 167, 65, 0.12);
 }
 
 /* ------------------------- ⁡⁢⁢⁣Shared Footer⁡ ------------------------- */

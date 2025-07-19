@@ -32,12 +32,12 @@
 
         <!-- Container 1 -->
         <div class="login_container">
-          <img
+          <button class="button_login"><img
             src="icons/login_icon.png"
             alt="login/register icon"
             class="login-icon"
             id="authIcon"
-          />
+          /></button>
           <div class="login-text">Login/Register</div>
         </div>
 
@@ -52,7 +52,7 @@
 
         <!-- Container 3 -->
         <div class="menu_container">
-          <img src="icons/menu.png" alt="menu icon" class="menu" />
+          <button class="button_menu"><img src="icons/menu.png" alt="menu icon" class="menu" /></button>
         </div>
       </header>
 
@@ -111,15 +111,23 @@
 
           <!-- Upload image section -->
           <section class="img-upload-container">
-            <img
+            <label for="upload-photo" class="upload-label"><img
               class="upload-icon"
               src="images/drag_drop_img.svg"
-              alt="Drag or drop to upload a photo"
+              alt="Drag or drop to upload a photo" tabindex="0"
             />
             <span class="subtext upload-instruction"
               >Drag & drop or click to upload</span
             >
             <span class="subtext optional-note">(Optional)</span>
+            <input type="file"
+            id="upload-photo"
+            class="input-file"
+            accept="image/*"
+            style="display: none"
+            tabindex="-1"
+            aria-label="Upload photo" />
+            </label>
           </section>
         </div>
       </main>
@@ -130,11 +138,11 @@
       <footer class="footer footer-lights">
         <div class="footer-inner">
           <!-- Next Button -->
-             <a class="btn next-button">Next
+             <button class="btn next-button">Next
             <img
               src="icons/next_arrow.png"
               alt="" class="btn-icon-next" aria-hidden="true"/>
-          </a>
+          </button>
         </div>
       </footer>
     </div>

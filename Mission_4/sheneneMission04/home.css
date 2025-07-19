@@ -27,6 +27,19 @@
   height: 7.8125rem;
 }
 
+/* MAIN CONTENT - HOME */
+.focusable:active,
+.focusable:focus {
+  position: static !important;
+  width: auto;
+  height: auto;
+  margin: 0;
+  background: #e0ffe0;
+  color: #222;
+  padding: 0.5em 1em;
+  z-index: 9999;
+}
+
 /* Main content positioning on home */
 .main-content.home {
   position: absolute;
@@ -70,6 +83,18 @@
   cursor: pointer;
 }
 
+/* .icon-link:focus,
+.icon-link:active {
+  outline: 2px solid #77a741;
+  border-radius: 50%;
+}
+
+.icon-link img:focus,
+.icon-link img:active {
+  outline: 2px solid #77a741;
+  border-radius: 50%;
+} */
+
 /* .icon-link img:focus,
 .icon-link img:hover {
   transform: scale(1.1);
@@ -77,6 +102,7 @@
   outline: 2px solid #77a741;
 } */
 
+/* Hover state */
 .icon-link img:focus,
 .icon-link img:hover {
   outline: 2px solid #77a741;
@@ -85,6 +111,25 @@
   transition: box-shadow 0.2s;
 }
 
+/* Click State */
+.icon-link img:active,
+.icon-link:active {
+  outline: 2px solid #ffba08;
+  box-shadow: 0 0 24px 8px rgba(255, 186, 8, 0.28);
+  border-radius: 50%;
+  transition: box-shadow 0.1s;
+}
+
+/* No hover state for mobile devices */
+@media (max-width: 600px) {
+  .icon-link img:hover,
+  .icon-link img:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Icons Placement */
 .icon.light {
   width: 230px;
   max-width: 230px;
