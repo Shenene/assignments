@@ -247,12 +247,20 @@ if (reportIntro) {
 if (reportAddress) {
   reportAddress.textContent = savedLocation || "[No address provided]";
 }
-// Set the uploaded photo, if it exists
-if (savedPhoto && photoSection && reportPhoto) {
-  reportPhoto.src = savedPhoto;
-  photoSection.style.display = "block";
-} else if (photoSection) {
-  photoSection.style.display = "none";
+// Show the uploaded photo or "No photo attached" fallback
+const photoPlaceholder = document.getElementById("photo-placeholder");
+
+if (photoSection && reportPhoto && photoPlaceholder) {
+  if (savedPhoto) {
+    reportPhoto.src = savedPhoto;
+    reportPhoto.style.display = "block";
+    photoPlaceholder.style.display = "none";
+    photoSection.style.display = "flex";
+  } else {
+    reportPhoto.style.display = "none";
+    photoPlaceholder.style.display = "flex";
+    photoSection.style.display = "flex";
+  }
 }
 
 //
