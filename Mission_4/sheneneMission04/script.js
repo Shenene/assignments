@@ -1,6 +1,6 @@
 "use strict";
 
-// ========== REPORT ISSUE PAGE ==========
+// ======= REPORT ISSUE PAGE (ISSUE SELECTION, OTHER, CHAR COUNT) =======
 const nextToLocationBtn = document.getElementById("next-to-location");
 const issueButtons = document.querySelectorAll(".issue-options button");
 const otherBtn = document.getElementById("btn-other");
@@ -8,19 +8,8 @@ const otherDesc = document.getElementById("other-desc");
 const otherInput = document.getElementById("other-issue-detail");
 const charCount = document.getElementById("char-count");
 const maxChars = 120;
-const photoInput = document.getElementById("upload-photo");
-const dropArea = document.getElementById("img-upload-container");
-const photoPreview = document.getElementById("photo-preview");
-const photoModal = document.getElementById("photo-modal");
-const modalPhoto = document.getElementById("modal-photo");
-const closeModal = document.getElementById("close-modal");
-const keepPhotoBtn = document.getElementById("keep-photo");
-const discardPhotoBtn = document.getElementById("discard-photo");
 
-// Hide the "other" field by default
 if (otherDesc) otherDesc.style.display = "none";
-
-// Listen for button clicks (show/hide Other)
 if (issueButtons.length) {
   issueButtons.forEach((btn) => {
     btn.addEventListener("click", function () {
@@ -36,8 +25,6 @@ if (issueButtons.length) {
     });
   });
 }
-
-// Character count for "Other"
 if (otherInput && charCount) {
   otherInput.addEventListener("input", function () {
     const remaining = maxChars - otherInput.value.length;
@@ -45,31 +32,40 @@ if (otherInput && charCount) {
   });
 }
 
-// ---- IMAGE HANDLING ----
-// Only rely on the <label> to trigger file picker! DO NOT add click event to dropArea.
+// ======= IMAGE UPLOAD, MODAL PREVIEW, REMOVE =======
+const photoInput = document.getElementById("upload-photo");
+const uploadLabel = document.getElementById("upload-label");
+const imagePreviewBox = document.getElementById("image-preview-box");
+const dropArea = document.getElementById("img-upload-container");
 
-// Helper: Open modal with photo for confirmation
-function showModalWithFile(file) {
-  if (!file.type.startsWith("image/")) return;
-  const reader = new FileReader();
-  reader.onload = function (e) {
-    modalPhoto.src = e.target.result;
-    photoModal.style.display = "flex";
-    window._pendingPhoto = e.target.result; // temp store, not in sessionStorage yet!
-  };
-  reader.readAsDataURL(file);
-}
+const photoModal = document.getElementById("photo-modal");
+const modalPhoto = document.getElementById("modal-photo");
+const closeModal = document.getElementById("close-modal");
+const keepPhotoBtn = document.getElementById("keep-photo");
+const discardPhotoBtn = document.getElementById("discard-photo");
 
-// File input change
-if (photoInput) {
-  photoInput.addEventListener("change", () => {
-    if (photoInput.files && photoInput.files[0]) {
-      showModalWithFile(photoInput.files[0]);
+let pendingPhotoDataURL = null;
+
+// Keyboard: allow label to trigger file input with Enter/Space
+if (uploadLabel) {
+  uploadLabel.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      photoInput.click();
+      e.preventDefault();
     }
   });
 }
 
-// Drag & drop events for dropArea
+// File input: open modal preview
+if (photoInput) {
+  photoInput.addEventListener("change", () => {
+    if (photoInput.files && photoInput.files[0]) {
+      handleFile(photoInput.files[0]);
+    }
+  });
+}
+
+// Drag & drop support
 if (dropArea) {
   ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
     dropArea.addEventListener(
@@ -90,65 +86,127 @@ if (dropArea) {
   dropArea.addEventListener("drop", (e) => {
     const files = e.dataTransfer.files;
     if (files.length > 0) {
-      // Also update the file input for consistency!
-      photoInput.files = files;
-      showModalWithFile(files[0]);
+      handleFile(files[0]);
+      // Sync file input for consistency
+      const dt = new DataTransfer();
+      dt.items.add(files[0]);
+      photoInput.files = dt.files;
     }
   });
 }
 
-// Keep photo (save to sessionStorage, show preview, hide modal)
-if (keepPhotoBtn) {
-  keepPhotoBtn.addEventListener("click", () => {
-    if (window._pendingPhoto) {
-      photoPreview.src = window._pendingPhoto;
-      photoPreview.style.display = "block";
-      sessionStorage.setItem("report_photo", window._pendingPhoto);
-      photoModal.style.display = "none";
-      // Optionally update UI: show "Change photo" etc
-    }
-  });
+// Handle image file: show modal
+function handleFile(file) {
+  if (!file.type.startsWith("image/")) return;
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    pendingPhotoDataURL = e.target.result;
+    modalPhoto.src = pendingPhotoDataURL;
+    photoModal.style.display = "flex";
+    // Keyboard focus on modal for accessibility
+    keepPhotoBtn.focus();
+  };
+  reader.readAsDataURL(file);
 }
 
-// Discard photo
-if (discardPhotoBtn) {
-  discardPhotoBtn.addEventListener("click", () => {
+// Modal controls
+if (closeModal) closeModal.onclick = () => discardPhotoBtn.click();
+if (discardPhotoBtn)
+  discardPhotoBtn.onclick = () => {
     photoInput.value = "";
-    window._pendingPhoto = null;
+    pendingPhotoDataURL = null;
     photoModal.style.display = "none";
-    photoPreview.src = "";
-    photoPreview.style.display = "none";
-    sessionStorage.removeItem("report_photo");
-  });
-}
+  };
+if (keepPhotoBtn)
+  keepPhotoBtn.onclick = () => {
+    // Clear previous preview
+    imagePreviewBox.innerHTML = "";
 
-// Also close modal with "X" (same as discard)
-if (closeModal) {
-  closeModal.addEventListener("click", () => {
-    discardPhotoBtn.click();
-  });
-}
+    // Add image
+    const img = document.createElement("img");
+    img.src = pendingPhotoDataURL;
+    img.alt = "Selected image preview";
+    img.setAttribute("tabindex", "0");
 
-// Next button: Save issue and photo to sessionStorage
+    // Remove button (accessible)
+    const removeBtn = document.createElement("button");
+    removeBtn.innerHTML = "&times;";
+    removeBtn.className = "remove-image-btn";
+    removeBtn.setAttribute("aria-label", "Remove image");
+    removeBtn.setAttribute("tabindex", "0");
+    removeBtn.onclick = () => {
+      imagePreviewBox.style.display = "none";
+      imagePreviewBox.innerHTML = "";
+      uploadLabel.style.display = "";
+      photoInput.value = "";
+      pendingPhotoDataURL = null;
+      sessionStorage.removeItem("report_photo");
+      uploadLabel.focus();
+    };
+
+    imagePreviewBox.appendChild(removeBtn);
+    imagePreviewBox.appendChild(img);
+
+    // Show preview, hide upload prompt
+    imagePreviewBox.style.display = "block";
+    uploadLabel.style.display = "none";
+
+    // Save for next page
+    sessionStorage.setItem("report_photo", pendingPhotoDataURL);
+
+    photoModal.style.display = "none";
+    // Keyboard focus on "remove image" button for accessibility
+    removeBtn.focus();
+  };
+
+// Restore photo from sessionStorage (if user comes back)
+window.addEventListener("DOMContentLoaded", () => {
+  const savedPhoto = sessionStorage.getItem("report_photo");
+  if (savedPhoto) {
+    imagePreviewBox.innerHTML = "";
+    const img = document.createElement("img");
+    img.src = savedPhoto;
+    img.alt = "Selected image preview";
+    img.setAttribute("tabindex", "0");
+
+    const removeBtn = document.createElement("button");
+    removeBtn.innerHTML = "&times;";
+    removeBtn.className = "remove-image-btn";
+    removeBtn.setAttribute("aria-label", "Remove image");
+    removeBtn.setAttribute("tabindex", "0");
+    removeBtn.onclick = () => {
+      imagePreviewBox.style.display = "none";
+      imagePreviewBox.innerHTML = "";
+      uploadLabel.style.display = "";
+      photoInput.value = "";
+      pendingPhotoDataURL = null;
+      sessionStorage.removeItem("report_photo");
+      uploadLabel.focus();
+    };
+
+    imagePreviewBox.appendChild(removeBtn);
+    imagePreviewBox.appendChild(img);
+    imagePreviewBox.style.display = "block";
+    uploadLabel.style.display = "none";
+  }
+});
+
+// ====== SAVE TO SESSIONSTORAGE ON NEXT ======
 if (nextToLocationBtn && issueButtons.length) {
   nextToLocationBtn.addEventListener("click", function (e) {
     let selected = "";
     issueButtons.forEach((btn) => {
       if (btn.classList.contains("selected")) selected = btn.textContent.trim();
     });
-
     if (selected.toLowerCase() === "other" && otherInput) {
       selected = otherInput.value.trim() || "other";
     }
     sessionStorage.setItem("report_issue", selected);
 
-    // Already saved photo in sessionStorage when user clicked Keep
-    // So just continue to next page
-    // If no photo, make sure to clear sessionStorage
+    // Already saved photo in sessionStorage
     if (!sessionStorage.getItem("report_photo")) {
       sessionStorage.removeItem("report_photo");
     }
-    // Default: let the link go to location.html
   });
 }
 

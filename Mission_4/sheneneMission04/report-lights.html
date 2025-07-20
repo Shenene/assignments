@@ -107,13 +107,14 @@
 
             <!-- Upload image section -->
             <section class="img-upload-container" id="img-upload-container">
-              <label for="upload-photo" class="upload-label"
-                ><img class="upload-icon" src="images/drag_drop_img.svg" alt="Drag or drop to upload a photo" tabindex="0" />
+              <label for="upload-photo" class="upload-label" id="upload-label" tabindex="0" aria-label="Drag & drop or click to upload an image">
+                <img class="upload-icon" src="images/drag_drop_img.svg" alt="Drag or drop to upload a photo" tabindex="-1" />
                 <span class="subtext upload-instruction">Drag & drop or click to upload</span>
                 <span class="subtext optional-note">(Optional)</span>
                 <input type="file" id="upload-photo" class="input-file" accept="image/*" style="display: none" tabindex="-1" aria-label="Upload photo" />
               </label>
-              <img id="photo-preview" class="photo-preview" src="" alt="Selected image preview" style="display: none; max-width: 220px; margin-top: 1rem" />
+              <!-- Preview area appears here after upload -->
+              <div id="image-preview-box" style="display: none; position: relative; margin: 1rem auto 0 auto; text-align: center"></div>
             </section>
           </div>
         </main>
@@ -138,7 +139,7 @@
         </div>
       </footer>
     </div>
-
+    <!-- Modal for photo -->
     <div id="photo-modal" class="photo-modal" style="display: none">
       <div class="photo-modal-content">
         <span id="close-modal" class="close">&times;</span>
