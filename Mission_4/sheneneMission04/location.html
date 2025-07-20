@@ -81,7 +81,7 @@
           <!-- SEARCH LOCATION -->
           <div class="search-location">
             <label for="location-search" class="visually-hidden">Search address or place name</label>
-            <input type="text" id="location-search" name="location" placeholder="Search address or place name" class="input--search-location" />
+            <input type="text" id="location-search" name="location" placeholder="Search address or place name" class="input--search-location" autofocus />
             <div class="location-info">Use your current location or search for a different one</div>
             <button class="btn btn-search">Search</button>
           </div>
@@ -93,10 +93,7 @@
       <footer class="footer footer-location">
         <div class="footer-inner">
           <!-- Next Button -->
-          <button class="btn next-button" onclick="window.location.href='#'">
-            Next
-            <img src="icons/next_arrow.png" alt="" class="btn-icon-next" aria-hidden="true" />
-          </button>
+          <a href="preview.html" class="btn next-button" id="next-to-preview">Next<img src="icons/next_arrow.png" alt="" class="btn-icon-next" aria-hidden="true" /></a>
         </div>
       </footer>
     </div>
