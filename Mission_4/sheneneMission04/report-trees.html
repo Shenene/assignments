@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FixIt App Prototype</title>
-    
-     <!-- Linked Sheets -->
-    <link href="report-trees.css" rel="stylesheet" />  
-    <link href="global.css" rel="stylesheet" /> 
-   
+
+    <!-- Linked Sheets -->
+    <link href="report-trees.css" rel="stylesheet" />
+    <link href="global.css" rel="stylesheet" />
+
     <script src="script.js" defer></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
   </head>
 
-⁡⁣⁢⁢ <!-- B O D Y -->⁡
+  ⁡⁣⁢⁢
+  <!-- B O D Y -->⁡
   <body>
     <!-- For Accessibility - Keyboard users can skip directly to the main content -->
     <a href="#main-content" class="visually-hidden focusable">Skip to main content</a>
@@ -22,25 +23,18 @@
     <!---------------- 📑 R E P O R T   I S S U E   S C R E E N  * 🌴 T R E E S ---------------->
     <!-- B A C K   G R O U N D -->
     <div class="app-wrapper background other">
-      
       <!-- H E A D E R - Container - Main -->
       <header class="header_container">
-
         <!-- Back Button (Arrow) -->
         <div class="back-button">
-         <button class="btn-back" onclick="window.history.back()">
+          <button class="btn-back" onclick="window.history.back()">
             <img src="icons/back_arrow.png" alt="Go back" class="back-icon" />
           </button>
         </div>
 
         <!-- Container 1 -->
         <div class="login_container">
-          <img
-            src="icons/login_icon.png"
-            alt="login/register icon"
-            class="login-icon"
-            id="authIcon"
-          />
+          <img src="icons/login_icon.png" alt="login/register icon" class="login-icon" id="authIcon" />
           <div class="login-text">Login/Register</div>
         </div>
 
@@ -70,74 +64,67 @@
 
       <!-- ------------------------------------------------------------------ -->
       <!-- P A G E   H E A D I N G (h1)-->
-       <div class="page-heading-wrapper">
-          <h1 class="heading_main report-issue">Trees</h1>
-       </div>
+      <div class="page-heading-wrapper">
+        <h1 class="heading_main report-issue">Trees</h1>
+      </div>
 
       ⁡⁣⁢⁢<!-- M A I N -->⁡
-        <div class="content-wrapper">
-      <main id="main-content" class="main-content report-issue">
-        <div class="content-wrapper">
-          <!-- Accessibility - Fieldset + Legend (screen reader will announce the legend before naming the buttons)  -->
-          <fieldset class="issue-options">
-            <legend class="visually-hidden">Type of tree issue</legend>
-            <!-- button 1 -->
-            <button class="btn btn--tree-fallen-branch">
-              <span class="label--tree-fallen-branch">Fallen branch</span>
-            </button>
+      <div class="content-wrapper">
+        <main id="main-content" class="main-content report-issue">
+          <div class="content-wrapper">
+            <!-- Accessibility - Fieldset + Legend (screen reader will announce the legend before naming the buttons)  -->
+            <fieldset class="issue-options">
+              <legend class="visually-hidden">Type of tree issue</legend>
+              <!-- button 1 -->
+              <button class="btn btn--tree-fallen-branch">
+                <span class="label--tree-fallen-branch">Fallen branch</span>
+              </button>
 
-            <!-- button 2 -->
-            <button class="btn btn--tree-blocking-path">
-              <span class="label--tree-blocking-path">Tree blocking path</span>
-            </button>
+              <!-- button 2 -->
+              <button class="btn btn--tree-blocking-path">
+                <span class="label--tree-blocking-path">Tree blocking path</span>
+              </button>
 
-            <!-- button 3 -->
-            <button class="btn btn--damaged-leaning-tree">
-              <span class="label--damaged-leaning-tree">Damaged/ leaning</span>
-            </button>
+              <!-- button 3 -->
+              <button class="btn btn--damaged-leaning-tree">
+                <span class="label--damaged-leaning-tree">Damaged/ leaning</span>
+              </button>
 
-            <!-- button 4 -->
-            <button class="btn btn-trees-other">
-              <span class="label-trees-other">Other</span>
-            </button>
+              <!-- button 4 -->
+              <button class="btn btn-trees-other" id="btn-other">
+                <span class="label-trees-other">Other</span>
+              </button>
 
-            <!-- user input field -->
-            <div class="other-description">
-              <label for="other-issue-detail" class="visually-hidden"
-                >Describe the other issue</label
-              >
-              <input type="text" id="other-issue-detail"
-              name="other-issue-detail" placeholder="Describe the other issue..." class="input-other"> </input>
-            </div>
-          </fieldset>
+              <!-- user input field -->
+              <div class="other-description" id="other-desc" style="display: none">
+                <label for="other-issue-detail" class="visually-hidden">Describe the other issue</label>
+                <input type="text" id="other-issue-detail" name="other-issue-detail" maxlength="120" placeholder="Describe the other issue..." class="input-other" />
+                <span id="char-count" class="char-count">120 characters left</span>
+              </div>
+            </fieldset>
 
-          <!-- Upload image section -->
-          <section class="img-upload-container">
-            <img
-              class="upload-icon"
-              src="images/drag_drop_img.svg"
-              alt="Drag or drop to upload a photo"
-            />
-            <span class="subtext upload-instruction"
-              >Drag & drop or click to upload</span
-            >
-            <span class="subtext optional-note">(Optional)</span>
-          </section>
-        </div>
-      </main>
+            <!-- Upload image section -->
+            <section class="img-upload-container">
+              <img class="upload-icon" src="images/drag_drop_img.svg" alt="Drag or drop to upload a photo" />
+              <span class="subtext upload-instruction">Drag & drop or click to upload</span>
+              <span class="subtext optional-note">(Optional)</span>
+            </section>
+          </div>
+        </main>
       </div>
-      
-     ⁡⁣⁢⁢ <!-- FOOTER -->⁡
+
+      ⁡⁣⁢⁢
+      <!-- FOOTER -->⁡
       <footer class="footer footer-lights">
         <div class="footer-inner">
-          
           <!-- Next Button -->
-           <a href="location.html" class="btn next-button">Next
+          <a href="location.html" class="btn next-button"
+            >Next
             <img src="icons/next_arrow.png" alt="" class="btn-icon-next" aria-hidden="true" />
-           </a>
+          </a>
 
-           <!-- Better to use a tags for navigation instead of button (unless submitting a form) apparently better for accessibility & semantics -->
-              <!-- <button class="btn next-button" onclick="window.location.href='location.html'">Next
+          <!-- Better to use a tags for navigation instead of button (unless submitting a form) apparently better for accessibility & semantics -->
+          <!-- <button class="btn next-button" onclick="window.location.href='location.html'">Next
             <img
               src="icons/next_arrow.png"
               alt="" class="btn-icon-next" aria-hidden="true"/>

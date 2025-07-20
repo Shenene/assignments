@@ -346,13 +346,21 @@ body {
   }
 }
 
-/* Report Issue Screens */
-/* Show other option only when other button is clicked - JavaScript added in the script.js file */
+/* ⁡⁢⁣⁢Reports Issue Screens⁡ */
+/* ⁡⁢⁣⁢Show other option only when other button is clicked - JavaScript added in the script.js file⁡⁡ */
 .issue-options .selected {
   outline: 2px solid #ffba08 !important;
   background: #fff7da !important;
   box-shadow: 0 0 12px 2px rgba(255, 186, 8, 0.18);
   transition: box-shadow 0.15s;
+}
+
+.char-count {
+  display: block;
+  font-size: 0.9rem;
+  color: #545454;
+  margin-top: 0.25rem;
+  text-align: right;
 }
 
 /* ------------------------- ⁡⁢⁡⁢⁢⁣Accessibility⁡⁡ ------------------------- */
