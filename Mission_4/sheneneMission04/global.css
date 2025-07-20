@@ -346,6 +346,15 @@ body {
   }
 }
 
+/* Report Issue Screens */
+/* Show other option only when other button is clicked - JavaScript added in the script.js file */
+.issue-options .selected {
+  outline: 2px solid #ffba08 !important;
+  background: #fff7da !important;
+  box-shadow: 0 0 12px 2px rgba(255, 186, 8, 0.18);
+  transition: box-shadow 0.15s;
+}
+
 /* ------------------------- ⁡⁢⁡⁢⁢⁣Accessibility⁡⁡ ------------------------- */
 /* learnt that this hides the text from view - but info is useful for screen readers */
 .visually-hidden {
