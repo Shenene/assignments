@@ -19,6 +19,9 @@
   ⁡⁣⁢⁢
   <!-- B O D Y -->⁡
   <body>
+    <!-- For Accessibility - Keyboard users can skip directly to the main content -->
+    <a href="#main-content" class="visually-hidden focusable">Skip to main content</a>
+
     <!---------------- 📌 ⁡⁣⁣⁢L O C A T I O N   S C R E E N⁡ ---------------->
 
     <!-- B A C K   G R O U N D -->
@@ -27,7 +30,7 @@
       <header class="header_container">
         <!-- Back Button (Arrow) -->
         <div class="back-button">
-          <button class="btn-back">
+          <button class="btn-back" onclick="window.history.back()">
             <img src="icons/back_arrow.png" alt="Go back" class="back-icon" />
           </button>
         </div>
@@ -70,7 +73,7 @@
 
       ⁡⁣⁢⁢<!-- M A I N -->⁡
       <div class="content-wrapper location-wrapper">
-        <main class="main-content">
+        <main id="main-content" class="main-content">
           <!-- MAP MOCKUP -->
           <div class="map-mockup">
             <img src="images/laptop-map_mockup.png" alt="map showing location on street grid" class="map-img" />
@@ -90,7 +93,7 @@
       <footer class="footer footer-location">
         <div class="footer-inner">
           <!-- Next Button -->
-          <button class="btn next-button">
+          <button class="btn next-button" onclick="window.location.href='#'">
             Next
             <img src="icons/next_arrow.png" alt="" class="btn-icon-next" aria-hidden="true" />
           </button>

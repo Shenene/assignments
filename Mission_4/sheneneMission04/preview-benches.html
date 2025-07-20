@@ -20,6 +20,9 @@
   ⁡⁣⁢⁡⁣⁢⁢
   <!-- B O D Y -->⁡
   <body>
+    <!-- For Accessibility - Keyboard users can skip directly to the main content -->
+    <a href="#main-content" class="visually-hidden focusable">Skip to main content</a>
+
     <!---------------- 🪟 ⁡⁢⁣⁣P R E V I E W   S C R E E N - 🪑 B E N C H E S⁡ --------------->
 
     <!-- B A C K   G R O U N D -->
@@ -28,7 +31,7 @@
       <header class="header_container">
         <!-- Back Button (Arrow) -->
         <div class="back-button">
-          <button class="btn-back">
+          <button class="btn-back" onclick="window.history.back()">
             <img src="icons/back_arrow.png" alt="Go back" class="back-icon" />
           </button>
         </div>
@@ -67,7 +70,7 @@
       <!-- M A I N -->⁡
       <!-- P A G E   H E A D I N G (h1)-->
       <div class="content-wrapper">
-        <main class="main-content">
+        <main id="main-content" class="main-content">
           <div class="page-heading-wrapper">
             <h1 class="heading_main report-issue">Preview</h1>
           </div>
