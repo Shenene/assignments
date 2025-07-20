@@ -198,14 +198,53 @@ if (nextToLocationBtn && issueButtons.length) {
     issueButtons.forEach((btn) => {
       if (btn.classList.contains("selected")) selected = btn.textContent.trim();
     });
+
+    // If "Other" is selected, require input
     if (selected.toLowerCase() === "other" && otherInput) {
-      selected = otherInput.value.trim() || "other";
+      if (!otherInput.value.trim()) {
+        otherInput.focus();
+        // Show error only once
+        if (!document.getElementById("other-error")) {
+          const err = document.createElement("div");
+          err.textContent = "Please describe the issue.";
+          err.style.color = "red";
+          err.style.fontSize = "0.98em";
+          err.id = "other-error";
+          otherDesc.appendChild(err);
+        }
+        e.preventDefault();
+        return;
+      } else {
+        // Remove error if previously added
+        const prevErr = document.getElementById("other-error");
+        if (prevErr) prevErr.remove();
+        selected = otherInput.value.trim(); // Save user text!
+      }
     }
+
     sessionStorage.setItem("report_issue", selected);
 
     // Already saved photo in sessionStorage
     if (!sessionStorage.getItem("report_photo")) {
       sessionStorage.removeItem("report_photo");
+    }
+  });
+}
+
+if (otherInput) {
+  otherInput.addEventListener("blur", function () {
+    if (!otherInput.value.trim() && otherDesc.style.display === "block") {
+      if (!document.getElementById("other-error")) {
+        const err = document.createElement("div");
+        err.textContent = "Please describe the issue.";
+        err.style.color = "red";
+        err.style.fontSize = "0.98em";
+        err.id = "other-error";
+        otherDesc.appendChild(err);
+      }
+    } else {
+      const prevErr = document.getElementById("other-error");
+      if (prevErr) prevErr.remove();
     }
   });
 }
@@ -240,9 +279,19 @@ console.log("savedLocation:", savedLocation);
 console.log("savedPhoto:", savedPhoto);
 
 // Set the issue summary
-if (reportIntro) {
-  reportIntro.textContent = savedIssue ? `You're about to report a ${savedIssue.toLowerCase()} at` : "No issue selected";
+function getIssueSummary(issueText) {
+  if (!issueText) return "No issue selected";
+  const text = issueText.trim().toLowerCase();
+  if (text === "flickering light") return "You're about to report a flickering light at";
+  if (text === "completely off") return "You're about to report a light that is completely off at";
+  if (text === "pole damaged") return "You're about to report a damaged pole at";
+  return `You're about to report: "${issueText}" at`;
 }
+
+if (reportIntro) {
+  reportIntro.textContent = getIssueSummary(savedIssue);
+}
+
 // Set the location
 if (reportAddress) {
   reportAddress.textContent = savedLocation || "[No address provided]";
