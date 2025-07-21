@@ -106,18 +106,26 @@
             </fieldset>
 
             <!-- Upload image section -->
-            <section class="img-upload-container">
-              <span class="upload-desktop">
-                <img class="upload-icon" src="images/drag_drop_img.svg" alt="Drag or drop to upload a photo" />
-                <span class="subtext upload-instruction">Drag & drop or click to upload</span>
-                <span class="subtext optional-note">(Optional)</span>
-              </span>
+            <section class="img-upload-container" id="img-upload-container">
+              <!-- Upload label (icon/text + file input) -->
+              <label for="upload-photo" class="upload-label" id="upload-label" tabindex="0" aria-label="Upload image">
+                <!-- Desktop icon and text -->
+                <span class="upload-desktop">
+                  <img class="upload-icon" src="images/drag_drop_img.svg" alt="Drag or drop to upload a photo" />
+                  <span class="subtext upload-instruction">Drag & drop or click to upload</span>
+                  <span class="subtext optional-note">(Optional)</span>
+                </span>
+                <!-- Mobile: shown with media query -->
+                <span class="upload-mobile">
+                  <img class="upload-icon" src="icons/camera_icon.svg" alt="Tap to upload a photo" />
+                  <span class="subtext upload-instruction">Take a photo</span>
+                  <span class="subtext optional-note">(Optional)</span>
+                </span>
+                <input type="file" id="upload-photo" class="input-file" accept="image/*" style="display: none" tabindex="-1" aria-label="Upload photo" />
+              </label>
 
-              <span class="upload-mobile">
-                <img class="upload-icon" src="icons/camera_icon.svg" alt="Tap to upload a photo" />
-                <span class="subtext upload-instruction">Tap to upload a photo</span>
-                <span class="subtext optional-note">(Optional)</span>
-              </span>
+              <!-- Image preview area (populated by JS after image is selected) -->
+              <div id="image-preview-box" style="display: none; position: relative; margin: 1rem auto 0 auto; text-align: center"></div>
             </section>
           </div>
         </main>

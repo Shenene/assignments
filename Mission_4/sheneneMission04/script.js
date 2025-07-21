@@ -46,6 +46,17 @@ const discardPhotoBtn = document.getElementById("discard-photo");
 
 let pendingPhotoDataURL = null;
 
+// Show upload or preview based on state
+function setUploadState(hasImage) {
+  if (hasImage) {
+    uploadLabel.style.display = "none";
+    imagePreviewBox.style.display = "block";
+  } else {
+    uploadLabel.style.display = "";
+    imagePreviewBox.style.display = "none";
+  }
+}
+
 // Keyboard: allow label to trigger file input with Enter/Space
 if (uploadLabel) {
   uploadLabel.addEventListener("keydown", (e) => {
@@ -103,7 +114,6 @@ function handleFile(file) {
     pendingPhotoDataURL = e.target.result;
     modalPhoto.src = pendingPhotoDataURL;
     photoModal.style.display = "flex";
-    // Keyboard focus on modal for accessibility
     keepPhotoBtn.focus();
   };
   reader.readAsDataURL(file);
@@ -119,7 +129,6 @@ if (discardPhotoBtn)
   };
 if (keepPhotoBtn)
   keepPhotoBtn.onclick = () => {
-    // Clear previous preview
     imagePreviewBox.innerHTML = "";
 
     // Add image
@@ -135,9 +144,8 @@ if (keepPhotoBtn)
     removeBtn.setAttribute("aria-label", "Remove image");
     removeBtn.setAttribute("tabindex", "0");
     removeBtn.onclick = () => {
-      imagePreviewBox.style.display = "none";
+      setUploadState(false);
       imagePreviewBox.innerHTML = "";
-      uploadLabel.style.display = "";
       photoInput.value = "";
       pendingPhotoDataURL = null;
       sessionStorage.removeItem("report_photo");
@@ -147,15 +155,12 @@ if (keepPhotoBtn)
     imagePreviewBox.appendChild(removeBtn);
     imagePreviewBox.appendChild(img);
 
-    // Show preview, hide upload prompt
-    imagePreviewBox.style.display = "block";
-    uploadLabel.style.display = "none";
+    setUploadState(true);
 
     // Save for next page
     sessionStorage.setItem("report_photo", pendingPhotoDataURL);
 
     photoModal.style.display = "none";
-    // Keyboard focus on "remove image" button for accessibility
     removeBtn.focus();
   };
 
@@ -175,9 +180,8 @@ window.addEventListener("DOMContentLoaded", () => {
     removeBtn.setAttribute("aria-label", "Remove image");
     removeBtn.setAttribute("tabindex", "0");
     removeBtn.onclick = () => {
-      imagePreviewBox.style.display = "none";
+      setUploadState(false);
       imagePreviewBox.innerHTML = "";
-      uploadLabel.style.display = "";
       photoInput.value = "";
       pendingPhotoDataURL = null;
       sessionStorage.removeItem("report_photo");
@@ -186,8 +190,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     imagePreviewBox.appendChild(removeBtn);
     imagePreviewBox.appendChild(img);
-    imagePreviewBox.style.display = "block";
-    uploadLabel.style.display = "none";
+
+    setUploadState(true);
+  } else {
+    setUploadState(false);
   }
 });
 

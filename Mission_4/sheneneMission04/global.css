@@ -448,7 +448,7 @@ body {
 }
 
 .upload-desktop {
-  display: inline;
+  display: inline-block;
 }
 .upload-mobile {
   display: none;
@@ -721,7 +721,7 @@ body {
     display: none !important;
   }
   .upload-mobile {
-    display: inline !important;
+    display: inline-block !important;
   }
   .upload-icon {
     width: 6.25rem !important;
