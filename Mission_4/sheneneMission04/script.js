@@ -312,9 +312,43 @@ if (photoSection && reportPhoto && photoPlaceholder) {
   }
 }
 
-// On submit:
-const reportId = "FIXIT-" + Math.random().toString(36).substr(2, 8).toUpperCase();
-sessionStorage.setItem("report_id", reportId);
+// REPORT ID - CONFIRMATION PAGE
+// PREVIEW PAGE: Send Report (generate report ID and save to sessionStorage)
+const sendReportBtn = document.querySelector(".send-report-button");
+if (sendReportBtn) {
+  sendReportBtn.addEventListener("click", function () {
+    // Generate a unique report ID
+    const reportId = "FIXIT-" + Math.random().toString(36).substr(2, 8).toUpperCase();
+    sessionStorage.setItem("report_id", reportId);
+    window.location.href = "confirmation.html";
+  });
+}
+
+// Reference outside so all code can access it!
+const reportIdSpan = document.getElementById("report-id");
+
+// CONFIRMATION PAGE: Display Report ID
+window.addEventListener("DOMContentLoaded", function () {
+  const reportId = sessionStorage.getItem("report_id");
+  if (reportIdSpan && reportId) {
+    reportIdSpan.textContent = reportId;
+  }
+});
+
+// Copy to clipboard
+const copyBtn = document.getElementById("copy-report-id");
+const copySuccess = document.getElementById("copy-success");
+if (copyBtn && reportIdSpan) {
+  copyBtn.addEventListener("click", function () {
+    // Only try copying if there's something to copy!
+    if (reportIdSpan.textContent) {
+      navigator.clipboard.writeText(reportIdSpan.textContent).then(() => {
+        copySuccess.style.display = "inline";
+        setTimeout(() => (copySuccess.style.display = "none"), 1200);
+      });
+    }
+  });
+}
 
 //
 

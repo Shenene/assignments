@@ -38,6 +38,7 @@
   padding-bottom: 2.5rem;
 }
 
+/* Report ID Number */
 .report-id-row {
   grid-column: 2/3;
   grid-row: 2/3;
@@ -63,6 +64,31 @@
   margin: 0;
   font-size: 1rem;
 } */
+
+#copy-report-id {
+  padding: 0.25rem 1.1rem;
+  font-size: 1.04rem;
+  border-radius: 6px;
+  background: #dde9ba;
+  border: 2px solid #77a741;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+}
+
+#copy-report-id:hover,
+#copy-report-id:focus {
+  background: #cbe495;
+  border-color: #659a34;
+  outline: none;
+}
+
+#copy-success {
+  color: #219653;
+  font-size: 0.99em;
+  margin-left: 0.5rem;
+  display: none;
+}
 
 .sub-heading {
   grid-column: 2/3;
