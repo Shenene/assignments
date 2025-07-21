@@ -312,6 +312,10 @@ if (photoSection && reportPhoto && photoPlaceholder) {
   }
 }
 
+// On submit:
+const reportId = "FIXIT-" + Math.random().toString(36).substr(2, 8).toUpperCase();
+sessionStorage.setItem("report_id", reportId);
+
 //
 
 // // OTHER INPUT - REPORT ISSUE SCREENS

@@ -659,46 +659,6 @@ body {
     padding-right: 6.5rem !important;
   }
 
-  /* Confirmation Screen */
-  .confirm-pg_container {
-    grid-template-columns: 1fr !important;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  .main-content_confirm {
-    padding-top: 0rem !important;
-  }
-  .heading_h1 {
-    font-size: 1.8rem;
-    padding-top: 1rem !important;
-  }
-  .report-note {
-    margin-top: 1.5rem !important;
-    font-size: 0.95rem !important;
-  }
-  .heading_h1,
-  .sub-heading,
-  .ul_confirmation-pg,
-  .track-report,
-  .visit-dashboard,
-  .report-note {
-    grid-column: 1 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    text-align: left;
-  }
-  .li_con-layout {
-    font-size: 1rem !important;
-    line-height: 1.2 !important;
-  }
-  .envelope_img {
-    display: none !important;
-  }
-  .footer-confirmation-pg {
-    padding-bottom: 0.3rem !important;
-    padding-top: 0.3rem;
-  }
-
   /* All Reports Screen */
   .input--search-filter {
     min-width: 1rem !important;
