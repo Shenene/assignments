@@ -454,7 +454,6 @@ body {
   display: none;
 }
 
-
 /* ------------------------- ⁡⁢⁢⁡⁢⁢⁣Modals⁡⁡⁡ ------------------------- */
 /* Report issue Screens */
 /* Modal styling */
@@ -710,7 +709,7 @@ body {
   }
 
   /* Report issue Screens */
-    .main-content.report-issue {
+  .main-content.report-issue {
     padding-top: 0;
   }
   .img-upload-container {
@@ -734,6 +733,7 @@ body {
     white-space: nowrap;
     text-align: center;
   }
+}
 
 /*  M A X   W I D T H   7 6 8 */
 /* Home screen */
