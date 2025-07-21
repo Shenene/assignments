@@ -180,6 +180,7 @@
   .heading_h1 {
     font-size: 1.8rem;
     padding-top: 0rem !important;
+    padding-bottom: 1.875rem;
   }
   .report-id-row {
     grid-column: 1 !important;

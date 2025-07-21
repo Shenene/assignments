@@ -22,7 +22,7 @@
 
     <!---------------- 📑 ⁡⁢⁣⁢R E P O R T   I S S U E   S C R E E N  * 💡 L I G H T S⁡ ---------------->
     <!-- B A C K   G R O U N D -->
-    <div class="app-wrapper background other">
+    <div class="app-wrapper background other has-modal">
       <!-- H E A D E R - Container - Main -->
       <header class="header_container">
         <!-- Back Button (Arrow) -->
@@ -106,15 +106,18 @@
             </fieldset>
 
             <!-- Upload image section -->
-            <section class="img-upload-container" id="img-upload-container">
-              <label for="upload-photo" class="upload-label" id="upload-label" tabindex="0" aria-label="Drag & drop or click to upload an image">
-                <img class="upload-icon" src="images/drag_drop_img.svg" alt="Drag or drop to upload a photo" tabindex="-1" />
+            <section class="img-upload-container">
+              <span class="upload-desktop">
+                <img class="upload-icon" src="images/drag_drop_img.svg" alt="Drag or drop to upload a photo" />
                 <span class="subtext upload-instruction">Drag & drop or click to upload</span>
                 <span class="subtext optional-note">(Optional)</span>
-                <input type="file" id="upload-photo" class="input-file" accept="image/*" style="display: none" tabindex="-1" aria-label="Upload photo" />
-              </label>
-              <!-- Preview area appears here after upload -->
-              <div id="image-preview-box" style="display: none; position: relative; margin: 1rem auto 0 auto; text-align: center"></div>
+              </span>
+
+              <span class="upload-mobile">
+                <img class="upload-icon" src="icons/camera_icon.svg" alt="Tap to upload a photo" />
+                <span class="subtext upload-instruction">Tap to upload a photo</span>
+                <span class="subtext optional-note">(Optional)</span>
+              </span>
             </section>
           </div>
         </main>
@@ -138,16 +141,17 @@
           </button> -->
         </div>
       </footer>
-    </div>
-    <!-- Modal for photo -->
-    <div id="photo-modal" class="photo-modal" style="display: none">
-      <div class="photo-modal-content">
-        <span id="close-modal" class="close">&times;</span>
-        <h2>Preview your uploaded photo</h2>
-        <img id="modal-photo" src="" alt="Preview photo" style="max-width: 90%; margin: 1em 0" />
-        <div>
-          <button id="discard-photo" class="btn">Discard</button>
-          <button id="keep-photo" class="btn">Keep</button>
+
+      <!-- Modal for photo -->
+      <div id="photo-modal" class="photo-modal" style="display: none">
+        <div class="photo-modal-content">
+          <span id="close-modal" class="close">&times;</span>
+          <h2>Preview your uploaded photo</h2>
+          <img id="modal-photo" src="" alt="Preview photo" style="max-width: 90%; margin: 1em 0" />
+          <div>
+            <button id="discard-photo" class="btn">Discard</button>
+            <button id="keep-photo" class="btn">Keep</button>
+          </div>
         </div>
       </div>
     </div>
