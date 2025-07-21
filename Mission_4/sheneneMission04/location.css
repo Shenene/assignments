@@ -53,3 +53,29 @@
   font-style: italic;
   color: #545454;
 }
+
+@media (max-width: 400px) {
+  /* Location Screen */
+  .back-button {
+    padding-left: 1rem;
+  }
+  .map-img {
+    max-width: 31.25rem;
+    height: 14rem !important;
+    width: 20rem !important;
+    margin-left: 1.4rem !important;
+  }
+  .search-location {
+    padding-left: 0.9rem;
+  }
+  .input--search-location {
+    max-width: 80vw !important;
+  }
+  .location-info {
+    max-width: 80%;
+    margin-left: 0 !important;
+  }
+  .next-button {
+    min-width: 9rem;
+  }
+}
