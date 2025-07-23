@@ -1,6 +1,6 @@
 "use strict";
 
-// ======= REPORT ISSUE PAGE (ISSUE SELECTION, OTHER, CHAR COUNT) =======
+// ======= ⁡⁣⁢⁢REPORT ISSUE PAGE (ISSUE SELECTION, OTHER, CHAR COUNT)⁡ =======
 const nextToLocationBtn = document.getElementById("next-to-location");
 const issueButtons = document.querySelectorAll(".issue-options button");
 const otherBtn = document.getElementById("btn-other");
@@ -32,7 +32,7 @@ if (otherInput && charCount) {
   });
 }
 
-// ======= IMAGE UPLOAD, MODAL PREVIEW, REMOVE =======
+// ======= ⁡⁣⁢⁢IMAGE UPLOAD, MODAL PREVIEW, REMOVE⁡ =======
 const photoInput = document.getElementById("upload-photo");
 const uploadLabel = document.getElementById("upload-label");
 const imagePreviewBox = document.getElementById("image-preview-box");
@@ -57,6 +57,7 @@ function setUploadState(hasImage) {
   }
 }
 
+// ⁡⁢⁢⁣Acce⁡⁢⁢⁣ssibility⁡
 // Keyboard: allow label to trigger file input with Enter/Space
 if (uploadLabel) {
   uploadLabel.addEventListener("keydown", (e) => {
@@ -76,7 +77,7 @@ if (photoInput) {
   });
 }
 
-// Drag & drop support
+// ⁡⁣⁢⁢Drag & drop support⁡
 if (dropArea) {
   ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
     dropArea.addEventListener(
@@ -137,6 +138,7 @@ if (keepPhotoBtn)
     img.alt = "Selected image preview";
     img.setAttribute("tabindex", "0");
 
+    // ⁡⁢⁢⁣Accessibility⁡
     // Remove button (accessible)
     const removeBtn = document.createElement("button");
     removeBtn.innerHTML = "&times;";
@@ -197,7 +199,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ====== SAVE TO SESSIONSTORAGE ON NEXT ======
+// ====== ⁡⁣⁢⁢SAVE TO SESSIONSTORAGE ON NEXT⁡ ======
 if (nextToLocationBtn && issueButtons.length) {
   nextToLocationBtn.addEventListener("click", function (e) {
     let selected = "";
@@ -319,7 +321,7 @@ if (photoSection && reportPhoto && photoPlaceholder) {
 }
 
 // REPORT ID - CONFIRMATION PAGE
-// PREVIEW PAGE: Send Report (generate report ID and save to sessionStorage)
+// PREVIEW PAGE: Send Report ⁡⁣⁢⁢(generate report ID and save to sessionStorage)⁡
 const sendReportBtn = document.querySelector(".send-report-button");
 if (sendReportBtn) {
   sendReportBtn.addEventListener("click", function () {
@@ -346,7 +348,7 @@ const copyBtn = document.getElementById("copy-report-id");
 const copySuccess = document.getElementById("copy-success");
 if (copyBtn && reportIdSpan) {
   copyBtn.addEventListener("click", function () {
-    // Only try copying if there's something to copy!
+    // Only try copying if there's something to copy
     if (reportIdSpan.textContent) {
       navigator.clipboard.writeText(reportIdSpan.textContent).then(() => {
         copySuccess.style.display = "inline";
