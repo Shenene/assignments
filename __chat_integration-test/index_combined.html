@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FixIt App Prototype</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="global_copy.css" rel="stylesheet" />
+    <link href="home_copy.css" rel="stylesheet" />
+    <style>
+      .app-container {
+        max-width: 1100px;
+        margin: 30px auto;
+        background: transparent;
+        min-height: 90vh;
+        position: relative;
+      }
+      /* Login/Menu Buttons inside .background.home */
+      .header_btn {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 1101;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+      }
+      .menu_btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 1101;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 4px 12px;
+        transition: opacity 0.2s;
+      }
+      .menu_btn.hide {
+        display: none !important;
+      }
+      /* Modal Overlay covers only .background.home */
+      .sidebarOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(50, 50, 50, 0.45);
+        z-index: 1200;
+        display: none;
+        transition: background 0.2s;
+      }
+      .sidebarOverlay.open {
+        display: block;
+      }
+      /* Sidebar Modal Nav */
+      .sidebarModal {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 320px;
+        max-width: 95vw;
+        background: #fff;
+        box-shadow: -4px 0 16px rgba(0, 0, 0, 0.09);
+        z-index: 1201;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+        gap: 2rem;
+        outline: none;
+        transform: translateX(100%);
+        transition: transform 0.25s;
+      }
+      .sidebarModal.open {
+        transform: translateX(0);
+      }
+      @media (max-width: 600px) {
+        .sidebarModal {
+          width: 100vw;
+          max-width: 100vw;
+          padding: 2rem 0.8rem 1rem 1rem;
+        }
+      }
+      .sidebar-close {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        align-self: flex-end;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+        line-height: 1;
+      }
+      .sidebar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .sidebar-link {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+        font-size: 1.17rem;
+        text-decoration: none;
+        color: #232323;
+        font-family: inherit;
+        font-weight: 500;
+        transition: color 0.17s;
+        cursor: pointer;
+      }
+      .sidebar-link img {
+        width: 32px;
+        height: 32px;
+      }
+      .sidebar-link:focus,
+      .sidebar-link:hover {
+        color: #008c37;
+        outline: none;
+      }
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      /* Chatbot integration */
+      .chatbot-modal {
+        position: fixed;
+        bottom: 80px;
+        right: 32px;
+        background: white;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+        padding: 0 0 8px 0;
+        z-index: 11002;
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        min-width: 360px;
+      }
+
+      .chatbot-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        margin: 4px 8px;
+        cursor: pointer;
+        align-self: flex-end;
+      }
+      @media (max-width: 700px) {
+        .chatbot-modal {
+          right: 0;
+          left: 0;
+          min-width: 0;
+          width: 100vw;
+          border-radius: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="visually-hidden focusable">Skip to main content</a>
+
+    <!-- ===== Centered App ===== -->
+    <div class="app-container">
+      <div class="background home" style="position: relative">
+        <!-- Login & Menu Buttons inside .background.home -->
+        <button class="header_btn" id="loginBtn" aria-label="Login/Register">
+          <img src="icons/login_icon.png" alt="login/register icon" style="width: 28px; height: 28px" />
+        </button>
+        <button class="menu_btn" id="openSidebar" aria-label="Open menu">
+          <img src="icons/menu.png" alt="menu icon" style="width: 24px; height: 24px" />
+        </button>
+
+        <!-- ===== Modal Overlay and Sidebar (inside .background.home) ===== -->
+        <div class="sidebarOverlay" id="sidebarOverlay" tabindex="-1">
+          <aside class="sidebarModal" id="sidebarModal" role="navigation" aria-label="Main menu">
+            <button class="sidebar-close" id="closeSidebar" aria-label="Close menu">&times;</button>
+            <nav class="sidebar-links">
+              <a class="sidebar-link" href="index.html"> <img src="icons/house_icon.svg" alt="Home" /> Home </a>
+              <a class="sidebar-link" href="reports.html"> <img src="icons/report_icon.svg" alt="Reports" /> All Reports </a>
+              <a class="sidebar-link" href="rate.html"> <img src="icons/feedback_icon.svg" alt="Rate" /> Feedback </a>
+              <a class="sidebar-link" href="#" id="openChatbot"> <img src="icons/chat_icon.png" alt="Chat" /> Chat FAQs </a>
+            </nav>
+          </aside>
+        </div>
+
+        <!-- ===== App Header/Logo ===== -->
+        <header class="header_container-home">
+          <div class="logo_container" style="justify-content: center; align-items: center; text-align: center">
+            <img src="logo/logo.png" alt="logo" class="logo" />
+            <div class="logo-text">
+              <span>See something wrong?</span>
+              <span>Report it. Help fix it.</span>
+            </div>
+          </div>
+        </header>
+
+        <main id="main-content" class="main-content home">
+          <h1 class="heading_main--home">Welcome to FixIt</h1>
+          <p class="subtext home">A quick, simple way to report problems in your city - like full bins, broken lights, or graffiti. You're helping restore our shared spaces.</p>
+        </main>
+
+        <section class="home-visual">
+          <a href="report-lights.html" class="icon-link" aria-label="Report light issue"><img src="icons/lights_icon.png" alt="light icon" class="icon light" /></a>
+          <a href="report-benches.html" class="icon-link" aria-label="Report bench issue"><img src="icons/bench_icon.png" alt="bench icon" class="icon bench" /></a>
+          <a href="report-trees.html" class="icon-link" aria-label="Report tree issue"><img src="icons/trees_icon.png" alt="tree icon" class="icon tree" /></a>
+          <a href="report-graffiti.html" class="icon-link" aria-label="Report graffiti issue"><img src="icons/graffiti_icon.png" alt="graffiti icon" class="icon graffiti" /></a>
+          <a href="report-paths.html" class="icon-link" aria-label="Report path issue"><img src="icons/paths_icon.png" alt="path icon" class="icon path" /></a>
+          <a href="report-bins.html" class="icon-link" aria-label="Report bin issue"><img src="icons/bins_icon.png" alt="bin icon" class="icon bin" /></a>
+          <a href="report-potholes.html" class="icon-link" aria-label="Report pothole issue"><img src="icons/pothole_icon.png" alt="pothole icon" class="icon pothole" /></a>
+        </section>
+
+        <footer class="footer-home">
+          <p>&copy; 2025 FixIt. All rights reserved</p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Chatbot integration -->
+    <div id="chatbot-modal" class="chatbot-modal">
+      <button id="chatbot-close" aria-label="Close chatbot" class="chatbot-close">&times;</button>
+      <iframe id="JotFormIFrame-0197af1931467f74a5021265777a2f95cd50" title="Sophie: Customer Service Specialist" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://agent.jotform.com/0197af1931467f74a5021265777a2f95cd50?embedMode=iframe&background=1&shadow=1" frameborder="0" style="min-width: 350px; max-width: 100%; height: 500px; border: none" scrolling="no"></iframe>
+      <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+      <script>
+        window.jotformEmbedHandler("iframe[id='JotFormIFrame-0197af1931467f74a5021265777a2f95cd50']", "https://www.jotform.com");
+      </script>
+    </div>
+
+    <script>
+      // Sidebar Modal JS
+      const openSidebar = document.getElementById("openSidebar");
+      const sidebarOverlay = document.getElementById("sidebarOverlay");
+      const sidebarModal = document.getElementById("sidebarModal");
+      const closeSidebar = document.getElementById("closeSidebar");
+
+      openSidebar.addEventListener("click", () => {
+        sidebarOverlay.classList.add("open");
+        setTimeout(() => sidebarModal.classList.add("open"), 10);
+        document.body.classList.add("modal-open");
+        openSidebar.classList.add("hide");
+        closeSidebar.focus();
+      });
+
+      function closeModal() {
+        sidebarModal.classList.remove("open");
+        setTimeout(() => sidebarOverlay.classList.remove("open"), 250);
+        document.body.classList.remove("modal-open");
+        openSidebar.classList.remove("hide");
+        openSidebar.focus();
+      }
+
+      closeSidebar.addEventListener("click", closeModal);
+      sidebarOverlay.addEventListener("click", (e) => {
+        if (e.target === sidebarOverlay) closeModal();
+      });
+      window.addEventListener("keydown", (e) => {
+        if (sidebarOverlay.classList.contains("open") && e.key === "Escape") {
+          closeModal();
+        }
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        sidebarModal.classList.remove("open");
+        sidebarOverlay.classList.remove("open");
+        // Hide chatbot modal by default
+        document.getElementById("chatbot-modal").style.display = "none";
+      });
+
+      // CHATBOT MODAL LOGIC
+      const openChatbotBtn = document.getElementById("openChatbot");
+      const chatbotModal = document.getElementById("chatbot-modal");
+      const closeChatbotBtn = document.getElementById("chatbot-close");
+
+      openChatbotBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        chatbotModal.style.display = "flex";
+        closeModal(); // Close sidebar nav
+      });
+      closeChatbotBtn.addEventListener("click", function () {
+        chatbotModal.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
