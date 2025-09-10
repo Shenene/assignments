@@ -9,17 +9,17 @@
 
 html,
 body {
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
+  /* width: 100vw;
+  height: 100vh; */
   max-width: 1440px;
-  max-height: 1024px;
-  background-image: url("bg.png");
+  max-height: 500px;
+  background-image: url("background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: sans-serif;
   color: #333;
-  line-height: 2;
 }
 
 /* BACKGROUNDS */
@@ -27,9 +27,9 @@ body {
   position: relative;
   width: 100%;
   max-width: 1440px;
-  max-height: 1024px;
+  max-height: 500px;
   min-width: 320px;
-  min-height: 600px;
+  /* min-height: 20vh; */
   margin: auto;
   background-size: cover;
   background-position: center;
@@ -37,34 +37,97 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  gap: 100px;
+  align-items: stretch;
+  gap: 30px;
 }
 
 .persona-container {
   display: flex;
-  justify-content: flex-start;
-  flex: 0 0 auto;
-  width: 320px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: stretch;
+  flex: auto;
+  flex: 1 1 auto;
+  width: 100%;
+  padding-left: 50px;
 }
 
 .persona {
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  /* display: block; */
+  /* height: 50vh; */
+  /* max-height: 100%; */
 }
 
-.left container {
+/* Main containers */
+.about {
+  max-width: 55ch;
   display: flex;
-  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  /* width: 700px;
+  max-height: 900px; */
+  /* align-self: stretch; */
+  /* margin-right: 40px; */
+}
+
+.left-container {
+  display: flex;
+  margin: 10px 10px;
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
 }
 
-.right container {
+.right-container {
   display: flex;
-  margin: auto;
+  margin: 10px 10px;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-content: center;
+}
+
+/* H2 */
+.about h2 {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  align-self: flex-start;
+  margin-left: 50px;
+}
+
+.left-container h2 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.right-container h2 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+/* Unorderd list */
+.about ul {
+  max-width: 52ch;
+  padding-left: 50px;
+}
+
+.left-container ul {
+  max-width: 50ch;
+}
+
+.right-container ul {
+  max-width: 50ch;
+}
+
+/* List items */
+.about li {
+  line-height: 1.4;
+}
+
+.left-container li {
+  line-height: 1.4;
+}
+
+.right-container li {
+  line-height: 1.4;
 }
